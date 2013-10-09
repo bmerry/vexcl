@@ -1,0 +1,8 @@
+<map id="vexcl/stencil.hpp" name="vexcl/stencil.hpp">
+<area shape="rect" id="node11" href="$vector_8hpp.html" title="OpenCL device vector. " alt="" coords="3157,80,3283,107"/>
+<area shape="rect" id="node26" href="$util_8hpp.html" title="OpenCL general utilities. " alt="" coords="3741,237,3845,264"/>
+<area shape="rect" id="node43" href="$operations_8hpp.html" title="Templates used for expression tree traversal and kernel generation. " alt="" coords="2577,155,2731,181"/>
+<area shape="rect" id="node64" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler. " alt="" coords="1717,237,1845,264"/>
+<area shape="rect" id="node101" href="$devlist_8hpp.html" title="OpenCL device enumeration and context initialization. " alt="" coords="3289,155,3415,181"/>
+<area shape="rect" id="node58" href="$types_8hpp.html" title="Support for using native C++ and OpenCL types in expressions. " alt="" coords="2430,237,2551,264"/>
+</map>

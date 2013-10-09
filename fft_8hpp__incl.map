@@ -1,0 +1,10 @@
+<map id="vexcl/fft.hpp" name="vexcl/fft.hpp">
+<area shape="rect" id="node5" href="$vector_8hpp.html" title="OpenCL device vector. " alt="" coords="1412,155,1537,181"/>
+<area shape="rect" id="node115" href="$plan_8hpp.html" title="FFT plan, stores kernels and buffers for one configuration. " alt="" coords="2292,80,2421,107"/>
+<area shape="rect" id="node23" href="$util_8hpp.html" title="OpenCL general utilities. " alt="" coords="1102,312,1207,339"/>
+<area shape="rect" id="node40" href="$operations_8hpp.html" title="Templates used for expression tree traversal and kernel generation. " alt="" coords="533,229,687,256"/>
+<area shape="rect" id="node60" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler. " alt="" coords="2382,312,2511,339"/>
+<area shape="rect" id="node98" href="$devlist_8hpp.html" title="OpenCL device enumeration and context initialization. " alt="" coords="1411,229,1537,256"/>
+<area shape="rect" id="node54" href="$types_8hpp.html" title="Support for using native C++ and OpenCL types in expressions. " alt="" coords="718,312,839,339"/>
+<area shape="rect" id="node125" href="$kernels_8hpp.html" title="Kernel generator for FFT. " alt="" coords="2171,155,2319,181"/>
+</map>
