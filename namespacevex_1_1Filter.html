@@ -84,33 +84,34 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1Filter_1_1Position.html">Position</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects one device at the given position.  <a href="structvex_1_1Filter_1_1Position.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1Filter_1_1General.html">General</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runtime filter holder.  <a href="structvex_1_1Filter_1_1General.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1Filter_1_1EnvFilter.html">EnvFilter</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Environment filter.  <a href="structvex_1_1Filter_1_1EnvFilter.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a0664aab5022fab0f7764d0e72cb06fc8"><td class="memTemplParams" colspan="2">template&lt;class Filter &gt; </td></tr>
-<tr class="memitem:a0664aab5022fab0f7764d0e72cb06fc8"><td class="memTemplItemLeft" align="right" valign="top">ExclusiveFilter&lt; Filter &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex_1_1Filter.html#a0664aab5022fab0f7764d0e72cb06fc8">Exclusive</a> (const Filter &amp;filter)</td></tr>
-<tr class="memdesc:a0664aab5022fab0f7764d0e72cb06fc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows exclusive access to compute devices across several processes.  <a href="#a0664aab5022fab0f7764d0e72cb06fc8">More...</a><br/></td></tr>
-<tr class="separator:a0664aab5022fab0f7764d0e72cb06fc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88ee82aa3e462528b522dffa30c447d0"><td class="memTemplParams" colspan="2"><a class="anchor" id="a88ee82aa3e462528b522dffa30c447d0"></a>
-template&lt;class LeftFilter , class RightFilter &gt; </td></tr>
-<tr class="memitem:a88ee82aa3e462528b522dffa30c447d0"><td class="memTemplItemLeft" align="right" valign="top">FilterBinaryOp&lt; LeftFilter, <br class="typebreak"/>
-RightFilter, FilterAnd &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex_1_1Filter.html#a88ee82aa3e462528b522dffa30c447d0">operator&amp;&amp;</a> (const LeftFilter &amp;left, const RightFilter &amp;right)</td></tr>
-<tr class="memdesc:a88ee82aa3e462528b522dffa30c447d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Join two filters with AND operator. <br/></td></tr>
-<tr class="separator:a88ee82aa3e462528b522dffa30c447d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af22bdf7eca4b8cf86854997dbf6aae24"><td class="memTemplParams" colspan="2"><a class="anchor" id="af22bdf7eca4b8cf86854997dbf6aae24"></a>
-template&lt;class LeftFilter , class RightFilter &gt; </td></tr>
-<tr class="memitem:af22bdf7eca4b8cf86854997dbf6aae24"><td class="memTemplItemLeft" align="right" valign="top">FilterBinaryOp&lt; LeftFilter, <br class="typebreak"/>
-RightFilter, FilterOr &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex_1_1Filter.html#af22bdf7eca4b8cf86854997dbf6aae24">operator||</a> (const LeftFilter &amp;left, const RightFilter &amp;right)</td></tr>
-<tr class="memdesc:af22bdf7eca4b8cf86854997dbf6aae24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Join two filters with OR operator. <br/></td></tr>
-<tr class="separator:af22bdf7eca4b8cf86854997dbf6aae24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78f584ca4e3eae2ac1414e56e92287ee"><td class="memTemplParams" colspan="2"><a class="anchor" id="a78f584ca4e3eae2ac1414e56e92287ee"></a>
-template&lt;class Flt &gt; </td></tr>
-<tr class="memitem:a78f584ca4e3eae2ac1414e56e92287ee"><td class="memTemplItemLeft" align="right" valign="top">NegateFilter&lt; Flt &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex_1_1Filter.html#a78f584ca4e3eae2ac1414e56e92287ee">operator!</a> (const Flt &amp;flt)</td></tr>
-<tr class="memdesc:a78f584ca4e3eae2ac1414e56e92287ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Negate a filter. <br/></td></tr>
-<tr class="separator:a78f584ca4e3eae2ac1414e56e92287ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0656e113d6d54d81b43226802a1f903"><td class="memTemplParams" colspan="2">template&lt;class Filter &gt; </td></tr>
+<tr class="memitem:af0656e113d6d54d81b43226802a1f903"><td class="memTemplItemLeft" align="right" valign="top">ExclusiveFilter&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex_1_1Filter.html#af0656e113d6d54d81b43226802a1f903">Exclusive</a> (Filter &amp;&amp;filter)</td></tr>
+<tr class="memdesc:af0656e113d6d54d81b43226802a1f903"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows exclusive access to compute devices across several processes.  <a href="#af0656e113d6d54d81b43226802a1f903">More...</a><br/></td></tr>
+<tr class="separator:af0656e113d6d54d81b43226802a1f903"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d7f4d27a344a223e412ae210a52ee9c"><td class="memTemplParams" colspan="2"><a class="anchor" id="a7d7f4d27a344a223e412ae210a52ee9c"></a>
+template&lt;class LHS , class RHS &gt; </td></tr>
+<tr class="memitem:a7d7f4d27a344a223e412ae210a52ee9c"><td class="memTemplItemLeft" align="right" valign="top">FilterBinaryOp&lt; FilterAnd &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex_1_1Filter.html#a7d7f4d27a344a223e412ae210a52ee9c">operator&amp;&amp;</a> (LHS &amp;&amp;lhs, RHS &amp;&amp;rhs)</td></tr>
+<tr class="memdesc:a7d7f4d27a344a223e412ae210a52ee9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Join two filters with AND operator. <br/></td></tr>
+<tr class="separator:a7d7f4d27a344a223e412ae210a52ee9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80c2a2fb00d0582e04c70ebd0256d9b3"><td class="memTemplParams" colspan="2"><a class="anchor" id="a80c2a2fb00d0582e04c70ebd0256d9b3"></a>
+template&lt;class LHS , class RHS &gt; </td></tr>
+<tr class="memitem:a80c2a2fb00d0582e04c70ebd0256d9b3"><td class="memTemplItemLeft" align="right" valign="top">FilterBinaryOp&lt; FilterOr &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex_1_1Filter.html#a80c2a2fb00d0582e04c70ebd0256d9b3">operator||</a> (LHS &amp;&amp;lhs, RHS &amp;&amp;rhs)</td></tr>
+<tr class="memdesc:a80c2a2fb00d0582e04c70ebd0256d9b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Join two filters with OR operator. <br/></td></tr>
+<tr class="separator:a80c2a2fb00d0582e04c70ebd0256d9b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e2fc524c98baceefa25da89943820b7"><td class="memTemplParams" colspan="2"><a class="anchor" id="a5e2fc524c98baceefa25da89943820b7"></a>
+template&lt;class Filter &gt; </td></tr>
+<tr class="memitem:a5e2fc524c98baceefa25da89943820b7"><td class="memTemplItemLeft" align="right" valign="top">NegateFilter&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex_1_1Filter.html#a5e2fc524c98baceefa25da89943820b7">operator!</a> (Filter &amp;&amp;filter)</td></tr>
+<tr class="memdesc:a5e2fc524c98baceefa25da89943820b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Negate a filter. <br/></td></tr>
+<tr class="separator:a5e2fc524c98baceefa25da89943820b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -127,16 +128,16 @@ const <a class="el" href="structvex_1_1Filter_1_1EnvFilter.html">EnvFilter</a>&#
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Device filters. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="a0664aab5022fab0f7764d0e72cb06fc8"></a>
+<a class="anchor" id="af0656e113d6d54d81b43226802a1f903"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class Filter &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">ExclusiveFilter&lt;Filter&gt; vex::Filter::Exclusive </td>
+          <td class="memname">ExclusiveFilter vex::Filter::Exclusive </td>
           <td>(</td>
-          <td class="paramtype">const Filter &amp;&#160;</td>
+          <td class="paramtype">Filter &amp;&amp;&#160;</td>
           <td class="paramname"><em>filter</em>)</td><td></td>
           <td></td>
         </tr>
