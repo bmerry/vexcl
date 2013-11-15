@@ -29,6 +29,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -90,10 +91,6 @@ typedef <a class="el" href="classvex_1_1vector_1_1iterator__type.html">iterator_
 typedef <a class="el" href="classvex_1_1vector_1_1iterator__type.html">iterator_type</a>&lt; const <br class="typebreak"/>
 <a class="el" href="classvex_1_1vector.html">vector</a>, const <a class="el" href="classvex_1_1vector_1_1element.html">element</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>const_iterator</b></td></tr>
 <tr class="separator:afd1bd847b9b29c84dbf26c8e8ce54f54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1acb768df9ae0304b3ddaf67e17903bb"><td class="memItemLeft" align="right" valign="top">typedef std::unique_ptr&lt; T[], <br class="typebreak"/>
-buffer_unmapper &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#a1acb768df9ae0304b3ddaf67e17903bb">mapped_array</a></td></tr>
-<tr class="memdesc:a1acb768df9ae0304b3ddaf67e17903bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Host array mapped to device buffer.  <a href="#a1acb768df9ae0304b3ddaf67e17903bb">More...</a><br/></td></tr>
-<tr class="separator:a1acb768df9ae0304b3ddaf67e17903bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -101,34 +98,30 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#a145842a554253e273ce5ee5f3e1d602b">vector</a> ()</td></tr>
 <tr class="memdesc:a145842a554253e273ce5ee5f3e1d602b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empty constructor. <br/></td></tr>
 <tr class="separator:a145842a554253e273ce5ee5f3e1d602b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43807a92f955acbf9f125c79bb254357"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a43807a92f955acbf9f125c79bb254357"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#a43807a92f955acbf9f125c79bb254357">vector</a> (size_t <a class="el" href="classvex_1_1vector.html#acba96d67dcc97afdc6ff552d913ca7d7">size</a>)</td></tr>
-<tr class="memdesc:a43807a92f955acbf9f125c79bb254357"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct by size and use static context. <br/></td></tr>
-<tr class="separator:a43807a92f955acbf9f125c79bb254357"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add76a9d6bb57a8a25821ba8f6349c026"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="add76a9d6bb57a8a25821ba8f6349c026"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#add76a9d6bb57a8a25821ba8f6349c026">vector</a> (const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;v)</td></tr>
 <tr class="memdesc:add76a9d6bb57a8a25821ba8f6349c026"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor. <br/></td></tr>
 <tr class="separator:add76a9d6bb57a8a25821ba8f6349c026"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5198f77adea4ed7bf18fa44569d2ec3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae5198f77adea4ed7bf18fa44569d2ec3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#ae5198f77adea4ed7bf18fa44569d2ec3">vector</a> (const cl::CommandQueue &amp;q, const cl::Buffer &amp;buffer)</td></tr>
-<tr class="memdesc:ae5198f77adea4ed7bf18fa44569d2ec3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrap a native buffer. <br/></td></tr>
-<tr class="separator:ae5198f77adea4ed7bf18fa44569d2ec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae780f1365bb3becf25b049d25ed9622"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae780f1365bb3becf25b049d25ed9622"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#aae780f1365bb3becf25b049d25ed9622">vector</a> (const std::vector&lt; cl::CommandQueue &gt; &amp;queue, size_t <a class="el" href="classvex_1_1vector.html#acba96d67dcc97afdc6ff552d913ca7d7">size</a>, const T *host=0, cl_mem_flags flags=CL_MEM_READ_WRITE)</td></tr>
-<tr class="memdesc:aae780f1365bb3becf25b049d25ed9622"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy host data to the new buffer. <br/></td></tr>
-<tr class="separator:aae780f1365bb3becf25b049d25ed9622"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45ca3ffdc527a809d932bac13c67a420"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a45ca3ffdc527a809d932bac13c67a420"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#a45ca3ffdc527a809d932bac13c67a420">vector</a> (size_t <a class="el" href="classvex_1_1vector.html#acba96d67dcc97afdc6ff552d913ca7d7">size</a>, const T *host, cl_mem_flags flags=CL_MEM_READ_WRITE)</td></tr>
-<tr class="memdesc:a45ca3ffdc527a809d932bac13c67a420"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy host data to the new buffer, use static context. <br/></td></tr>
-<tr class="separator:a45ca3ffdc527a809d932bac13c67a420"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6507c5202d017b3d447b9c2e59947c30"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6507c5202d017b3d447b9c2e59947c30"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#a6507c5202d017b3d447b9c2e59947c30">vector</a> (const std::vector&lt; cl::CommandQueue &gt; &amp;queue, const std::vector&lt; T &gt; &amp;host, cl_mem_flags flags=CL_MEM_READ_WRITE)</td></tr>
-<tr class="memdesc:a6507c5202d017b3d447b9c2e59947c30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy host data to the new buffer. <br/></td></tr>
-<tr class="separator:a6507c5202d017b3d447b9c2e59947c30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6f8a719ce7c1756a3099a687f61c138"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae6f8a719ce7c1756a3099a687f61c138"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#ae6f8a719ce7c1756a3099a687f61c138">vector</a> (const std::vector&lt; T &gt; &amp;host, cl_mem_flags flags=CL_MEM_READ_WRITE)</td></tr>
-<tr class="memdesc:ae6f8a719ce7c1756a3099a687f61c138"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy host data to the new buffer, use static context. <br/></td></tr>
-<tr class="separator:ae6f8a719ce7c1756a3099a687f61c138"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a926f54621bfe702740aa684c0486ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4a926f54621bfe702740aa684c0486ac"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#a4a926f54621bfe702740aa684c0486ac">vector</a> (const <a class="el" href="classvex_1_1backend_1_1cuda_1_1command__queue.html">backend::command_queue</a> &amp;q, const <a class="el" href="classvex_1_1backend_1_1cuda_1_1device__vector.html">backend::device_vector</a>&lt; T &gt; &amp;buffer)</td></tr>
+<tr class="memdesc:a4a926f54621bfe702740aa684c0486ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrap a native buffer. <br/></td></tr>
+<tr class="separator:a4a926f54621bfe702740aa684c0486ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae00bf340ccc7df8cbefb0711aa6da4e7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae00bf340ccc7df8cbefb0711aa6da4e7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#ae00bf340ccc7df8cbefb0711aa6da4e7">vector</a> (const std::vector&lt; <a class="el" href="classvex_1_1backend_1_1cuda_1_1command__queue.html">backend::command_queue</a> &gt; &amp;queue, size_t <a class="el" href="classvex_1_1vector.html#acba96d67dcc97afdc6ff552d913ca7d7">size</a>, const T *host=0, <a class="el" href="namespacevex_1_1backend_1_1cuda.html#a6e1dfc6343ad7a10e42fcc5cdecf59d4">backend::mem_flags</a> flags=backend::MEM_READ_WRITE)</td></tr>
+<tr class="memdesc:ae00bf340ccc7df8cbefb0711aa6da4e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy host data to the new buffer. <br/></td></tr>
+<tr class="separator:ae00bf340ccc7df8cbefb0711aa6da4e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af452218ab9bebd1d00d183dda8b37f89"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af452218ab9bebd1d00d183dda8b37f89"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#af452218ab9bebd1d00d183dda8b37f89">vector</a> (size_t <a class="el" href="classvex_1_1vector.html#acba96d67dcc97afdc6ff552d913ca7d7">size</a>, const T *host=0, <a class="el" href="namespacevex_1_1backend_1_1cuda.html#a6e1dfc6343ad7a10e42fcc5cdecf59d4">backend::mem_flags</a> flags=backend::MEM_READ_WRITE)</td></tr>
+<tr class="memdesc:af452218ab9bebd1d00d183dda8b37f89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy host data to the new buffer, use static context. <br/></td></tr>
+<tr class="separator:af452218ab9bebd1d00d183dda8b37f89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a823e016657ccc4c0a8206637bdd4e883"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a823e016657ccc4c0a8206637bdd4e883"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#a823e016657ccc4c0a8206637bdd4e883">vector</a> (const std::vector&lt; <a class="el" href="classvex_1_1backend_1_1cuda_1_1command__queue.html">backend::command_queue</a> &gt; &amp;queue, const std::vector&lt; T &gt; &amp;host, <a class="el" href="namespacevex_1_1backend_1_1cuda.html#a6e1dfc6343ad7a10e42fcc5cdecf59d4">backend::mem_flags</a> flags=backend::MEM_READ_WRITE)</td></tr>
+<tr class="memdesc:a823e016657ccc4c0a8206637bdd4e883"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy host data to the new buffer. <br/></td></tr>
+<tr class="separator:a823e016657ccc4c0a8206637bdd4e883"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeea933a5df4d9afe54b247e91cded5eb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeea933a5df4d9afe54b247e91cded5eb"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#aeea933a5df4d9afe54b247e91cded5eb">vector</a> (const std::vector&lt; T &gt; &amp;host, <a class="el" href="namespacevex_1_1backend_1_1cuda.html#a6e1dfc6343ad7a10e42fcc5cdecf59d4">backend::mem_flags</a> flags=backend::MEM_READ_WRITE)</td></tr>
+<tr class="memdesc:aeea933a5df4d9afe54b247e91cded5eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy host data to the new buffer, use static context. <br/></td></tr>
+<tr class="separator:aeea933a5df4d9afe54b247e91cded5eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0b79ef69f8deeb152834bdb20cdc3b8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac0b79ef69f8deeb152834bdb20cdc3b8"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#ac0b79ef69f8deeb152834bdb20cdc3b8">vector</a> (<a class="el" href="classvex_1_1vector.html">vector</a> &amp;&amp;v) noexcept</td></tr>
 <tr class="memdesc:ac0b79ef69f8deeb152834bdb20cdc3b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move constructor. <br/></td></tr>
@@ -145,30 +138,30 @@ const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;&#160;</td><t
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#afe792e9bcb2d6efa1af5e9bd60ca0526">swap</a> (<a class="el" href="classvex_1_1vector.html">vector</a> &amp;v)</td></tr>
 <tr class="memdesc:afe792e9bcb2d6efa1af5e9bd60ca0526"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swap function. <br/></td></tr>
 <tr class="separator:afe792e9bcb2d6efa1af5e9bd60ca0526"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab86b51939875b8e84698ddf6558a23d1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab86b51939875b8e84698ddf6558a23d1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#ab86b51939875b8e84698ddf6558a23d1">resize</a> (const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;v, cl_mem_flags flags=CL_MEM_READ_WRITE)</td></tr>
-<tr class="memdesc:ab86b51939875b8e84698ddf6558a23d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize vector. <br/></td></tr>
-<tr class="separator:ab86b51939875b8e84698ddf6558a23d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90c1fa2468fd173040fd433d68d9b76a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a90c1fa2468fd173040fd433d68d9b76a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#a90c1fa2468fd173040fd433d68d9b76a">resize</a> (const std::vector&lt; cl::CommandQueue &gt; &amp;queue, size_t <a class="el" href="classvex_1_1vector.html#acba96d67dcc97afdc6ff552d913ca7d7">size</a>, const T *host=0, cl_mem_flags flags=CL_MEM_READ_WRITE)</td></tr>
-<tr class="memdesc:a90c1fa2468fd173040fd433d68d9b76a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize vector. <br/></td></tr>
-<tr class="separator:a90c1fa2468fd173040fd433d68d9b76a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89ce2d148fb858750de01226b26888a8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a89ce2d148fb858750de01226b26888a8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#a89ce2d148fb858750de01226b26888a8">resize</a> (const std::vector&lt; cl::CommandQueue &gt; &amp;queue, const std::vector&lt; T &gt; &amp;host, cl_mem_flags flags=CL_MEM_READ_WRITE)</td></tr>
-<tr class="memdesc:a89ce2d148fb858750de01226b26888a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize vector. <br/></td></tr>
-<tr class="separator:a89ce2d148fb858750de01226b26888a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63d1913b6fbc162b589da7f94d6994f2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a63d1913b6fbc162b589da7f94d6994f2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#a63d1913b6fbc162b589da7f94d6994f2">resize</a> (size_t <a class="el" href="classvex_1_1vector.html#acba96d67dcc97afdc6ff552d913ca7d7">size</a>)</td></tr>
-<tr class="memdesc:a63d1913b6fbc162b589da7f94d6994f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize vector with static context. <br/></td></tr>
-<tr class="separator:a63d1913b6fbc162b589da7f94d6994f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addd1751493d316d69c3dfbfc5c27d9a0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="addd1751493d316d69c3dfbfc5c27d9a0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#addd1751493d316d69c3dfbfc5c27d9a0">resize</a> (const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;v, <a class="el" href="namespacevex_1_1backend_1_1cuda.html#a6e1dfc6343ad7a10e42fcc5cdecf59d4">backend::mem_flags</a> flags=backend::MEM_READ_WRITE)</td></tr>
+<tr class="memdesc:addd1751493d316d69c3dfbfc5c27d9a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize vector. <br/></td></tr>
+<tr class="separator:addd1751493d316d69c3dfbfc5c27d9a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c3de6032e406df5afd4d713dd94bc78"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c3de6032e406df5afd4d713dd94bc78"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#a1c3de6032e406df5afd4d713dd94bc78">resize</a> (const std::vector&lt; <a class="el" href="classvex_1_1backend_1_1cuda_1_1command__queue.html">backend::command_queue</a> &gt; &amp;queue, size_t <a class="el" href="classvex_1_1vector.html#acba96d67dcc97afdc6ff552d913ca7d7">size</a>, const T *host=0, <a class="el" href="namespacevex_1_1backend_1_1cuda.html#a6e1dfc6343ad7a10e42fcc5cdecf59d4">backend::mem_flags</a> flags=backend::MEM_READ_WRITE)</td></tr>
+<tr class="memdesc:a1c3de6032e406df5afd4d713dd94bc78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize vector. <br/></td></tr>
+<tr class="separator:a1c3de6032e406df5afd4d713dd94bc78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8037ecef74ab78e7f690728f8e60d6d8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8037ecef74ab78e7f690728f8e60d6d8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#a8037ecef74ab78e7f690728f8e60d6d8">resize</a> (const std::vector&lt; <a class="el" href="classvex_1_1backend_1_1cuda_1_1command__queue.html">backend::command_queue</a> &gt; &amp;queue, const std::vector&lt; T &gt; &amp;host, <a class="el" href="namespacevex_1_1backend_1_1cuda.html#a6e1dfc6343ad7a10e42fcc5cdecf59d4">backend::mem_flags</a> flags=backend::MEM_READ_WRITE)</td></tr>
+<tr class="memdesc:a8037ecef74ab78e7f690728f8e60d6d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize vector. <br/></td></tr>
+<tr class="separator:a8037ecef74ab78e7f690728f8e60d6d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae136be8541a903becef771a67f81c5c0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae136be8541a903becef771a67f81c5c0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#ae136be8541a903becef771a67f81c5c0">resize</a> (size_t <a class="el" href="classvex_1_1vector.html#acba96d67dcc97afdc6ff552d913ca7d7">size</a>, const T *host=0, <a class="el" href="namespacevex_1_1backend_1_1cuda.html#a6e1dfc6343ad7a10e42fcc5cdecf59d4">backend::mem_flags</a> flags=backend::MEM_READ_WRITE)</td></tr>
+<tr class="memdesc:ae136be8541a903becef771a67f81c5c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize vector with static context. <br/></td></tr>
+<tr class="separator:ae136be8541a903becef771a67f81c5c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe88998b123d1bee00fb8cff7c604606"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afe88998b123d1bee00fb8cff7c604606"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#afe88998b123d1bee00fb8cff7c604606">clear</a> ()</td></tr>
 <tr class="memdesc:afe88998b123d1bee00fb8cff7c604606"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills vector with zeros. <br/></td></tr>
 <tr class="separator:afe88998b123d1bee00fb8cff7c604606"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa23f8bdb53015e6d446338ccb0ca0b8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa23f8bdb53015e6d446338ccb0ca0b8"></a>
-cl::Buffer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#afa23f8bdb53015e6d446338ccb0ca0b8">operator()</a> (unsigned d=0) const </td></tr>
-<tr class="memdesc:afa23f8bdb53015e6d446338ccb0ca0b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return cl::Buffer object located on a given device. <br/></td></tr>
-<tr class="separator:afa23f8bdb53015e6d446338ccb0ca0b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57b70e9e1cb9726e1060e70020d05d4c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a57b70e9e1cb9726e1060e70020d05d4c"></a>
+<a class="el" href="classvex_1_1backend_1_1cuda_1_1device__vector.html">backend::device_vector</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#a57b70e9e1cb9726e1060e70020d05d4c">operator()</a> (unsigned d=0) const </td></tr>
+<tr class="memdesc:a57b70e9e1cb9726e1060e70020d05d4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return memory buffer located on a given device. <br/></td></tr>
+<tr class="separator:a57b70e9e1cb9726e1060e70020d05d4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad15856f00b1c4b80726e6f908260ef57"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad15856f00b1c4b80726e6f908260ef57"></a>
 <a class="el" href="classvex_1_1vector_1_1iterator__type.html">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#ad15856f00b1c4b80726e6f908260ef57">begin</a> () const </td></tr>
 <tr class="memdesc:ad15856f00b1c4b80726e6f908260ef57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Const iterator to beginning. <br/></td></tr>
@@ -209,11 +202,11 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#a52c7bf21a4d87c503bf6debfec8e2f1a">part_start</a> (unsigned d) const </td></tr>
 <tr class="memdesc:a52c7bf21a4d87c503bf6debfec8e2f1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return part start for a given device. <br/></td></tr>
 <tr class="separator:a52c7bf21a4d87c503bf6debfec8e2f1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64c9b104b362b5ded3af3f3e2750efe5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a64c9b104b362b5ded3af3f3e2750efe5"></a>
+<tr class="memitem:ae6b48f08d3b85d3e6334425f9fa51ffd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae6b48f08d3b85d3e6334425f9fa51ffd"></a>
 const std::vector<br class="typebreak"/>
-&lt; cl::CommandQueue &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#a64c9b104b362b5ded3af3f3e2750efe5">queue_list</a> () const </td></tr>
-<tr class="memdesc:a64c9b104b362b5ded3af3f3e2750efe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return reference to vector's queue list. <br/></td></tr>
-<tr class="separator:a64c9b104b362b5ded3af3f3e2750efe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+&lt; <a class="el" href="classvex_1_1backend_1_1cuda_1_1command__queue.html">backend::command_queue</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#ae6b48f08d3b85d3e6334425f9fa51ffd">queue_list</a> () const </td></tr>
+<tr class="memdesc:ae6b48f08d3b85d3e6334425f9fa51ffd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return reference to vector's queue list. <br/></td></tr>
+<tr class="separator:ae6b48f08d3b85d3e6334425f9fa51ffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa38fc396876f2239495488441c11720e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa38fc396876f2239495488441c11720e"></a>
 const std::vector&lt; size_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#aa38fc396876f2239495488441c11720e">partition</a> () const </td></tr>
 <tr class="memdesc:aa38fc396876f2239495488441c11720e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return reference to vector's partition. <br/></td></tr>
@@ -221,62 +214,63 @@ const std::vector&lt; size_t &gt; &amp;&#160;</td><td class="memItemRight" valig
 <tr class="memitem:adedf824ab0681d4bc7e230c716a77c40"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adedf824ab0681d4bc7e230c716a77c40"></a>
 const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;x)</td></tr>
 <tr class="separator:adedf824ab0681d4bc7e230c716a77c40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5212ee502dc242a3cdeb2453ba83853e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5212ee502dc242a3cdeb2453ba83853e"></a>
-<a class="el" href="classvex_1_1vector.html#a1acb768df9ae0304b3ddaf67e17903bb">mapped_array</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#a5212ee502dc242a3cdeb2453ba83853e">map</a> (unsigned d=0, cl_map_flags flags=CL_MAP_READ|CL_MAP_WRITE)</td></tr>
-<tr class="memdesc:a5212ee502dc242a3cdeb2453ba83853e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maps device buffer to host array. <br/></td></tr>
-<tr class="separator:a5212ee502dc242a3cdeb2453ba83853e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e9de92d05feb8575f2fdd44279ccbd6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7e9de92d05feb8575f2fdd44279ccbd6"></a>
+<a class="el" href="classvex_1_1backend_1_1cuda_1_1device__vector.html">backend::device_vector</a>&lt; T &gt;<br class="typebreak"/>
+::mapped_array&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#a7e9de92d05feb8575f2fdd44279ccbd6">map</a> (unsigned d=0)</td></tr>
+<tr class="memdesc:a7e9de92d05feb8575f2fdd44279ccbd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maps device buffer to host array. <br/></td></tr>
+<tr class="separator:a7e9de92d05feb8575f2fdd44279ccbd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf3307f913b582c50f9962930f0088c7"><td class="memTemplParams" colspan="2">template&lt;class Expr &gt; </td></tr>
 <tr class="memitem:adf3307f913b582c50f9962930f0088c7"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#adf3307f913b582c50f9962930f0088c7">operator=</a> (const Expr &amp;expr)</td></tr>
-<tr class="memdesc:adf3307f913b582c50f9962930f0088c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector expression assignment.  <a href="#adf3307f913b582c50f9962930f0088c7">More...</a><br/></td></tr>
+<tr class="memdesc:adf3307f913b582c50f9962930f0088c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector expression assignment. *.  <a href="#adf3307f913b582c50f9962930f0088c7">More...</a><br/></td></tr>
 <tr class="separator:adf3307f913b582c50f9962930f0088c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abde5fd2b20412cc73bde08f33c83fb2f"><td class="memTemplParams" colspan="2">template&lt;class Expr &gt; </td></tr>
 <tr class="memitem:abde5fd2b20412cc73bde08f33c83fb2f"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#abde5fd2b20412cc73bde08f33c83fb2f">operator+=</a> (const Expr &amp;expr)</td></tr>
-<tr class="memdesc:abde5fd2b20412cc73bde08f33c83fb2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector expression assignment.  <a href="#abde5fd2b20412cc73bde08f33c83fb2f">More...</a><br/></td></tr>
+<tr class="memdesc:abde5fd2b20412cc73bde08f33c83fb2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector expression assignment. *.  <a href="#abde5fd2b20412cc73bde08f33c83fb2f">More...</a><br/></td></tr>
 <tr class="separator:abde5fd2b20412cc73bde08f33c83fb2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc692cd6e6c89c352f0e3dd87fbed427"><td class="memTemplParams" colspan="2">template&lt;class Expr &gt; </td></tr>
 <tr class="memitem:abc692cd6e6c89c352f0e3dd87fbed427"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#abc692cd6e6c89c352f0e3dd87fbed427">operator-=</a> (const Expr &amp;expr)</td></tr>
-<tr class="memdesc:abc692cd6e6c89c352f0e3dd87fbed427"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector expression assignment.  <a href="#abc692cd6e6c89c352f0e3dd87fbed427">More...</a><br/></td></tr>
+<tr class="memdesc:abc692cd6e6c89c352f0e3dd87fbed427"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector expression assignment. *.  <a href="#abc692cd6e6c89c352f0e3dd87fbed427">More...</a><br/></td></tr>
 <tr class="separator:abc692cd6e6c89c352f0e3dd87fbed427"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadbae2ada65e7ba984ea217b36ab9670"><td class="memTemplParams" colspan="2">template&lt;class Expr &gt; </td></tr>
 <tr class="memitem:aadbae2ada65e7ba984ea217b36ab9670"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#aadbae2ada65e7ba984ea217b36ab9670">operator*=</a> (const Expr &amp;expr)</td></tr>
-<tr class="memdesc:aadbae2ada65e7ba984ea217b36ab9670"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector expression assignment.  <a href="#aadbae2ada65e7ba984ea217b36ab9670">More...</a><br/></td></tr>
+<tr class="memdesc:aadbae2ada65e7ba984ea217b36ab9670"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector expression assignment. *.  <a href="#aadbae2ada65e7ba984ea217b36ab9670">More...</a><br/></td></tr>
 <tr class="separator:aadbae2ada65e7ba984ea217b36ab9670"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51076907d763c0917e12c880ce575536"><td class="memTemplParams" colspan="2">template&lt;class Expr &gt; </td></tr>
 <tr class="memitem:a51076907d763c0917e12c880ce575536"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#a51076907d763c0917e12c880ce575536">operator/=</a> (const Expr &amp;expr)</td></tr>
-<tr class="memdesc:a51076907d763c0917e12c880ce575536"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector expression assignment.  <a href="#a51076907d763c0917e12c880ce575536">More...</a><br/></td></tr>
+<tr class="memdesc:a51076907d763c0917e12c880ce575536"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector expression assignment. *.  <a href="#a51076907d763c0917e12c880ce575536">More...</a><br/></td></tr>
 <tr class="separator:a51076907d763c0917e12c880ce575536"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdad9a64471bb43b6d49029de902d80b"><td class="memTemplParams" colspan="2">template&lt;class Expr &gt; </td></tr>
 <tr class="memitem:acdad9a64471bb43b6d49029de902d80b"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#acdad9a64471bb43b6d49029de902d80b">operator%=</a> (const Expr &amp;expr)</td></tr>
-<tr class="memdesc:acdad9a64471bb43b6d49029de902d80b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector expression assignment.  <a href="#acdad9a64471bb43b6d49029de902d80b">More...</a><br/></td></tr>
+<tr class="memdesc:acdad9a64471bb43b6d49029de902d80b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector expression assignment. *.  <a href="#acdad9a64471bb43b6d49029de902d80b">More...</a><br/></td></tr>
 <tr class="separator:acdad9a64471bb43b6d49029de902d80b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adde46afcd466bca9be02356c19da9b15"><td class="memTemplParams" colspan="2">template&lt;class Expr &gt; </td></tr>
 <tr class="memitem:adde46afcd466bca9be02356c19da9b15"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#adde46afcd466bca9be02356c19da9b15">operator&amp;=</a> (const Expr &amp;expr)</td></tr>
-<tr class="memdesc:adde46afcd466bca9be02356c19da9b15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector expression assignment.  <a href="#adde46afcd466bca9be02356c19da9b15">More...</a><br/></td></tr>
+<tr class="memdesc:adde46afcd466bca9be02356c19da9b15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector expression assignment. *.  <a href="#adde46afcd466bca9be02356c19da9b15">More...</a><br/></td></tr>
 <tr class="separator:adde46afcd466bca9be02356c19da9b15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6008a53ec28a3730e2e910662007edc3"><td class="memTemplParams" colspan="2">template&lt;class Expr &gt; </td></tr>
 <tr class="memitem:a6008a53ec28a3730e2e910662007edc3"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#a6008a53ec28a3730e2e910662007edc3">operator|=</a> (const Expr &amp;expr)</td></tr>
-<tr class="memdesc:a6008a53ec28a3730e2e910662007edc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector expression assignment.  <a href="#a6008a53ec28a3730e2e910662007edc3">More...</a><br/></td></tr>
+<tr class="memdesc:a6008a53ec28a3730e2e910662007edc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector expression assignment. *.  <a href="#a6008a53ec28a3730e2e910662007edc3">More...</a><br/></td></tr>
 <tr class="separator:a6008a53ec28a3730e2e910662007edc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4472df58973e0d54e087910ec59ac39"><td class="memTemplParams" colspan="2">template&lt;class Expr &gt; </td></tr>
 <tr class="memitem:af4472df58973e0d54e087910ec59ac39"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#af4472df58973e0d54e087910ec59ac39">operator^=</a> (const Expr &amp;expr)</td></tr>
-<tr class="memdesc:af4472df58973e0d54e087910ec59ac39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector expression assignment.  <a href="#af4472df58973e0d54e087910ec59ac39">More...</a><br/></td></tr>
+<tr class="memdesc:af4472df58973e0d54e087910ec59ac39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector expression assignment. *.  <a href="#af4472df58973e0d54e087910ec59ac39">More...</a><br/></td></tr>
 <tr class="separator:af4472df58973e0d54e087910ec59ac39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92b1cde3a0421f75f323d1839d832499"><td class="memTemplParams" colspan="2">template&lt;class Expr &gt; </td></tr>
 <tr class="memitem:a92b1cde3a0421f75f323d1839d832499"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#a92b1cde3a0421f75f323d1839d832499">operator&lt;&lt;=</a> (const Expr &amp;expr)</td></tr>
-<tr class="memdesc:a92b1cde3a0421f75f323d1839d832499"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector expression assignment.  <a href="#a92b1cde3a0421f75f323d1839d832499">More...</a><br/></td></tr>
+<tr class="memdesc:a92b1cde3a0421f75f323d1839d832499"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector expression assignment. *.  <a href="#a92b1cde3a0421f75f323d1839d832499">More...</a><br/></td></tr>
 <tr class="separator:a92b1cde3a0421f75f323d1839d832499"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84b61181a23a107422f658e295008d25"><td class="memTemplParams" colspan="2">template&lt;class Expr &gt; </td></tr>
 <tr class="memitem:a84b61181a23a107422f658e295008d25"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#a84b61181a23a107422f658e295008d25">operator&gt;&gt;=</a> (const Expr &amp;expr)</td></tr>
-<tr class="memdesc:a84b61181a23a107422f658e295008d25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector expression assignment.  <a href="#a84b61181a23a107422f658e295008d25">More...</a><br/></td></tr>
+<tr class="memdesc:a84b61181a23a107422f658e295008d25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector expression assignment. *.  <a href="#a84b61181a23a107422f658e295008d25">More...</a><br/></td></tr>
 <tr class="separator:a84b61181a23a107422f658e295008d25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa66099d924613ef81fb750060d48ab3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa66099d924613ef81fb750060d48ab3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#afa66099d924613ef81fb750060d48ab3">write_data</a> (size_t offset, size_t <a class="el" href="classvex_1_1vector.html#acba96d67dcc97afdc6ff552d913ca7d7">size</a>, const T *hostptr, cl_bool blocking, std::vector&lt; cl::Event &gt; *uevent=0)</td></tr>
-<tr class="memdesc:afa66099d924613ef81fb750060d48ab3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy data from host buffer to device(s). <br/></td></tr>
-<tr class="separator:afa66099d924613ef81fb750060d48ab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab464b27742b614f203e590e82f1d745b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab464b27742b614f203e590e82f1d745b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#ab464b27742b614f203e590e82f1d745b">read_data</a> (size_t offset, size_t <a class="el" href="classvex_1_1vector.html#acba96d67dcc97afdc6ff552d913ca7d7">size</a>, T *hostptr, cl_bool blocking, std::vector&lt; cl::Event &gt; *uevent=0) const </td></tr>
-<tr class="memdesc:ab464b27742b614f203e590e82f1d745b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy data from device(s) to host buffer . <br/></td></tr>
-<tr class="separator:ab464b27742b614f203e590e82f1d745b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad20134106411dff1dba40d3e7744a908"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad20134106411dff1dba40d3e7744a908"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#ad20134106411dff1dba40d3e7744a908">write_data</a> (size_t offset, size_t <a class="el" href="classvex_1_1vector.html#acba96d67dcc97afdc6ff552d913ca7d7">size</a>, const T *hostptr, bool blocking)</td></tr>
+<tr class="memdesc:ad20134106411dff1dba40d3e7744a908"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy data from host buffer to device(s). <br/></td></tr>
+<tr class="separator:ad20134106411dff1dba40d3e7744a908"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a345dd428ce29f0756b0c2bb1f951ec26"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a345dd428ce29f0756b0c2bb1f951ec26"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#a345dd428ce29f0756b0c2bb1f951ec26">read_data</a> (size_t offset, size_t <a class="el" href="classvex_1_1vector.html#acba96d67dcc97afdc6ff552d913ca7d7">size</a>, T *hostptr, bool blocking) const </td></tr>
+<tr class="memdesc:a345dd428ce29f0756b0c2bb1f951ec26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy data from device(s) to host buffer . <br/></td></tr>
+<tr class="separator:a345dd428ce29f0756b0c2bb1f951ec26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -290,25 +284,7 @@ template&lt;typename S , size_t N&gt; </td></tr>
 class vex::vector&lt; T &gt;</h3>
 
 <p>Device vector. </p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a class="anchor" id="a1acb768df9ae0304b3ddaf67e17903bb"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef std::unique_ptr&lt;T[], buffer_unmapper&gt; <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt;::<a class="el" href="classvex_1_1vector.html#a1acb768df9ae0304b3ddaf67e17903bb">mapped_array</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Host array mapped to device buffer. </p>
-<p>Unmaps automatically when goes out of scope. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a9c2de310d894fca15385030ae906d545"></a>
 <div class="memitem">
 <div class="memproto">
@@ -361,8 +337,8 @@ template&lt;class Expr &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Vector expression assignment. </p>
-<p>The appropriate kernel is compiled first time the assignment is made. Vectors participating in expression should have same number of parts; corresponding parts of the vectors should reside on the same compute devices. </p>
+<p>Vector expression assignment. *. </p>
+<p>The appropriate kernel is compiled first time the assignment is * made. Vectors participating in expression should have same number of * parts; corresponding parts of the vectors should reside on the same * compute devices. </p>
 
 </div>
 </div>
@@ -384,8 +360,8 @@ template&lt;class Expr &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Vector expression assignment. </p>
-<p>The appropriate kernel is compiled first time the assignment is made. Vectors participating in expression should have same number of parts; corresponding parts of the vectors should reside on the same compute devices. </p>
+<p>Vector expression assignment. *. </p>
+<p>The appropriate kernel is compiled first time the assignment is * made. Vectors participating in expression should have same number of * parts; corresponding parts of the vectors should reside on the same * compute devices. </p>
 
 </div>
 </div>
@@ -407,8 +383,8 @@ template&lt;class Expr &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Vector expression assignment. </p>
-<p>The appropriate kernel is compiled first time the assignment is made. Vectors participating in expression should have same number of parts; corresponding parts of the vectors should reside on the same compute devices. </p>
+<p>Vector expression assignment. *. </p>
+<p>The appropriate kernel is compiled first time the assignment is * made. Vectors participating in expression should have same number of * parts; corresponding parts of the vectors should reside on the same * compute devices. </p>
 
 </div>
 </div>
@@ -430,8 +406,8 @@ template&lt;class Expr &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Vector expression assignment. </p>
-<p>The appropriate kernel is compiled first time the assignment is made. Vectors participating in expression should have same number of parts; corresponding parts of the vectors should reside on the same compute devices. </p>
+<p>Vector expression assignment. *. </p>
+<p>The appropriate kernel is compiled first time the assignment is * made. Vectors participating in expression should have same number of * parts; corresponding parts of the vectors should reside on the same * compute devices. </p>
 
 </div>
 </div>
@@ -453,8 +429,8 @@ template&lt;class Expr &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Vector expression assignment. </p>
-<p>The appropriate kernel is compiled first time the assignment is made. Vectors participating in expression should have same number of parts; corresponding parts of the vectors should reside on the same compute devices. </p>
+<p>Vector expression assignment. *. </p>
+<p>The appropriate kernel is compiled first time the assignment is * made. Vectors participating in expression should have same number of * parts; corresponding parts of the vectors should reside on the same * compute devices. </p>
 
 </div>
 </div>
@@ -476,8 +452,8 @@ template&lt;class Expr &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Vector expression assignment. </p>
-<p>The appropriate kernel is compiled first time the assignment is made. Vectors participating in expression should have same number of parts; corresponding parts of the vectors should reside on the same compute devices. </p>
+<p>Vector expression assignment. *. </p>
+<p>The appropriate kernel is compiled first time the assignment is * made. Vectors participating in expression should have same number of * parts; corresponding parts of the vectors should reside on the same * compute devices. </p>
 
 </div>
 </div>
@@ -499,8 +475,8 @@ template&lt;class Expr &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Vector expression assignment. </p>
-<p>The appropriate kernel is compiled first time the assignment is made. Vectors participating in expression should have same number of parts; corresponding parts of the vectors should reside on the same compute devices. </p>
+<p>Vector expression assignment. *. </p>
+<p>The appropriate kernel is compiled first time the assignment is * made. Vectors participating in expression should have same number of * parts; corresponding parts of the vectors should reside on the same * compute devices. </p>
 
 </div>
 </div>
@@ -522,8 +498,8 @@ template&lt;class Expr &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Vector expression assignment. </p>
-<p>The appropriate kernel is compiled first time the assignment is made. Vectors participating in expression should have same number of parts; corresponding parts of the vectors should reside on the same compute devices. </p>
+<p>Vector expression assignment. *. </p>
+<p>The appropriate kernel is compiled first time the assignment is * made. Vectors participating in expression should have same number of * parts; corresponding parts of the vectors should reside on the same * compute devices. </p>
 
 </div>
 </div>
@@ -545,8 +521,8 @@ template&lt;class Expr &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Vector expression assignment. </p>
-<p>The appropriate kernel is compiled first time the assignment is made. Vectors participating in expression should have same number of parts; corresponding parts of the vectors should reside on the same compute devices. </p>
+<p>Vector expression assignment. *. </p>
+<p>The appropriate kernel is compiled first time the assignment is * made. Vectors participating in expression should have same number of * parts; corresponding parts of the vectors should reside on the same * compute devices. </p>
 
 </div>
 </div>
@@ -568,8 +544,8 @@ template&lt;class Expr &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Vector expression assignment. </p>
-<p>The appropriate kernel is compiled first time the assignment is made. Vectors participating in expression should have same number of parts; corresponding parts of the vectors should reside on the same compute devices. </p>
+<p>Vector expression assignment. *. </p>
+<p>The appropriate kernel is compiled first time the assignment is * made. Vectors participating in expression should have same number of * parts; corresponding parts of the vectors should reside on the same * compute devices. </p>
 
 </div>
 </div>
@@ -591,8 +567,8 @@ template&lt;class Expr &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Vector expression assignment. </p>
-<p>The appropriate kernel is compiled first time the assignment is made. Vectors participating in expression should have same number of parts; corresponding parts of the vectors should reside on the same compute devices. </p>
+<p>Vector expression assignment. *. </p>
+<p>The appropriate kernel is compiled first time the assignment is * made. Vectors participating in expression should have same number of * parts; corresponding parts of the vectors should reside on the same * compute devices. </p>
 
 </div>
 </div>

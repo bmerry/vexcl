@@ -29,6 +29,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -66,6 +67,7 @@
 <code>#include &lt;iostream&gt;</code><br/>
 <code>#include &lt;type_traits&gt;</code><br/>
 <code>#include &lt;<a class="el" href="vector_8hpp.html">vexcl/vector.hpp</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="vector__view_8hpp.html">vexcl/vector_view.hpp</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="hybrid__ell_8inl.html">vexcl/spmat/hybrid_ell.inl</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="csr_8inl.html">vexcl/spmat/csr.inl</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="ccsr_8hpp.html">vexcl/spmat/ccsr.hpp</a>&gt;</code><br/>
@@ -77,7 +79,7 @@
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="spmat_8hpp__incl.png" border="0" usemap="#vexcl_2spmat_8hpp" alt=""/></div>
 <map name="vexcl_2spmat_8hpp" id="vexcl_2spmat_8hpp">
-<area shape="rect" id="node19" href="vector_8hpp.html" title="OpenCL device vector. " alt="" coords="1911,88,2037,115"/><area shape="rect" id="node123" href="hybrid__ell_8inl.html" title="OpenCL sparse matrix in Hybrid ELL&#45;CSR format. " alt="" coords="2544,81,2686,122"/><area shape="rect" id="node125" href="csr_8inl.html" title="OpenCL sparse matrix in CSR format. " alt="" coords="2711,88,2850,115"/><area shape="rect" id="node127" href="ccsr_8hpp.html" title="Sparse matrix in Compressed CSR format. " alt="" coords="2875,88,3030,115"/><area shape="rect" id="node129" href="inline__spmv_8hpp.html" title="Inline SpMV operation. " alt="" coords="3055,81,3190,122"/><area shape="rect" id="node33" href="util_8hpp.html" title="OpenCL general utilities. " alt="" coords="1477,253,1582,280"/><area shape="rect" id="node49" href="operations_8hpp.html" title="Templates used for expression tree traversal and kernel generation. " alt="" coords="795,171,949,197"/><area shape="rect" id="node69" href="profiler_8hpp.html" title="Simple OpenCL/Host profiler. " alt="" coords="2685,253,2814,280"/><area shape="rect" id="node107" href="devlist_8hpp.html" title="OpenCL device enumeration and context initialization. " alt="" coords="1732,171,1858,197"/><area shape="rect" id="node63" href="types_8hpp.html" title="Support for using native C++ and OpenCL types in expressions. " alt="" coords="648,253,769,280"/></map>
+<area shape="rect" id="node19" href="vector_8hpp.html" title="OpenCL device vector. " alt="" coords="2779,179,2905,205"/><area shape="rect" id="node111" href="vector__view_8hpp.html" title="Provides sub&#45;view for an existing vex::vector. " alt="" coords="3477,88,3635,115"/><area shape="rect" id="node132" href="hybrid__ell_8inl.html" title="OpenCL sparse matrix in Hybrid ELL&#45;CSR format. " alt="" coords="4385,81,4527,122"/><area shape="rect" id="node134" href="csr_8inl.html" title="OpenCL sparse matrix in CSR format. " alt="" coords="4553,88,4691,115"/><area shape="rect" id="node136" href="ccsr_8hpp.html" title="Sparse matrix in Compressed CSR format. " alt="" coords="4716,88,4871,115"/><area shape="rect" id="node138" href="inline__spmv_8hpp.html" title="Inline SpMV operation. " alt="" coords="4897,81,5031,122"/><area shape="rect" id="node33" href="backend_8hpp.html" title="Compile&#45;time selection of backend (OpenCL/CUDA). " alt="" coords="2453,344,2593,371"/><area shape="rect" id="node37" href="util_8hpp.html" title="OpenCL general utilities. " alt="" coords="3076,344,3181,371"/><area shape="rect" id="node53" href="operations_8hpp.html" title="Templates used for expression tree traversal and kernel generation. " alt="" coords="3130,261,3283,288"/><area shape="rect" id="node74" href="profiler_8hpp.html" title="Simple OpenCL/Host profiler. " alt="" coords="1225,261,1354,288"/><area shape="rect" id="node104" href="devlist_8hpp.html" title="OpenCL device enumeration and context initialization. " alt="" coords="2569,261,2695,288"/><area shape="rect" id="node35" href="opencl_8hpp.html" title="OpenCL backend for compute kernel generation/compilation/launching. " alt="" coords="2430,427,2617,453"/><area shape="rect" id="node66" href="types_8hpp.html" title="Support for using native C++ and OpenCL types in expressions. " alt="" coords="2931,344,3051,371"/><area shape="rect" id="node121" href="element__index_8hpp.html" title="Element index for use in vector expressions. " alt="" coords="3032,179,3211,205"/></map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> This graph shows which files directly or indirectly include this file:</div>
@@ -103,9 +105,9 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ae8e8c4b4386379f9b8489e382909070e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#ae8e8c4b4386379f9b8489e382909070e">vex::device_spmv_perf</a> (const cl::CommandQueue &amp;q)</td></tr>
-<tr class="memdesc:ae8e8c4b4386379f9b8489e382909070e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weights device wrt to spmv performance.  <a href="#ae8e8c4b4386379f9b8489e382909070e">More...</a><br/></td></tr>
-<tr class="separator:ae8e8c4b4386379f9b8489e382909070e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac74a209f956b87b8dc289aad5498a25c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#ac74a209f956b87b8dc289aad5498a25c">vex::device_spmv_perf</a> (const backend::command_queue &amp;q)</td></tr>
+<tr class="memdesc:ac74a209f956b87b8dc289aad5498a25c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weights device wrt to spmv performance.  <a href="#ac74a209f956b87b8dc289aad5498a25c">More...</a><br/></td></tr>
+<tr class="separator:ac74a209f956b87b8dc289aad5498a25c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>OpenCL sparse matrix. </p>

@@ -29,6 +29,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -78,27 +79,29 @@ template&lt;typename T1 , typename T2 &gt; </td></tr>
 <tr class="memitem:aaf8ddde2b93ae479a9bbf9633c8ba886"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf8ddde2b93ae479a9bbf9633c8ba886"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () const </td></tr>
 <tr class="separator:aaf8ddde2b93ae479a9bbf9633c8ba886"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c154c0b1c306c5cd99ffc89c95e6a67"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4c154c0b1c306c5cd99ffc89c95e6a67"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>preamble</b> (const std::string &amp;prm_name, const cl::Device &amp;, detail::kernel_generator_state_ptr) const </td></tr>
-<tr class="separator:a4c154c0b1c306c5cd99ffc89c95e6a67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab022a7e64bab3eefd02b2dfa5aa63374"><td class="memTemplParams" colspan="2"><a class="anchor" id="ab022a7e64bab3eefd02b2dfa5aa63374"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ab022a7e64bab3eefd02b2dfa5aa63374"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><b>parameter_declaration</b> (const std::string &amp;prm_name, const cl::Device &amp;, detail::kernel_generator_state_ptr) const </td></tr>
-<tr class="separator:ab022a7e64bab3eefd02b2dfa5aa63374"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd1d032402c04c4bb1ea4f59e4e52978"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd1d032402c04c4bb1ea4f59e4e52978"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>local_preamble</b> (const std::string &amp;, const cl::Device &amp;, detail::kernel_generator_state_ptr) const </td></tr>
-<tr class="separator:acd1d032402c04c4bb1ea4f59e4e52978"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6362da537fb2d4fd7ceb9d02fbe74578"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6362da537fb2d4fd7ceb9d02fbe74578"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>partial_expression</b> (const std::string &amp;prm_name, const cl::Device &amp;, detail::kernel_generator_state_ptr) const </td></tr>
-<tr class="separator:a6362da537fb2d4fd7ceb9d02fbe74578"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ff0d0cb71874c6aa74c5fc475dac3ee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8ff0d0cb71874c6aa74c5fc475dac3ee"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setArgs</b> (cl::Kernel &amp;kernel, unsigned, size_t, unsigned &amp;position, detail::kernel_generator_state_ptr) const </td></tr>
-<tr class="separator:a8ff0d0cb71874c6aa74c5fc475dac3ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf27a3898ff920b8c5a7057d1aff58b1"><td class="memTemplParams" colspan="2"><a class="anchor" id="adf27a3898ff920b8c5a7057d1aff58b1"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:adf27a3898ff920b8c5a7057d1aff58b1"><td class="memTemplItemLeft" align="right" valign="top">vector_view&lt; T, <a class="el" href="structvex_1_1gslice.html">gslice</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structvex_1_1gslice.html#adf27a3898ff920b8c5a7057d1aff58b1">operator()</a> (const <a class="el" href="classvex_1_1vector.html">vector</a>&lt; T &gt; &amp;base) const </td></tr>
-<tr class="memdesc:adf27a3898ff920b8c5a7057d1aff58b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns sliced vector. <br/></td></tr>
-<tr class="separator:adf27a3898ff920b8c5a7057d1aff58b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4ddd3190ec04e6f5eef48337490bfab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4ddd3190ec04e6f5eef48337490bfab"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>preamble</b> (backend::source_generator &amp;src, const std::string &amp;prm_name, const <a class="el" href="classvex_1_1backend_1_1cuda_1_1command__queue.html">backend::command_queue</a> &amp;, detail::kernel_generator_state_ptr) const </td></tr>
+<tr class="separator:ab4ddd3190ec04e6f5eef48337490bfab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2fc55075d703ba69501847b9f06a2a0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad2fc55075d703ba69501847b9f06a2a0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>parameter_declaration</b> (backend::source_generator &amp;src, const std::string &amp;prm_name, const <a class="el" href="classvex_1_1backend_1_1cuda_1_1command__queue.html">backend::command_queue</a> &amp;, detail::kernel_generator_state_ptr) const </td></tr>
+<tr class="separator:ad2fc55075d703ba69501847b9f06a2a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60d54e3e9e90bd8f5a157a02e5e6e9c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60d54e3e9e90bd8f5a157a02e5e6e9c6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>local_preamble</b> (backend::source_generator &amp;, const std::string &amp;, const <a class="el" href="classvex_1_1backend_1_1cuda_1_1command__queue.html">backend::command_queue</a> &amp;, detail::kernel_generator_state_ptr) const </td></tr>
+<tr class="separator:a60d54e3e9e90bd8f5a157a02e5e6e9c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5202328f97f01b05a8c8ab8a7dca01b0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5202328f97f01b05a8c8ab8a7dca01b0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>index</b> (backend::source_generator &amp;src, const std::string &amp;prm_name, const <a class="el" href="classvex_1_1backend_1_1cuda_1_1command__queue.html">backend::command_queue</a> &amp;, detail::kernel_generator_state_ptr) const </td></tr>
+<tr class="separator:a5202328f97f01b05a8c8ab8a7dca01b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa05bf7d9fd25e33331ec9718c62c29a1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa05bf7d9fd25e33331ec9718c62c29a1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setArgs</b> (backend::kernel &amp;kernel, unsigned, size_t, detail::kernel_generator_state_ptr) const </td></tr>
+<tr class="separator:aa05bf7d9fd25e33331ec9718c62c29a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b3aad88352f5da13754544d83cbea82"><td class="memTemplParams" colspan="2"><a class="anchor" id="a5b3aad88352f5da13754544d83cbea82"></a>
+template&lt;class Expr &gt; </td></tr>
+<tr class="memitem:a5b3aad88352f5da13754544d83cbea82"><td class="memTemplItemLeft" align="right" valign="top">vector_view&lt; typename <br class="typebreak"/>
+boost::proto::result_of::as_child<br class="typebreak"/>
+&lt; const Expr, vector_domain &gt;<br class="typebreak"/>
+::type, <a class="el" href="structvex_1_1gslice.html">gslice</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structvex_1_1gslice.html#a5b3aad88352f5da13754544d83cbea82">operator()</a> (const Expr &amp;expr) const </td></tr>
+<tr class="memdesc:a5b3aad88352f5da13754544d83cbea82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns sliced vector. <br/></td></tr>
+<tr class="separator:a5b3aad88352f5da13754544d83cbea82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>

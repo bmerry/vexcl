@@ -1,0 +1,13 @@
+<map id="vexcl/backend/opencl/fft.hpp" name="vexcl/backend/opencl/fft.hpp">
+<area shape="rect" id="node5" href="$vector_8hpp.html" title="OpenCL device vector. " alt="" coords="1269,195,1394,221"/>
+<area shape="rect" id="node119" href="$plan_8hpp.html" title="FFT plan, stores kernels and buffers for one configuration. " alt="" coords="1768,97,1926,138"/>
+<area shape="rect" id="node23" href="$backend_8hpp.html" title="Compile&#45;time selection of backend (OpenCL/CUDA). " alt="" coords="1096,376,1236,403"/>
+<area shape="rect" id="node33" href="$util_8hpp.html" title="OpenCL general utilities. " alt="" coords="967,376,1072,403"/>
+<area shape="rect" id="node50" href="$operations_8hpp.html" title="Templates used for expression tree traversal and kernel generation. " alt="" coords="700,285,853,312"/>
+<area shape="rect" id="node72" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler. " alt="" coords="2158,285,2286,312"/>
+<area shape="rect" id="node110" href="$devlist_8hpp.html" title="OpenCL device enumeration and context initialization. " alt="" coords="1319,285,1445,312"/>
+<area shape="rect" id="node25" href="$opencl_8hpp.html" title="OpenCL backend for compute kernel generation/compilation/launching. " alt="" coords="1024,459,1210,485"/>
+<area shape="rect" id="node29" href="$opencl_2error_8hpp.html" title="Output OpenCL errors to a std::stream. " alt="" coords="1044,534,1202,575"/>
+<area shape="rect" id="node63" href="$types_8hpp.html" title="Support for using native C++ and OpenCL types in expressions. " alt="" coords="224,376,345,403"/>
+<area shape="rect" id="node129" href="$kernels_8hpp.html" title="Kernel generator for FFT. " alt="" coords="1960,187,2118,229"/>
+</map>

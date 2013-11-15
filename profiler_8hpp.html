@@ -29,6 +29,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -49,7 +50,6 @@
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">profiler.hpp File Reference</div>  </div>
@@ -78,7 +78,7 @@
 <code>#include &lt;boost/accumulators/statistics/sum.hpp&gt;</code><br/>
 <code>#include &lt;boost/accumulators/statistics/mean.hpp&gt;</code><br/>
 <code>#include &lt;boost/accumulators/statistics/median.hpp&gt;</code><br/>
-<code>#include &lt;CL/cl.hpp&gt;</code><br/>
+<code>#include &lt;<a class="el" href="backend_8hpp.html">vexcl/backend.hpp</a>&gt;</code><br/>
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for profiler.hpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -86,7 +86,7 @@
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="profiler_8hpp__incl.png" border="0" usemap="#vexcl_2profiler_8hpp" alt=""/></div>
 <map name="vexcl_2profiler_8hpp" id="vexcl_2profiler_8hpp">
-</map>
+<area shape="rect" id="node43" href="backend_8hpp.html" title="Compile&#45;time selection of backend (OpenCL/CUDA). " alt="" coords="961,88,1100,115"/><area shape="rect" id="node45" href="opencl_8hpp.html" title="OpenCL backend for compute kernel generation/compilation/launching. " alt="" coords="848,171,1035,197"/><area shape="rect" id="node49" href="opencl_2error_8hpp.html" title="Output OpenCL errors to a std::stream. " alt="" coords="694,337,852,378"/><area shape="rect" id="node53" href="opencl_2context_8hpp.html" title="OpenCL device enumeration and context initialization. " alt="" coords="511,337,669,378"/><area shape="rect" id="node58" href="opencl_2filter_8hpp.html" title="Device filters for OpenCL backend. " alt="" coords="226,337,384,378"/><area shape="rect" id="node76" href="opencl_2device__vector_8hpp.html" title="OpenCL device vector. " alt="" coords="679,246,837,287"/><area shape="rect" id="node79" href="opencl_2source_8hpp.html" title="Helper class for OpenCL source code generation. " alt="" coords="1349,246,1507,287"/><area shape="rect" id="node112" href="opencl_2compiler_8hpp.html" title="OpenCL source code compilation wrapper. " alt="" coords="1030,337,1188,378"/><area shape="rect" id="node116" href="opencl_2kernel_8hpp.html" title="An abstraction over OpenCL compute kernel. " alt="" coords="862,246,1020,287"/><area shape="rect" id="node87" href="common_8hpp.html" title="Common backend utilities. " alt="" coords="931,435,1132,461"/><area shape="rect" id="node100" href="types_8hpp.html" title="Support for using native C++ and OpenCL types in expressions. " alt="" coords="1417,344,1537,371"/></map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> This graph shows which files directly or indirectly include this file:</div>
@@ -95,7 +95,7 @@
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="profiler_8hpp__dep__incl.png" border="0" usemap="#vexcl_2profiler_8hppdep" alt=""/></div>
 <map name="vexcl_2profiler_8hppdep" id="vexcl_2profiler_8hppdep">
-<area shape="rect" id="node3" href="vector_8hpp.html" title="OpenCL device vector. " alt="" coords="439,80,564,107"/><area shape="rect" id="node7" href="plan_8hpp.html" title="FFT plan, stores kernels and buffers for one configuration. " alt="" coords="5,163,135,189"/><area shape="rect" id="node11" href="vexcl_8hpp.html" title="Vector expression template library for OpenCL. " alt="" coords="731,320,849,347"/><area shape="rect" id="node5" href="boost__compute_8hpp.html" title="Provides wrappers for some of Boost.Compute (https://github.com/kylelutz/compute) algorithms..." alt="" coords="161,155,311,197"/><area shape="rect" id="node9" href="fft_8hpp.html" title="Fast Fourier Transformation. " alt="" coords="215,245,313,272"/><area shape="rect" id="node14" href="gather_8hpp.html" title="Gather scattered points from OpenCL device vector. " alt="" coords="389,245,515,272"/><area shape="rect" id="node17" href="multi__array_8hpp.html" title="An analog of boost::multi_array. " alt="" coords="539,245,695,272"/><area shape="rect" id="node19" href="vector__view_8hpp.html" title="Provides sub&#45;view for an existing vex::vector. " alt="" coords="539,163,697,189"/><area shape="rect" id="node23" href="multivector_8hpp.html" title="OpenCL device multi&#45;vector. " alt="" coords="771,245,928,272"/><area shape="rect" id="node26" href="spmat_8hpp.html" title="OpenCL sparse matrix. " alt="" coords="953,245,1079,272"/><area shape="rect" id="node29" href="stencil_8hpp.html" title="Stencil convolution. " alt="" coords="825,163,951,189"/><area shape="rect" id="node32" href="vector__pointer_8hpp.html" title="Cast vex::vector to a raw pointer. " alt="" coords="975,163,1152,189"/></map>
+<area shape="rect" id="node3" href="plan_8hpp.html" title="FFT plan, stores kernels and buffers for one configuration. " alt="" coords="1215,155,1373,197"/><area shape="rect" id="node9" href="vexcl_8hpp.html" title="Vector expression template library for OpenCL. " alt="" coords="531,411,649,437"/><area shape="rect" id="node11" href="vector_8hpp.html" title="OpenCL device vector. " alt="" coords="629,80,754,107"/><area shape="rect" id="node5" href="backend_2opencl_2fft_8hpp.html" title="Fast Fourier Transformation. " alt="" coords="1187,246,1345,287"/><area shape="rect" id="node7" href="fft_8hpp.html" title="Backend selector for FFT. " alt="" coords="1111,336,1210,363"/><area shape="rect" id="node15" href="boost__compute_8hpp.html" title="Provides wrappers for some of Boost.Compute (https://github.com/kylelutz/compute) algorithms..." alt="" coords="755,155,905,197"/><area shape="rect" id="node17" href="gather_8hpp.html" title="Gather scattered points from OpenCL device vector. " alt="" coords="804,253,930,280"/><area shape="rect" id="node20" href="vector__view_8hpp.html" title="Provides sub&#45;view for an existing vex::vector. " alt="" coords="929,163,1087,189"/><area shape="rect" id="node23" href="multi__array_8hpp.html" title="An analog of boost::multi_array. " alt="" coords="1007,253,1162,280"/><area shape="rect" id="node25" href="spmat_8hpp.html" title="OpenCL sparse matrix. " alt="" coords="653,253,779,280"/><area shape="rect" id="node29" href="generator_8hpp.html" title="OpenCL kernel generator. " alt="" coords="45,336,193,363"/><area shape="rect" id="node33" href="multivector_8hpp.html" title="OpenCL device multi&#45;vector. " alt="" coords="218,336,375,363"/><area shape="rect" id="node37" href="stencil_8hpp.html" title="Stencil convolution. " alt="" coords="400,336,526,363"/><area shape="rect" id="node40" href="vector__pointer_8hpp.html" title="Cast vex::vector to a raw pointer. " alt="" coords="400,163,577,189"/></map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -115,10 +115,11 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aa0b2d63baf732e819287e0c07f4a2ceb"><td class="memTemplParams" colspan="2"><a class="anchor" id="aa0b2d63baf732e819287e0c07f4a2ceb"></a>
+<tr class="memitem:a5801a416346704678a4cd8810c262722"><td class="memTemplParams" colspan="2"><a class="anchor" id="a5801a416346704678a4cd8810c262722"></a>
 template&lt;class Clock &gt; </td></tr>
-<tr class="memitem:aa0b2d63baf732e819287e0c07f4a2ceb"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;os, <a class="el" href="classvex_1_1profiler.html">vex::profiler</a>&lt; Clock &gt; &amp;prof)</td></tr>
-<tr class="separator:aa0b2d63baf732e819287e0c07f4a2ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5801a416346704678a4cd8810c262722"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>std::operator&lt;&lt;</b> (std::ostream &amp;os, <a class="el" href="classvex_1_1profiler.html">vex::profiler</a>&lt; Clock &gt; &amp;prof)</td></tr>
+<tr class="memdesc:a5801a416346704678a4cd8810c262722"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends the profiler summary to the output stream. <br/></td></tr>
+<tr class="separator:a5801a416346704678a4cd8810c262722"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Simple OpenCL/Host profiler. </p>

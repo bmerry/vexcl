@@ -29,6 +29,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -66,7 +67,7 @@
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="multi__array_8hpp__incl.png" border="0" usemap="#vexcl_2multi__array_8hpp" alt=""/></div>
 <map name="vexcl_2multi__array_8hpp" id="vexcl_2multi__array_8hpp">
-<area shape="rect" id="node5" href="vector_8hpp.html" title="OpenCL device vector. " alt="" coords="1063,163,1188,189"/><area shape="rect" id="node114" href="vector__view_8hpp.html" title="Provides sub&#45;view for an existing vex::vector. " alt="" coords="1610,80,1768,107"/><area shape="rect" id="node22" href="util_8hpp.html" title="OpenCL general utilities. " alt="" coords="886,328,991,355"/><area shape="rect" id="node39" href="operations_8hpp.html" title="Templates used for expression tree traversal and kernel generation. " alt="" coords="1401,245,1555,272"/><area shape="rect" id="node60" href="profiler_8hpp.html" title="Simple OpenCL/Host profiler. " alt="" coords="2369,328,2497,355"/><area shape="rect" id="node98" href="devlist_8hpp.html" title="OpenCL device enumeration and context initialization. " alt="" coords="574,245,700,272"/><area shape="rect" id="node54" href="types_8hpp.html" title="Support for using native C++ and OpenCL types in expressions. " alt="" coords="1798,328,1919,355"/></map>
+<area shape="rect" id="node5" href="vector_8hpp.html" title="OpenCL device vector. " alt="" coords="2239,163,2364,189"/><area shape="rect" id="node115" href="vector__view_8hpp.html" title="Provides sub&#45;view for an existing vex::vector. " alt="" coords="885,80,1043,107"/><area shape="rect" id="node22" href="backend_8hpp.html" title="Compile&#45;time selection of backend (OpenCL/CUDA). " alt="" coords="2662,328,2801,355"/><area shape="rect" id="node28" href="util_8hpp.html" title="OpenCL general utilities. " alt="" coords="1982,328,2087,355"/><area shape="rect" id="node45" href="operations_8hpp.html" title="Templates used for expression tree traversal and kernel generation. " alt="" coords="1532,245,1685,272"/><area shape="rect" id="node68" href="profiler_8hpp.html" title="Simple OpenCL/Host profiler. " alt="" coords="4097,245,4225,272"/><area shape="rect" id="node106" href="devlist_8hpp.html" title="OpenCL device enumeration and context initialization. " alt="" coords="2402,245,2528,272"/><area shape="rect" id="node24" href="opencl_8hpp.html" title="OpenCL backend for compute kernel generation/compilation/launching. " alt="" coords="2509,411,2696,437"/><area shape="rect" id="node59" href="types_8hpp.html" title="Support for using native C++ and OpenCL types in expressions. " alt="" coords="1598,328,1719,355"/><area shape="rect" id="node125" href="element__index_8hpp.html" title="Element index for use in vector expressions. " alt="" coords="1311,163,1491,189"/></map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -80,12 +81,14 @@ Functions</h2></td></tr>
 <tr class="memitem:ab9f2a40c6b7a0f4b540ba12f2b52532b"><td class="memTemplParams" colspan="2"><a class="anchor" id="ab9f2a40c6b7a0f4b540ba12f2b52532b"></a>
 template&lt;class RDC , typename T , size_t NDIM, size_t NR&gt; </td></tr>
 <tr class="memitem:ab9f2a40c6b7a0f4b540ba12f2b52532b"><td class="memTemplItemLeft" align="right" valign="top">reduced_vector_view&lt; vector&lt; T &gt;<br class="typebreak"/>
-, NDIM, NR, RDC &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::reduce</b> (const multi_array&lt; T, NDIM &gt; &amp;m, const std::array&lt; size_t, NR &gt; &amp;reduce_dims)</td></tr>
+, NDIM, NR, RDC &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#ab9f2a40c6b7a0f4b540ba12f2b52532b">vex::reduce</a> (const multi_array&lt; T, NDIM &gt; &amp;m, const std::array&lt; size_t, NR &gt; &amp;reduce_dims)</td></tr>
+<tr class="memdesc:ab9f2a40c6b7a0f4b540ba12f2b52532b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduce vex::multi_array along the specified dimensions. <br/></td></tr>
 <tr class="separator:ab9f2a40c6b7a0f4b540ba12f2b52532b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af475f0b6dadddfa0df505b5be6555fe6"><td class="memTemplParams" colspan="2"><a class="anchor" id="af475f0b6dadddfa0df505b5be6555fe6"></a>
 template&lt;class RDC , typename T , size_t NDIM&gt; </td></tr>
 <tr class="memitem:af475f0b6dadddfa0df505b5be6555fe6"><td class="memTemplItemLeft" align="right" valign="top">reduced_vector_view&lt; vector&lt; T &gt;<br class="typebreak"/>
-, NDIM, 1, RDC &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::reduce</b> (const multi_array&lt; T, NDIM &gt; &amp;m, size_t reduce_dim)</td></tr>
+, NDIM, 1, RDC &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#af475f0b6dadddfa0df505b5be6555fe6">vex::reduce</a> (const multi_array&lt; T, NDIM &gt; &amp;m, size_t reduce_dim)</td></tr>
+<tr class="memdesc:af475f0b6dadddfa0df505b5be6555fe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduce vex::multi_array along the specified dimension. <br/></td></tr>
 <tr class="separator:af475f0b6dadddfa0df505b5be6555fe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>

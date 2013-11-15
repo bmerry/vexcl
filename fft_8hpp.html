@@ -29,6 +29,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -46,19 +47,15 @@
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
 <div class="title">fft.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Fast Fourier Transformation.  
+<p>Backend selector for FFT.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;memory&gt;</code><br/>
-<code>#include &lt;<a class="el" href="vector_8hpp.html">vexcl/vector.hpp</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="plan_8hpp.html">vexcl/fft/plan.hpp</a>&gt;</code><br/>
+<div class="textblock"><code>#include &lt;<a class="el" href="backend_8hpp.html">vexcl/backend.hpp</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="backend_2opencl_2fft_8hpp.html">vexcl/backend/opencl/fft.hpp</a>&gt;</code><br/>
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for fft.hpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -66,7 +63,7 @@
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="fft_8hpp__incl.png" border="0" usemap="#vexcl_2fft_8hpp" alt=""/></div>
 <map name="vexcl_2fft_8hpp" id="vexcl_2fft_8hpp">
-<area shape="rect" id="node5" href="vector_8hpp.html" title="OpenCL device vector. " alt="" coords="1511,155,1636,181"/><area shape="rect" id="node116" href="plan_8hpp.html" title="FFT plan, stores kernels and buffers for one configuration. " alt="" coords="2401,80,2531,107"/><area shape="rect" id="node23" href="util_8hpp.html" title="OpenCL general utilities. " alt="" coords="1051,312,1156,339"/><area shape="rect" id="node40" href="operations_8hpp.html" title="Templates used for expression tree traversal and kernel generation. " alt="" coords="552,229,705,256"/><area shape="rect" id="node60" href="profiler_8hpp.html" title="Simple OpenCL/Host profiler. " alt="" coords="2402,312,2531,339"/><area shape="rect" id="node98" href="devlist_8hpp.html" title="OpenCL device enumeration and context initialization. " alt="" coords="1510,229,1636,256"/><area shape="rect" id="node54" href="types_8hpp.html" title="Support for using native C++ and OpenCL types in expressions. " alt="" coords="718,312,839,339"/><area shape="rect" id="node126" href="kernels_8hpp.html" title="Kernel generator for FFT. " alt="" coords="2280,155,2428,181"/></map>
+<area shape="rect" id="node3" href="backend_8hpp.html" title="Compile&#45;time selection of backend (OpenCL/CUDA). " alt="" coords="1265,427,1404,453"/><area shape="rect" id="node81" href="backend_2opencl_2fft_8hpp.html" title="Fast Fourier Transformation. " alt="" coords="1339,81,1497,122"/><area shape="rect" id="node5" href="opencl_8hpp.html" title="OpenCL backend for compute kernel generation/compilation/launching. " alt="" coords="740,501,927,528"/><area shape="rect" id="node9" href="opencl_2error_8hpp.html" title="Output OpenCL errors to a std::stream. " alt="" coords="531,667,689,709"/><area shape="rect" id="node14" href="opencl_2context_8hpp.html" title="OpenCL device enumeration and context initialization. " alt="" coords="297,667,455,709"/><area shape="rect" id="node20" href="opencl_2filter_8hpp.html" title="Device filters for OpenCL backend. " alt="" coords="1102,667,1260,709"/><area shape="rect" id="node39" href="opencl_2device__vector_8hpp.html" title="OpenCL device vector. " alt="" coords="285,577,443,618"/><area shape="rect" id="node42" href="opencl_2source_8hpp.html" title="Helper class for OpenCL source code generation. " alt="" coords="1398,577,1556,618"/><area shape="rect" id="node72" href="opencl_2compiler_8hpp.html" title="OpenCL source code compilation wrapper. " alt="" coords="766,667,924,709"/><area shape="rect" id="node76" href="opencl_2kernel_8hpp.html" title="An abstraction over OpenCL compute kernel. " alt="" coords="741,577,899,618"/><area shape="rect" id="node52" href="common_8hpp.html" title="Common backend utilities. " alt="" coords="1195,765,1396,792"/><area shape="rect" id="node62" href="types_8hpp.html" title="Support for using native C++ and OpenCL types in expressions. " alt="" coords="1937,675,2057,701"/><area shape="rect" id="node85" href="vector_8hpp.html" title="OpenCL device vector. " alt="" coords="1559,269,1684,296"/><area shape="rect" id="node151" href="plan_8hpp.html" title="FFT plan, stores kernels and buffers for one configuration. " alt="" coords="1238,171,1396,213"/><area shape="rect" id="node97" href="util_8hpp.html" title="OpenCL general utilities. " alt="" coords="2082,675,2187,701"/><area shape="rect" id="node112" href="operations_8hpp.html" title="Templates used for expression tree traversal and kernel generation. " alt="" coords="2004,352,2157,379"/><area shape="rect" id="node127" href="profiler_8hpp.html" title="Simple OpenCL/Host profiler. " alt="" coords="923,352,1052,379"/><area shape="rect" id="node143" href="devlist_8hpp.html" title="OpenCL device enumeration and context initialization. " alt="" coords="1582,352,1708,379"/><area shape="rect" id="node161" href="kernels_8hpp.html" title="Kernel generator for FFT. " alt="" coords="1238,262,1396,303"/></map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> This graph shows which files directly or indirectly include this file:</div>
@@ -77,22 +74,9 @@
 <map name="vexcl_2fft_8hppdep" id="vexcl_2fft_8hppdep">
 <area shape="rect" id="node3" href="vexcl_8hpp.html" title="Vector expression template library for OpenCL. " alt="" coords="5,80,123,107"/></map>
 </div>
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1FFT.html">vex::FFT&lt; Tin, Tout, Planner &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fast Fourier Transform.  <a href="structvex_1_1FFT.html#details">More...</a><br/></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespacevex"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html">vex</a></td></tr>
-<tr class="memdesc:namespacevex"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector expression template library for OpenCL. <br/></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Fast Fourier Transformation. </p>
-<dl class="section author"><dt>Author</dt><dd>Pascal Germroth <a href="#" onclick="location.href='mai'+'lto:'+'pas'+'ca'+'l@e'+'ns'+'iev'+'e.'+'org'; return false;">pasca<span style="display: none;">.nosp@m.</span>l@en<span style="display: none;">.nosp@m.</span>sieve<span style="display: none;">.nosp@m.</span>.org</a> </dd></dl>
+</div><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Backend selector for FFT. </p>
+<dl class="section author"><dt>Author</dt><dd>Denis Demidov <a href="#" onclick="location.href='mai'+'lto:'+'dde'+'mi'+'dov'+'@k'+'su.'+'ru'; return false;">ddemi<span style="display: none;">.nosp@m.</span>dov@<span style="display: none;">.nosp@m.</span>ksu.r<span style="display: none;">.nosp@m.</span>u</a> </dd></dl>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

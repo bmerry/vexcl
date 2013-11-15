@@ -29,6 +29,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -50,7 +51,6 @@
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classvex_1_1mba-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -77,38 +77,17 @@ typedef std::array&lt; size_t, NDIM &gt;&#160;</td><td class="memItemRight" vali
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a479f07233be9c68b532cc616765bbf46"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1mba.html#a479f07233be9c68b532cc616765bbf46">mba</a> (const std::vector&lt; cl::CommandQueue &gt; &amp;queue, const point &amp;cmin, const point &amp;cmax, const std::vector&lt; point &gt; &amp;coo, std::vector&lt; real &gt; val, std::array&lt; size_t, NDIM &gt; grid, size_t levels=8, real tol=1e-8)</td></tr>
-<tr class="separator:a479f07233be9c68b532cc616765bbf46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcee85f5bde21b2076669ae5e6422bf6"><td class="memTemplParams" colspan="2">template&lt;class CooIter , class ValIter &gt; </td></tr>
-<tr class="memitem:afcee85f5bde21b2076669ae5e6422bf6"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvex_1_1mba.html#afcee85f5bde21b2076669ae5e6422bf6">mba</a> (const std::vector&lt; cl::CommandQueue &gt; &amp;queue, const point &amp;cmin, const point &amp;cmax, CooIter coo_begin, CooIter coo_end, ValIter val_begin, std::array&lt; size_t, NDIM &gt; grid, size_t levels=8, real tol=1e-8)</td></tr>
-<tr class="separator:afcee85f5bde21b2076669ae5e6422bf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27de095fbed1ed8a16d15e6184c4c132"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1mba.html#a27de095fbed1ed8a16d15e6184c4c132">mba</a> (const std::vector&lt; <a class="el" href="classvex_1_1backend_1_1cuda_1_1command__queue.html">backend::command_queue</a> &gt; &amp;queue, const point &amp;cmin, const point &amp;cmax, const std::vector&lt; point &gt; &amp;coo, std::vector&lt; real &gt; val, std::array&lt; size_t, NDIM &gt; grid, size_t levels=8, real tol=1e-8)</td></tr>
+<tr class="separator:a27de095fbed1ed8a16d15e6184c4c132"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41f6ae68344618d03f7a8e839d78c81b"><td class="memTemplParams" colspan="2">template&lt;class CooIter , class ValIter &gt; </td></tr>
+<tr class="memitem:a41f6ae68344618d03f7a8e839d78c81b"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvex_1_1mba.html#a41f6ae68344618d03f7a8e839d78c81b">mba</a> (const std::vector&lt; <a class="el" href="classvex_1_1backend_1_1cuda_1_1command__queue.html">backend::command_queue</a> &gt; &amp;queue, const point &amp;cmin, const point &amp;cmax, CooIter coo_begin, CooIter coo_end, ValIter val_begin, std::array&lt; size_t, NDIM &gt; grid, size_t levels=8, real tol=1e-8)</td></tr>
+<tr class="separator:a41f6ae68344618d03f7a8e839d78c81b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5660107fe6178eec3173b39288583494"><td class="memTemplParams" colspan="2"><a class="anchor" id="a5660107fe6178eec3173b39288583494"></a>
 template&lt;class... Expr&gt; </td></tr>
 <tr class="memitem:a5660107fe6178eec3173b39288583494"><td class="memTemplItemLeft" align="right" valign="top">mba_interp&lt; <a class="el" href="classvex_1_1mba.html">mba</a>, boost::tuple<br class="typebreak"/>
 &lt; const Expr &amp;...&gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvex_1_1mba.html#a5660107fe6178eec3173b39288583494">operator()</a> (const Expr &amp;...expr) const </td></tr>
 <tr class="memdesc:a5660107fe6178eec3173b39288583494"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide interpolated values at given coordinates. <br/></td></tr>
 <tr class="separator:a5660107fe6178eec3173b39288583494"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a43d5d8838c7ab6e12a4b61aa93a71fc3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a43d5d8838c7ab6e12a4b61aa93a71fc3"></a>
-std::vector&lt; cl::CommandQueue &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>queue</b></td></tr>
-<tr class="separator:a43d5d8838c7ab6e12a4b61aa93a71fc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97d78a08cfdff52458f2d645a11c3992"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a97d78a08cfdff52458f2d645a11c3992"></a>
-std::vector&lt; cl::Buffer &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>phi</b></td></tr>
-<tr class="separator:a97d78a08cfdff52458f2d645a11c3992"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08c37e4fe4c0c92786aea4d4302166c8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08c37e4fe4c0c92786aea4d4302166c8"></a>
-point&#160;</td><td class="memItemRight" valign="bottom"><b>xmin</b></td></tr>
-<tr class="separator:a08c37e4fe4c0c92786aea4d4302166c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65050ae2358356d60f06743a794f650a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a65050ae2358356d60f06743a794f650a"></a>
-point&#160;</td><td class="memItemRight" valign="bottom"><b>hinv</b></td></tr>
-<tr class="separator:a65050ae2358356d60f06743a794f650a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f0b3d6e775806dfdc5c17073691b732"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f0b3d6e775806dfdc5c17073691b732"></a>
-index&#160;</td><td class="memItemRight" valign="bottom"><b>n</b></td></tr>
-<tr class="separator:a6f0b3d6e775806dfdc5c17073691b732"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1dbd776333d6467d702956a4acf5671b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1dbd776333d6467d702956a4acf5671b"></a>
-index&#160;</td><td class="memItemRight" valign="bottom"><b>stride</b></td></tr>
-<tr class="separator:a1dbd776333d6467d702956a4acf5671b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -124,7 +103,7 @@ class vex::mba&lt; NDIM, real &gt;</h3>
 <p>This is an implementation of the MBA algorithm from [1]. This is a fast algorithm for scattered N-dimensional data interpolation and approximation. Multilevel B-splines are used to compute a C2-continuous surface through a set of irregularly spaced points. The algorithm makes use of a coarse-to-fine hierarchy of control lattices to generate a sequence of bicubic B-spline functions whose sum approaches the desired interpolation function. Large performance gains are realized by using B-spline refinement to reduce the sum of these functions into one equivalent B-spline function. High-fidelity reconstruction is possible from a selected set of sparse and irregular samples.</p>
 <p>[1] S. Lee, G. Wolberg, and S. Y. Shin. Scattered data interpolation with multilevel B-Splines. IEEE Transactions on Visualization and Computer Graphics, 3:228–244, 1997. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a479f07233be9c68b532cc616765bbf46"></a>
+<a class="anchor" id="a27de095fbed1ed8a16d15e6184c4c132"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -136,7 +115,7 @@ template&lt;size_t NDIM, typename real  = double&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="classvex_1_1mba.html">vex::mba</a>&lt; NDIM, real &gt;::<a class="el" href="classvex_1_1mba.html">mba</a> </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; cl::CommandQueue &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classvex_1_1backend_1_1cuda_1_1command__queue.html">backend::command_queue</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>queue</em>, </td>
         </tr>
         <tr>
@@ -211,7 +190,7 @@ template&lt;size_t NDIM, typename real  = double&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="afcee85f5bde21b2076669ae5e6422bf6"></a>
+<a class="anchor" id="a41f6ae68344618d03f7a8e839d78c81b"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -225,7 +204,7 @@ template&lt;class CooIter , class ValIter &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="classvex_1_1mba.html">vex::mba</a>&lt; NDIM, real &gt;::<a class="el" href="classvex_1_1mba.html">mba</a> </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; cl::CommandQueue &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classvex_1_1backend_1_1cuda_1_1command__queue.html">backend::command_queue</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>queue</em>, </td>
         </tr>
         <tr>

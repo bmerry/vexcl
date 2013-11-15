@@ -29,6 +29,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -68,7 +69,7 @@ Public Types</h2></td></tr>
 typedef val_t&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b></td></tr>
 <tr class="separator:a1bceb8e60e12c147076f80ef2ec0dd8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59919e9a79cf2fb69e48a03f4429c383"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59919e9a79cf2fb69e48a03f4429c383"></a>
-typedef <a class="el" href="structvex_1_1cl__scalar__of.html">cl_scalar_of</a>&lt; val_t &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>scalar_type</b></td></tr>
+typedef cl_scalar_of&lt; val_t &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>scalar_type</b></td></tr>
 <tr class="separator:a59919e9a79cf2fb69e48a03f4429c383"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -77,9 +78,9 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1SpMat.html#a9dcc260fadda1053d76baa7aca3692c2">SpMat</a> ()</td></tr>
 <tr class="memdesc:a9dcc260fadda1053d76baa7aca3692c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empty constructor. <br/></td></tr>
 <tr class="separator:a9dcc260fadda1053d76baa7aca3692c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac503fc8519756b95f80fb35bd7288967"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1SpMat.html#ac503fc8519756b95f80fb35bd7288967">SpMat</a> (const std::vector&lt; cl::CommandQueue &gt; &amp;queue, size_t n, size_t m, const idx_t *row, const col_t *col, const val_t *val)</td></tr>
-<tr class="memdesc:ac503fc8519756b95f80fb35bd7288967"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#ac503fc8519756b95f80fb35bd7288967">More...</a><br/></td></tr>
-<tr class="separator:ac503fc8519756b95f80fb35bd7288967"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae97b79a5895ea713cee4a413551c1d41"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1SpMat.html#ae97b79a5895ea713cee4a413551c1d41">SpMat</a> (const std::vector&lt; <a class="el" href="classvex_1_1backend_1_1cuda_1_1command__queue.html">backend::command_queue</a> &gt; &amp;queue, size_t n, size_t m, const idx_t *row, const col_t *col, const val_t *val)</td></tr>
+<tr class="memdesc:ae97b79a5895ea713cee4a413551c1d41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#ae97b79a5895ea713cee4a413551c1d41">More...</a><br/></td></tr>
+<tr class="separator:ae97b79a5895ea713cee4a413551c1d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7587eca5ca9696680a94ead3713d2daa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1SpMat.html#a7587eca5ca9696680a94ead3713d2daa">mul</a> (const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; val_t &gt; &amp;x, <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; val_t &gt; &amp;y, scalar_type alpha=1, bool append=false) const </td></tr>
 <tr class="memdesc:a7587eca5ca9696680a94ead3713d2daa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Matrix-vector multiplication.  <a href="#a7587eca5ca9696680a94ead3713d2daa">More...</a><br/></td></tr>
 <tr class="separator:a7587eca5ca9696680a94ead3713d2daa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -98,18 +99,18 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:abd4e7d83d01b5d2b26c5ea71eaf9a398"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abd4e7d83d01b5d2b26c5ea71eaf9a398"></a>
-static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>inline_preamble</b> (const cl::Device &amp;device, const std::string &amp;prm_name, detail::kernel_generator_state_ptr)</td></tr>
-<tr class="separator:abd4e7d83d01b5d2b26c5ea71eaf9a398"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab72ed96294b1b3f0b15b562b637c8962"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab72ed96294b1b3f0b15b562b637c8962"></a>
-static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>inline_expression</b> (const cl::Device &amp;device, const std::string &amp;prm_name, detail::kernel_generator_state_ptr)</td></tr>
-<tr class="separator:ab72ed96294b1b3f0b15b562b637c8962"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75964e27fbdc6c2613ab7e0756dc48bd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a75964e27fbdc6c2613ab7e0756dc48bd"></a>
-static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>inline_parameters</b> (const cl::Device &amp;device, const std::string &amp;prm_name, detail::kernel_generator_state_ptr)</td></tr>
-<tr class="separator:a75964e27fbdc6c2613ab7e0756dc48bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec76eeb7567cd11f0a6df20cdb502e21"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec76eeb7567cd11f0a6df20cdb502e21"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>inline_arguments</b> (cl::Kernel &amp;kernel, unsigned device, size_t, unsigned &amp;position, const <a class="el" href="classvex_1_1SpMat.html">SpMat</a> &amp;A, const <a class="el" href="classvex_1_1vector.html">vector</a>&lt; val_t &gt; &amp;x, detail::kernel_generator_state_ptr)</td></tr>
-<tr class="separator:aec76eeb7567cd11f0a6df20cdb502e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16c9097d3b14d74e6aef947c7508dab9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a16c9097d3b14d74e6aef947c7508dab9"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>inline_preamble</b> (backend::source_generator &amp;src, const <a class="el" href="classvex_1_1backend_1_1cuda_1_1command__queue.html">backend::command_queue</a> &amp;queue, const std::string &amp;prm_name, detail::kernel_generator_state_ptr)</td></tr>
+<tr class="separator:a16c9097d3b14d74e6aef947c7508dab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ea3f840ff94b3cee97b42e1bdb4c138"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2ea3f840ff94b3cee97b42e1bdb4c138"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>inline_expression</b> (backend::source_generator &amp;src, const <a class="el" href="classvex_1_1backend_1_1cuda_1_1command__queue.html">backend::command_queue</a> &amp;queue, const std::string &amp;prm_name, detail::kernel_generator_state_ptr)</td></tr>
+<tr class="separator:a2ea3f840ff94b3cee97b42e1bdb4c138"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f87d505d7e3b6652afe22918448dacc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0f87d505d7e3b6652afe22918448dacc"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>inline_parameters</b> (backend::source_generator &amp;src, const <a class="el" href="classvex_1_1backend_1_1cuda_1_1command__queue.html">backend::command_queue</a> &amp;queue, const std::string &amp;prm_name, detail::kernel_generator_state_ptr)</td></tr>
+<tr class="separator:a0f87d505d7e3b6652afe22918448dacc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1006407849900291442de890eef703d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac1006407849900291442de890eef703d"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>inline_arguments</b> (backend::kernel &amp;kernel, unsigned part, size_t, const <a class="el" href="classvex_1_1SpMat.html">SpMat</a> &amp;A, const <a class="el" href="classvex_1_1vector.html">vector</a>&lt; val_t &gt; &amp;x, detail::kernel_generator_state_ptr)</td></tr>
+<tr class="separator:ac1006407849900291442de890eef703d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename val_t, typename col_t = size_t, typename idx_t = size_t&gt;<br/>
@@ -117,7 +118,7 @@ class vex::SpMat&lt; val_t, col_t, idx_t &gt;</h3>
 
 <p>Sparse matrix in hybrid ELL-CSR format. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ac503fc8519756b95f80fb35bd7288967"></a>
+<a class="anchor" id="ae97b79a5895ea713cee4a413551c1d41"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -129,7 +130,7 @@ template&lt;typename val_t, typename col_t = size_t, typename idx_t = size_t&gt;
         <tr>
           <td class="memname"><a class="el" href="classvex_1_1SpMat.html">vex::SpMat</a>&lt; val_t, col_t, idx_t &gt;::<a class="el" href="classvex_1_1SpMat.html">SpMat</a> </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; cl::CommandQueue &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classvex_1_1backend_1_1cuda_1_1command__queue.html">backend::command_queue</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>queue</em>, </td>
         </tr>
         <tr>
@@ -189,7 +190,7 @@ template&lt;typename val_t, typename col_t = size_t, typename idx_t = size_t&gt;
   </dd>
 </dl>
 
-<p>References <a class="el" href="namespacevex.html#acdde8bea01bff2ffb88771e32cae12a4">vex::is_cpu()</a>, <a class="el" href="namespacevex.html#a4d3fe52e80bf245c052cedbf50a3d388">vex::qctx()</a>, and <a class="el" href="namespacevex.html#ae299eb0d6e1f28d13e73820ac0c56a52">vex::qdev()</a>.</p>
+<p>References <a class="el" href="namespacevex_1_1backend_1_1cuda.html#a26115fef08c8f8475271f821132b545b">vex::backend::cuda::duplicate_queue()</a>, <a class="el" href="namespacevex_1_1backend_1_1cuda.html#aa57c519ac45e9b247d19051f8b415dff">vex::backend::cuda::is_cpu()</a>, and <a class="el" href="namespacevex.html#ae08b03eaab6548720caf55e47f5cfc91">vex::partition()</a>.</p>
 
 </div>
 </div>
@@ -252,9 +253,9 @@ template&lt;typename val_t, typename col_t = size_t, typename idx_t = size_t&gt;
   </dd>
 </dl>
 
-<p>References <a class="el" href="namespacevex.html#adde6e399118c4e9c8fdb111d23d65698">vex::alignup()</a>, <a class="el" href="namespacevex.html#ab7763bd1334147c58efee32b08012d0c">vex::build_sources()</a>, <a class="el" href="namespacevex.html#aed8919091924e9ef2dac72bd2ead146d">vex::kernel_workgroup_size()</a>, <a class="el" href="namespacevex.html#a4d3fe52e80bf245c052cedbf50a3d388">vex::qctx()</a>, <a class="el" href="namespacevex.html#ae299eb0d6e1f28d13e73820ac0c56a52">vex::qdev()</a>, and <a class="el" href="namespacevex.html#aae8dd773dd40e5fa7cf9bb68f425cc20">vex::standard_kernel_header()</a>.</p>
+<p>References <a class="el" href="classvex_1_1vector.html#ad15856f00b1c4b80726e6f908260ef57">vex::vector&lt; T &gt;::begin()</a>, <a class="el" href="classvex_1_1SpMat.html#a36ca2c010f488b2f65784f1d7ab9b123">vex::SpMat&lt; val_t, col_t, idx_t &gt;::cols()</a>, <a class="el" href="namespacevex.html#aaa68b032f0d66695e3b3b6c5375e8cf6">vex::copy()</a>, <a class="el" href="classvex_1_1vector.html#a5169d2645c884403fa690d45c77552fa">vex::vector&lt; T &gt;::end()</a>, and <a class="el" href="namespacevex.html#a1d8048e3bb5185ab018e9d0a0649ef0b">vex::permutation()</a>.</p>
 
-<p>Referenced by <a class="el" href="namespacevex.html#ae8e8c4b4386379f9b8489e382909070e">vex::device_spmv_perf()</a>.</p>
+<p>Referenced by <a class="el" href="namespacevex.html#ac74a209f956b87b8dc289aad5498a25c">vex::device_spmv_perf()</a>.</p>
 
 </div>
 </div>

@@ -29,6 +29,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -70,7 +71,7 @@
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="stencil_8hpp__incl.png" border="0" usemap="#vexcl_2stencil_8hpp" alt=""/></div>
 <map name="vexcl_2stencil_8hpp" id="vexcl_2stencil_8hpp">
-<area shape="rect" id="node11" href="vector_8hpp.html" title="OpenCL device vector. " alt="" coords="2973,80,3099,107"/><area shape="rect" id="node26" href="util_8hpp.html" title="OpenCL general utilities. " alt="" coords="3291,237,3396,264"/><area shape="rect" id="node43" href="operations_8hpp.html" title="Templates used for expression tree traversal and kernel generation. " alt="" coords="2659,155,2812,181"/><area shape="rect" id="node64" href="profiler_8hpp.html" title="Simple OpenCL/Host profiler. " alt="" coords="1717,237,1845,264"/><area shape="rect" id="node101" href="devlist_8hpp.html" title="OpenCL device enumeration and context initialization. " alt="" coords="3426,155,3552,181"/><area shape="rect" id="node58" href="types_8hpp.html" title="Support for using native C++ and OpenCL types in expressions. " alt="" coords="2481,237,2601,264"/></map>
+<area shape="rect" id="node11" href="vector_8hpp.html" title="OpenCL device vector. " alt="" coords="1183,80,1308,107"/><area shape="rect" id="node26" href="backend_8hpp.html" title="Compile&#45;time selection of backend (OpenCL/CUDA). " alt="" coords="4106,237,4245,264"/><area shape="rect" id="node79" href="util_8hpp.html" title="OpenCL general utilities. " alt="" coords="950,403,1055,429"/><area shape="rect" id="node94" href="operations_8hpp.html" title="Templates used for expression tree traversal and kernel generation. " alt="" coords="617,155,771,181"/><area shape="rect" id="node110" href="profiler_8hpp.html" title="Simple OpenCL/Host profiler. " alt="" coords="2561,155,2689,181"/><area shape="rect" id="node147" href="devlist_8hpp.html" title="OpenCL device enumeration and context initialization. " alt="" coords="4322,155,4448,181"/><area shape="rect" id="node28" href="opencl_8hpp.html" title="OpenCL backend for compute kernel generation/compilation/launching. " alt="" coords="4479,320,4665,347"/><area shape="rect" id="node32" href="opencl_2error_8hpp.html" title="Output OpenCL errors to a std::stream. " alt="" coords="4397,486,4555,527"/><area shape="rect" id="node36" href="opencl_2context_8hpp.html" title="OpenCL device enumeration and context initialization. " alt="" coords="4207,395,4365,437"/><area shape="rect" id="node41" href="opencl_2filter_8hpp.html" title="Device filters for OpenCL backend. " alt="" coords="4493,395,4651,437"/><area shape="rect" id="node52" href="opencl_2device__vector_8hpp.html" title="OpenCL device vector. " alt="" coords="5013,395,5171,437"/><area shape="rect" id="node55" href="opencl_2source_8hpp.html" title="Helper class for OpenCL source code generation. " alt="" coords="3567,395,3725,437"/><area shape="rect" id="node71" href="opencl_2compiler_8hpp.html" title="OpenCL source code compilation wrapper. " alt="" coords="4769,486,4927,527"/><area shape="rect" id="node74" href="opencl_2kernel_8hpp.html" title="An abstraction over OpenCL compute kernel. " alt="" coords="4778,395,4936,437"/><area shape="rect" id="node62" href="types_8hpp.html" title="Support for using native C++ and OpenCL types in expressions. " alt="" coords="1231,493,1352,520"/></map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> This graph shows which files directly or indirectly include this file:</div>
@@ -102,7 +103,7 @@ Macros</h2></td></tr>
 <tr class="memitem:a382f8cf99fdf905e87856c4a01bf4fab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stencil_8hpp.html#a382f8cf99fdf905e87856c4a01bf4fab">VEX_STENCIL_OPERATOR_TYPE</a>(name, type, width, center, body_str)</td></tr>
 <tr class="memdesc:a382f8cf99fdf905e87856c4a01bf4fab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to declare a user-defined stencil operator type.  <a href="#a382f8cf99fdf905e87856c4a01bf4fab">More...</a><br/></td></tr>
 <tr class="separator:a382f8cf99fdf905e87856c4a01bf4fab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48de2489c51353e5e84a0e23f4b945c9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stencil_8hpp.html#a48de2489c51353e5e84a0e23f4b945c9">VEX_STENCIL_OPERATOR</a>(name, type, width, center, body, queue)&#160;&#160;&#160;<a class="el" href="stencil_8hpp.html#a382f8cf99fdf905e87856c4a01bf4fab">VEX_STENCIL_OPERATOR_TYPE</a>(stencil_operator_##name##_t, type, width, center, body) name(queue)</td></tr>
+<tr class="memitem:a48de2489c51353e5e84a0e23f4b945c9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stencil_8hpp.html#a48de2489c51353e5e84a0e23f4b945c9">VEX_STENCIL_OPERATOR</a>(name, type, width, center, body, queue)</td></tr>
 <tr class="memdesc:a48de2489c51353e5e84a0e23f4b945c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to declare a user-defined stencil operator.  <a href="#a48de2489c51353e5e84a0e23f4b945c9">More...</a><br/></td></tr>
 <tr class="separator:a48de2489c51353e5e84a0e23f4b945c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -110,11 +111,13 @@ Macros</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:ac6ed30e74c6b0ab0685466979e869e47"><td class="memTemplParams" colspan="2"><a class="anchor" id="ac6ed30e74c6b0ab0685466979e869e47"></a>
 template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ac6ed30e74c6b0ab0685466979e869e47"><td class="memTemplItemLeft" align="right" valign="top">conv&lt; stencil&lt; T &gt;, vector&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::operator*</b> (const stencil&lt; T &gt; &amp;s, const vector&lt; T &gt; &amp;x)</td></tr>
+<tr class="memitem:ac6ed30e74c6b0ab0685466979e869e47"><td class="memTemplItemLeft" align="right" valign="top">conv&lt; stencil&lt; T &gt;, vector&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#ac6ed30e74c6b0ab0685466979e869e47">vex::operator*</a> (const stencil&lt; T &gt; &amp;s, const vector&lt; T &gt; &amp;x)</td></tr>
+<tr class="memdesc:ac6ed30e74c6b0ab0685466979e869e47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convolve the stencil with the vector. <br/></td></tr>
 <tr class="separator:ac6ed30e74c6b0ab0685466979e869e47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0257dfd2e174677cdcb62691741a5f8c"><td class="memTemplParams" colspan="2"><a class="anchor" id="a0257dfd2e174677cdcb62691741a5f8c"></a>
 template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a0257dfd2e174677cdcb62691741a5f8c"><td class="memTemplItemLeft" align="right" valign="top">conv&lt; stencil&lt; T &gt;, vector&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::operator*</b> (const vector&lt; T &gt; &amp;x, const stencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a0257dfd2e174677cdcb62691741a5f8c"><td class="memTemplItemLeft" align="right" valign="top">conv&lt; stencil&lt; T &gt;, vector&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a0257dfd2e174677cdcb62691741a5f8c">vex::operator*</a> (const vector&lt; T &gt; &amp;x, const stencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memdesc:a0257dfd2e174677cdcb62691741a5f8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convolve the stencil with the vector. <br/></td></tr>
 <tr class="separator:a0257dfd2e174677cdcb62691741a5f8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -164,11 +167,14 @@ template&lt;typename T &gt; </td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;<a class="el" href="stencil_8hpp.html#a382f8cf99fdf905e87856c4a01bf4fab">VEX_STENCIL_OPERATOR_TYPE</a>(stencil_operator_##name##_t, type, width, center, body) name(queue)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="stencil_8hpp.html#a382f8cf99fdf905e87856c4a01bf4fab" title="Macro to declare a user-defined stencil operator type. ">VEX_STENCIL_OPERATOR_TYPE</a>(                                                   \</div>
+<div class="line">          stencil_operator_##name##_t, type, width, center,  body)             \</div>
+<div class="line">    const name(queue)</div>
+</div><!-- fragment -->
 <p>Macro to declare a user-defined stencil operator. </p>
 <div class="fragment"><div class="line"><a class="code" href="stencil_8hpp.html#a48de2489c51353e5e84a0e23f4b945c9" title="Macro to declare a user-defined stencil operator. ">VEX_STENCIL_OPERATOR</a>(pow3_oper, <span class="keywordtype">double</span>, 3, 1, <span class="stringliteral">&quot;return X[0] + pow(X[-1] + X[1], 3.0);&quot;</span>, queue);</div>
 <div class="line">output = pow3_oper(input);</div>
@@ -217,7 +223,7 @@ template&lt;typename T &gt; </td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keyword">struct </span>name : <a class="code" href="classvex_1_1StencilOperator.html" title="User-defined stencil operator. ">vex::StencilOperator</a>&lt;type, width, center, name&gt; { \</div>
-<div class="line">        name(<span class="keyword">const</span> std::vector&lt;cl::CommandQueue&gt; &amp;q) : vex::StencilOperator&lt;type, width, center, name&gt;(q) {} \</div>
+<div class="line">        name(<span class="keyword">const</span> std::vector&lt;vex::backend::command_queue&gt; &amp;q) : vex::StencilOperator&lt;type, width, center, name&gt;(q) {} \</div>
 <div class="line">        static std::string body() { <span class="keywordflow">return</span> body_str; } \</div>
 <div class="line">    }</div>
 </div><!-- fragment -->

@@ -29,6 +29,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li class="current"><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -75,11 +76,11 @@ Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex_1_1generator.html#a7bb760db4db25175da29d869f9b347d1">set_recorder</a> (std::ostream &amp;os)</td></tr>
 <tr class="memdesc:a7bb760db4db25175da29d869f9b347d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set output stream for kernel recorder. <br/></td></tr>
 <tr class="separator:a7bb760db4db25175da29d869f9b347d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcbcddc333c7b7ce307ec4515cb83def"><td class="memTemplParams" colspan="2"><a class="anchor" id="adcbcddc333c7b7ce307ec4515cb83def"></a>
+<tr class="memitem:a4c60e9f68a2e74de54a073730704532e"><td class="memTemplParams" colspan="2"><a class="anchor" id="a4c60e9f68a2e74de54a073730704532e"></a>
 template&lt;class... Args&gt; </td></tr>
-<tr class="memitem:adcbcddc333c7b7ce307ec4515cb83def"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvex_1_1generator_1_1Kernel.html">Kernel</a>&lt; sizeof...(Args)&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex_1_1generator.html#adcbcddc333c7b7ce307ec4515cb83def">build_kernel</a> (const std::vector&lt; cl::CommandQueue &gt; &amp;queue, const std::string &amp;name, const std::string &amp;body, const Args &amp;...args)</td></tr>
-<tr class="memdesc:adcbcddc333c7b7ce307ec4515cb83def"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds kernel from recorded expression sequence and symbolic parameter list. <br/></td></tr>
-<tr class="separator:adcbcddc333c7b7ce307ec4515cb83def"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c60e9f68a2e74de54a073730704532e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvex_1_1generator_1_1Kernel.html">Kernel</a>&lt; sizeof...(Args)&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex_1_1generator.html#a4c60e9f68a2e74de54a073730704532e">build_kernel</a> (const std::vector&lt; <a class="el" href="classvex_1_1backend_1_1cuda_1_1command__queue.html">backend::command_queue</a> &gt; &amp;queue, const std::string &amp;name, const std::string &amp;body, const Args &amp;...args)</td></tr>
+<tr class="memdesc:a4c60e9f68a2e74de54a073730704532e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds kernel from recorded expression sequence and symbolic parameter list. <br/></td></tr>
+<tr class="separator:a4c60e9f68a2e74de54a073730704532e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0263b233e113206855f28eb745b7ec8"><td class="memTemplParams" colspan="2"><a class="anchor" id="af0263b233e113206855f28eb745b7ec8"></a>
 template&lt;class Ret , class... Args&gt; </td></tr>
 <tr class="memitem:af0263b233e113206855f28eb745b7ec8"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex_1_1generator.html#af0263b233e113206855f28eb745b7ec8">make_function</a> (std::string body, const Ret &amp;ret, const Args &amp;...args)</td></tr>

@@ -29,6 +29,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -60,33 +61,42 @@
  <a href="structvex_1_1SpMatCCSR.html#details">More...</a></p>
 
 <p><code>#include &lt;ccsr.hpp&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for vex::SpMatCCSR&lt; val_t, col_t, idx_t &gt;:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="structvex_1_1SpMatCCSR__coll__graph.png" border="0" usemap="#vex_1_1SpMatCCSR_3_01val__t_00_01col__t_00_01idx__t_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="vex_1_1SpMatCCSR_3_01val__t_00_01col__t_00_01idx__t_01_4_coll__map" id="vex_1_1SpMatCCSR_3_01val__t_00_01col__t_00_01idx__t_01_4_coll__map">
+<area shape="rect" id="node2" href="classvex_1_1backend_1_1cuda_1_1device__vector.html" title="vex::backend::cuda\l::device_vector\&lt; val_t \&gt;" alt="" coords="5,5,184,46"/><area shape="rect" id="node4" href="classvex_1_1backend_1_1cuda_1_1device__vector.html" title="vex::backend::cuda\l::device_vector\&lt; idx_t \&gt;" alt="" coords="5,70,184,111"/><area shape="rect" id="node6" href="classvex_1_1backend_1_1cuda_1_1device__vector.html" title="vex::backend::cuda\l::device_vector\&lt; col_t \&gt;" alt="" coords="5,135,184,177"/></map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7716e87edb66f24eed0f101a0c6fc195"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1SpMatCCSR.html#a7716e87edb66f24eed0f101a0c6fc195">SpMatCCSR</a> (const cl::CommandQueue &amp;queue, size_t n, size_t m, const idx_t *idx, const idx_t *row, const col_t *col, const val_t *val)</td></tr>
-<tr class="memdesc:a7716e87edb66f24eed0f101a0c6fc195"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for CCSR format.  <a href="#a7716e87edb66f24eed0f101a0c6fc195">More...</a><br/></td></tr>
-<tr class="separator:a7716e87edb66f24eed0f101a0c6fc195"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a5eee3c39229bd29edb6d867e17deec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1SpMatCCSR.html#a0a5eee3c39229bd29edb6d867e17deec">SpMatCCSR</a> (const <a class="el" href="classvex_1_1backend_1_1cuda_1_1command__queue.html">backend::command_queue</a> &amp;queue, size_t n, size_t m, const idx_t *idx, const idx_t *row, const col_t *col, const val_t *val)</td></tr>
+<tr class="memdesc:a0a5eee3c39229bd29edb6d867e17deec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for CCSR format.  <a href="#a0a5eee3c39229bd29edb6d867e17deec">More...</a><br/></td></tr>
+<tr class="separator:a0a5eee3c39229bd29edb6d867e17deec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a902ca495e6d029e596359314a8b82472"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a902ca495e6d029e596359314a8b82472"></a>
-cl::CommandQueue&#160;</td><td class="memItemRight" valign="bottom"><b>queue</b></td></tr>
-<tr class="separator:a902ca495e6d029e596359314a8b82472"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af56745f0bb8c8804450a5984f86a91a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af56745f0bb8c8804450a5984f86a91a3"></a>
+<a class="el" href="classvex_1_1backend_1_1cuda_1_1command__queue.html">backend::command_queue</a>&#160;</td><td class="memItemRight" valign="bottom"><b>queue</b></td></tr>
+<tr class="separator:af56745f0bb8c8804450a5984f86a91a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52d7b0a25bbbeaf4c4fbd03485f63064"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a52d7b0a25bbbeaf4c4fbd03485f63064"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>n</b></td></tr>
 <tr class="separator:a52d7b0a25bbbeaf4c4fbd03485f63064"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace63478c755fa9a804a69304f4bc0b5c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ace63478c755fa9a804a69304f4bc0b5c"></a>
-cl::Buffer&#160;</td><td class="memItemRight" valign="bottom"><b>idx</b></td></tr>
-<tr class="separator:ace63478c755fa9a804a69304f4bc0b5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a399f0ac96683e48bd324d88d37f320db"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a399f0ac96683e48bd324d88d37f320db"></a>
-cl::Buffer&#160;</td><td class="memItemRight" valign="bottom"><b>row</b></td></tr>
-<tr class="separator:a399f0ac96683e48bd324d88d37f320db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c98460b29505c52b8cd0e30332e94f5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c98460b29505c52b8cd0e30332e94f5"></a>
-cl::Buffer&#160;</td><td class="memItemRight" valign="bottom"><b>col</b></td></tr>
-<tr class="separator:a7c98460b29505c52b8cd0e30332e94f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6240e0f9d40b4253024c89ab749a955"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae6240e0f9d40b4253024c89ab749a955"></a>
-cl::Buffer&#160;</td><td class="memItemRight" valign="bottom"><b>val</b></td></tr>
-<tr class="separator:ae6240e0f9d40b4253024c89ab749a955"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4bb7ef2235bf0a1314afcce8f789130"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad4bb7ef2235bf0a1314afcce8f789130"></a>
+<a class="el" href="classvex_1_1backend_1_1cuda_1_1device__vector.html">backend::device_vector</a>&lt; idx_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>idx</b></td></tr>
+<tr class="separator:ad4bb7ef2235bf0a1314afcce8f789130"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e9e9ebcf5e7d4114804e351fc3db582"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e9e9ebcf5e7d4114804e351fc3db582"></a>
+<a class="el" href="classvex_1_1backend_1_1cuda_1_1device__vector.html">backend::device_vector</a>&lt; idx_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>row</b></td></tr>
+<tr class="separator:a3e9e9ebcf5e7d4114804e351fc3db582"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eae7075beef3944a67d21f198a17d8c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0eae7075beef3944a67d21f198a17d8c"></a>
+<a class="el" href="classvex_1_1backend_1_1cuda_1_1device__vector.html">backend::device_vector</a>&lt; col_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>col</b></td></tr>
+<tr class="separator:a0eae7075beef3944a67d21f198a17d8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87e320dc50866d2c3c813f7ed3841fe4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a87e320dc50866d2c3c813f7ed3841fe4"></a>
+<a class="el" href="classvex_1_1backend_1_1cuda_1_1device__vector.html">backend::device_vector</a>&lt; val_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>val</b></td></tr>
+<tr class="separator:a87e320dc50866d2c3c813f7ed3841fe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename val_t, typename col_t = ptrdiff_t, typename idx_t = size_t&gt;<br/>
@@ -102,7 +112,7 @@ struct vex::SpMatCCSR&lt; val_t, col_t, idx_t &gt;</h3>
 <div class="line">}</div>
 </div><!-- fragment --><p> This format does not support multi-device computation, so it accepts single queue at initialization. Vectors x and y should also be single-queued and reside on the same device with matrix. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a7716e87edb66f24eed0f101a0c6fc195"></a>
+<a class="anchor" id="a0a5eee3c39229bd29edb6d867e17deec"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -114,7 +124,7 @@ template&lt;typename val_t , typename col_t  = ptrdiff_t, typename idx_t  = size
         <tr>
           <td class="memname"><a class="el" href="structvex_1_1SpMatCCSR.html">vex::SpMatCCSR</a>&lt; val_t, col_t, idx_t &gt;::<a class="el" href="structvex_1_1SpMatCCSR.html">SpMatCCSR</a> </td>
           <td>(</td>
-          <td class="paramtype">const cl::CommandQueue &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classvex_1_1backend_1_1cuda_1_1command__queue.html">backend::command_queue</a> &amp;&#160;</td>
           <td class="paramname"><em>queue</em>, </td>
         </tr>
         <tr>

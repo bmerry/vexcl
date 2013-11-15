@@ -29,6 +29,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -50,8 +51,10 @@
   </div>
   <div id="navrow4" class="tabs3">
     <ul class="tablist">
+      <li><a href="#index_a"><span>a</span></a></li>
       <li><a href="#index_b"><span>b</span></a></li>
       <li><a href="#index_c"><span>c</span></a></li>
+      <li><a href="#index_d"><span>d</span></a></li>
       <li><a href="#index_e"><span>e</span></a></li>
       <li><a href="#index_f"><span>f</span></a></li>
       <li><a href="#index_m"><span>m</span></a></li>
@@ -70,6 +73,13 @@
 <div class="contents">
 <div class="textblock">Here is a list of all documented class members with links to the class documentation for each member:</div>
 
+<h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
+<li>average()
+: <a class="el" href="classvex_1_1stopwatch.html#adcabca1b4fa22c83014e2bdb6645363b">vex::stopwatch&lt; Clock &gt;</a>
+</li>
+</ul>
+
+
 <h3><a class="anchor" id="index_b"></a>- b -</h3><ul>
 <li>begin()
 : <a class="el" href="classvex_1_1multivector.html#a29f7eebb57e4df796b23595476ce7592">vex::multivector&lt; T, N &gt;</a>
@@ -87,11 +97,30 @@
 <li>cols()
 : <a class="el" href="classvex_1_1SpMat.html#a36ca2c010f488b2f65784f1d7ab9b123">vex::SpMat&lt; val_t, col_t, idx_t &gt;</a>
 </li>
-<li>Context()
-: <a class="el" href="classvex_1_1Context.html#a23cd0db57fad873a5c1885a43264a35a">vex::Context</a>
+<li>command_queue()
+: <a class="el" href="classvex_1_1backend_1_1cuda_1_1command__queue.html#adc5c955077200df2dc68959e43dbebb6">vex::backend::cuda::command_queue</a>
+</li>
+<li>compute_capability()
+: <a class="el" href="classvex_1_1backend_1_1cuda_1_1device.html#abb72ae295972127b216bee5b5c479ad3">vex::backend::cuda::device</a>
+</li>
+<li>context()
+: <a class="el" href="classvex_1_1backend_1_1cuda_1_1context.html#a9cf34bbc5ea2921d531508b1bdb97349">vex::backend::cuda::context</a>
+, <a class="el" href="classvex_1_1backend_1_1cuda_1_1command__queue.html#abdb220233aad71376a68e85a70571bd8">vex::backend::cuda::command_queue</a>
+, <a class="el" href="classvex_1_1backend_1_1cuda_1_1context.html#a03d8b695f306d4ee4fa3732570eec473">vex::backend::cuda::context</a>
 </li>
 <li>convolve()
 : <a class="el" href="classvex_1_1stencil.html#a0c78fa83e093c8adbab71534f7a25756">vex::stencil&lt; T &gt;</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_d"></a>- d -</h3><ul>
+<li>device()
+: <a class="el" href="classvex_1_1backend_1_1cuda_1_1device.html#a0bcd95e22dd30cdb9b772fc887a8eac2">vex::backend::cuda::device</a>
+, <a class="el" href="classvex_1_1backend_1_1cuda_1_1command__queue.html#aec5471fd379d4994d40d477217f8f924">vex::backend::cuda::command_queue</a>
+</li>
+<li>device_vector()
+: <a class="el" href="classvex_1_1backend_1_1cuda_1_1device__vector.html#aa17a04eaef8a6dceeb57b710e4d26316">vex::backend::cuda::device_vector&lt; T &gt;</a>
 </li>
 </ul>
 
@@ -107,7 +136,13 @@
 
 <h3><a class="anchor" id="index_f"></a>- f -</h3><ul>
 <li>FFT()
-: <a class="el" href="structvex_1_1FFT.html#ab457d6ca5b4b9b0377e47b19a9239e2b">vex::FFT&lt; Tin, Tout, Planner &gt;</a>
+: <a class="el" href="structvex_1_1FFT.html#aa4ddc4f60cea292b7b934f83420e1017">vex::FFT&lt; Tin, Tout, Planner &gt;</a>
+</li>
+<li>finish()
+: <a class="el" href="classvex_1_1backend_1_1cuda_1_1command__queue.html#ad9d7f9cf597a02d4104d62ff4a78ba58">vex::backend::cuda::command_queue</a>
+</li>
+<li>flags()
+: <a class="el" href="classvex_1_1backend_1_1cuda_1_1command__queue.html#aa922ba74fb51f9965da7000f0ceb6b11">vex::backend::cuda::command_queue</a>
 </li>
 </ul>
 
@@ -117,24 +152,37 @@
 : <a class="el" href="structvex_1_1random_1_1philox.html#acdcb748bf30a6a8ab39961966fbfa0d2">vex::random::philox</a>
 </li>
 <li>map()
-: <a class="el" href="classvex_1_1vector.html#a5212ee502dc242a3cdeb2453ba83853e">vex::vector&lt; T &gt;</a>
+: <a class="el" href="classvex_1_1vector.html#a7e9de92d05feb8575f2fdd44279ccbd6">vex::vector&lt; T &gt;</a>
+, <a class="el" href="classvex_1_1backend_1_1cuda_1_1device__vector.html#a8ef72b591c2daf8d7974e15d54f33dd2">vex::backend::cuda::device_vector&lt; T &gt;</a>
 </li>
 <li>mapped_array
-: <a class="el" href="classvex_1_1vector.html#a1acb768df9ae0304b3ddaf67e17903bb">vex::vector&lt; T &gt;</a>
+: <a class="el" href="classvex_1_1backend_1_1cuda_1_1device__vector.html#af3899cdc84f0b61eba717d00b119b63c">vex::backend::cuda::device_vector&lt; T &gt;</a>
+</li>
+<li>max_shared_memory_per_block()
+: <a class="el" href="classvex_1_1backend_1_1cuda_1_1device.html#a50834dc3a57b0eb90990d331a37c0554">vex::backend::cuda::device</a>
+</li>
+<li>max_threads_per_block()
+: <a class="el" href="classvex_1_1backend_1_1cuda_1_1device.html#afaab222f33f82d183453ff639058b497">vex::backend::cuda::device</a>
 </li>
 <li>mba()
-: <a class="el" href="classvex_1_1mba.html#a479f07233be9c68b532cc616765bbf46">vex::mba&lt; NDIM, real &gt;</a>
+: <a class="el" href="classvex_1_1mba.html#a27de095fbed1ed8a16d15e6184c4c132">vex::mba&lt; NDIM, real &gt;</a>
 </li>
 <li>mul()
 : <a class="el" href="classvex_1_1SpMat.html#a7587eca5ca9696680a94ead3713d2daa">vex::SpMat&lt; val_t, col_t, idx_t &gt;</a>
 </li>
+<li>multiprocessor_count()
+: <a class="el" href="classvex_1_1backend_1_1cuda_1_1device.html#a166d7b75ac9804e2465349629148d273">vex::backend::cuda::device</a>
+</li>
 <li>multivector()
-: <a class="el" href="classvex_1_1multivector.html#ab475714621843cb7cd6f38b4c7039588">vex::multivector&lt; T, N &gt;</a>
+: <a class="el" href="classvex_1_1multivector.html#ae9cc538b5d88e8069d83646fae5f8a7a">vex::multivector&lt; T, N &gt;</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
+<li>name()
+: <a class="el" href="classvex_1_1backend_1_1cuda_1_1device.html#a2209269276255be81676edfc890498e5">vex::backend::cuda::device</a>
+</li>
 <li>nonzeros()
 : <a class="el" href="classvex_1_1SpMat.html#af23cdb6ebb8d614ba92b812e3f07de61">vex::SpMat&lt; val_t, col_t, idx_t &gt;</a>
 </li>
@@ -160,8 +208,8 @@
 : <a class="el" href="classvex_1_1multivector.html#a6b8bd8158618b145b54768156a80ce23">vex::multivector&lt; T, N &gt;</a>
 , <a class="el" href="classvex_1_1Reductor.html#acadc866d0e75711786762e7f3cfb37f0">vex::Reductor&lt; real, RDC &gt;</a>
 , <a class="el" href="classvex_1_1generator_1_1Kernel.html#aff818a250c0ad905cc9cd9c98cfa427e">vex::generator::Kernel&lt; NP &gt;</a>
-, <a class="el" href="classvex_1_1vector.html#afa23f8bdb53015e6d446338ccb0ca0b8">vex::vector&lt; T &gt;</a>
-, <a class="el" href="structvex_1_1gslice.html#adf27a3898ff920b8c5a7057d1aff58b1">vex::gslice&lt; NDIM &gt;</a>
+, <a class="el" href="classvex_1_1vector.html#a57b70e9e1cb9726e1060e70020d05d4c">vex::vector&lt; T &gt;</a>
+, <a class="el" href="structvex_1_1gslice.html#a5b3aad88352f5da13754544d83cbea82">vex::gslice&lt; NDIM &gt;</a>
 , <a class="el" href="classvex_1_1mba.html#a5660107fe6178eec3173b39288583494">vex::mba&lt; NDIM, real &gt;</a>
 </li>
 <li>operator*=()
@@ -226,15 +274,15 @@
 : <a class="el" href="classvex_1_1profiler.html#ae3ee2f95ec519e1993b2ce4de28fee71">vex::profiler&lt; Clock &gt;</a>
 </li>
 <li>profiler()
-: <a class="el" href="classvex_1_1profiler.html#a0093574a1fef68c37324533f07de7fa1">vex::profiler&lt; Clock &gt;</a>
+: <a class="el" href="classvex_1_1profiler.html#aa2ff9289c1e3cbf707d1d262bca5493b">vex::profiler&lt; Clock &gt;</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_q"></a>- q -</h3><ul>
 <li>queue_list()
-: <a class="el" href="classvex_1_1multivector.html#a5d49d9214864a651f59890346e7818fa">vex::multivector&lt; T, N &gt;</a>
-, <a class="el" href="classvex_1_1vector.html#a64c9b104b362b5ded3af3f3e2750efe5">vex::vector&lt; T &gt;</a>
+: <a class="el" href="classvex_1_1multivector.html#a09651e4abd4ab20bf03e1ec7bbb748bc">vex::multivector&lt; T, N &gt;</a>
+, <a class="el" href="classvex_1_1vector.html#ae6b48f08d3b85d3e6334425f9fa51ffd">vex::vector&lt; T &gt;</a>
 </li>
 </ul>
 
@@ -243,18 +291,26 @@
 <li>range()
 : <a class="el" href="structvex_1_1range.html#a602f9e92149be290d6e15b2ccc125723">vex::range</a>
 </li>
+<li>raw()
+: <a class="el" href="classvex_1_1backend_1_1cuda_1_1device__vector.html#a3e207ca50ae587ea444cc81e58004d25">vex::backend::cuda::device_vector&lt; T &gt;</a>
+, <a class="el" href="classvex_1_1backend_1_1cuda_1_1device.html#ae15367542161a7140509419235f9d44a">vex::backend::cuda::device</a>
+, <a class="el" href="classvex_1_1backend_1_1cuda_1_1context.html#a68013a8ebe6d034f148aacddff4a6dc3">vex::backend::cuda::context</a>
+, <a class="el" href="classvex_1_1backend_1_1cuda_1_1command__queue.html#a94b9bf08f24f1ae7303f2fe47b9c0584">vex::backend::cuda::command_queue</a>
+</li>
+<li>read()
+: <a class="el" href="classvex_1_1backend_1_1cuda_1_1device__vector.html#a4aa0f9e18454e9bff40ee58cb8f659ce">vex::backend::cuda::device_vector&lt; T &gt;</a>
+</li>
 <li>read_data()
-: <a class="el" href="classvex_1_1vector.html#ab464b27742b614f203e590e82f1d745b">vex::vector&lt; T &gt;</a>
+: <a class="el" href="classvex_1_1vector.html#a345dd428ce29f0756b0c2bb1f951ec26">vex::vector&lt; T &gt;</a>
 </li>
 <li>Reductor()
-: <a class="el" href="classvex_1_1Reductor.html#a088edf87b4b1b2892e2c5cc82a656c38">vex::Reductor&lt; real, RDC &gt;</a>
+: <a class="el" href="classvex_1_1Reductor.html#ac9bd909c184fc47d710c158b6a051a92">vex::Reductor&lt; real, RDC &gt;</a>
 </li>
 <li>resize()
-: <a class="el" href="classvex_1_1vector.html#a90c1fa2468fd173040fd433d68d9b76a">vex::vector&lt; T &gt;</a>
-, <a class="el" href="classvex_1_1multivector.html#ae1de77d9ded0b34dc0716b3dc7c4a5d3">vex::multivector&lt; T, N &gt;</a>
-, <a class="el" href="classvex_1_1vector.html#a89ce2d148fb858750de01226b26888a8">vex::vector&lt; T &gt;</a>
+: <a class="el" href="classvex_1_1vector.html#a8037ecef74ab78e7f690728f8e60d6d8">vex::vector&lt; T &gt;</a>
 , <a class="el" href="classvex_1_1multivector.html#a0df89f0a066c29bd16b13ae3eb852938">vex::multivector&lt; T, N &gt;</a>
-, <a class="el" href="classvex_1_1vector.html#ab86b51939875b8e84698ddf6558a23d1">vex::vector&lt; T &gt;</a>
+, <a class="el" href="classvex_1_1vector.html#ae136be8541a903becef771a67f81c5c0">vex::vector&lt; T &gt;</a>
+, <a class="el" href="classvex_1_1multivector.html#a2b000a4b388abceb70bc8a19cedb6764">vex::multivector&lt; T, N &gt;</a>
 </li>
 <li>rows()
 : <a class="el" href="classvex_1_1SpMat.html#a024d177bdf1c0e1a58560b9de7881838">vex::SpMat&lt; val_t, col_t, idx_t &gt;</a>
@@ -263,18 +319,22 @@
 
 
 <h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
+<li>set_current()
+: <a class="el" href="classvex_1_1backend_1_1cuda_1_1context.html#a9d79b83dde9dcd3c8daa6322610c9941">vex::backend::cuda::context</a>
+</li>
 <li>size()
-: <a class="el" href="classvex_1_1multivector.html#ad3c7abe7faa85d0653cc001baaffbc8b">vex::multivector&lt; T, N &gt;</a>
+: <a class="el" href="classvex_1_1backend_1_1cuda_1_1device__vector.html#a378c18c6899fb1f916d0a566f38f533d">vex::backend::cuda::device_vector&lt; T &gt;</a>
 , <a class="el" href="classvex_1_1vector.html#acba96d67dcc97afdc6ff552d913ca7d7">vex::vector&lt; T &gt;</a>
+, <a class="el" href="classvex_1_1multivector.html#ad3c7abe7faa85d0653cc001baaffbc8b">vex::multivector&lt; T, N &gt;</a>
 </li>
 <li>SpMat()
-: <a class="el" href="classvex_1_1SpMat.html#ac503fc8519756b95f80fb35bd7288967">vex::SpMat&lt; val_t, col_t, idx_t &gt;</a>
+: <a class="el" href="classvex_1_1SpMat.html#a9dcc260fadda1053d76baa7aca3692c2">vex::SpMat&lt; val_t, col_t, idx_t &gt;</a>
 </li>
 <li>SpMatCCSR()
-: <a class="el" href="structvex_1_1SpMatCCSR.html#a7716e87edb66f24eed0f101a0c6fc195">vex::SpMatCCSR&lt; val_t, col_t, idx_t &gt;</a>
+: <a class="el" href="structvex_1_1SpMatCCSR.html#a0a5eee3c39229bd29edb6d867e17deec">vex::SpMatCCSR&lt; val_t, col_t, idx_t &gt;</a>
 </li>
 <li>stencil()
-: <a class="el" href="classvex_1_1stencil.html#ad43a6b0c0e04b9dcd908b210a7309065">vex::stencil&lt; T &gt;</a>
+: <a class="el" href="classvex_1_1stencil.html#a0eebc074db0047d79c69b83b1eb2f3a9">vex::stencil&lt; T &gt;</a>
 </li>
 <li>swap()
 : <a class="el" href="classvex_1_1vector.html#afe792e9bcb2d6efa1af5e9bd60ca0526">vex::vector&lt; T &gt;</a>
@@ -292,9 +352,15 @@
 <li>tic_cpu()
 : <a class="el" href="classvex_1_1profiler.html#a1e30c672478aa5d4f09e1aba3774c6b2">vex::profiler&lt; Clock &gt;</a>
 </li>
+<li>tics()
+: <a class="el" href="classvex_1_1stopwatch.html#a202856afb4b08510a3c7e8c077bd5d2e">vex::stopwatch&lt; Clock &gt;</a>
+</li>
 <li>toc()
 : <a class="el" href="classvex_1_1stopwatch.html#a72fbbe67e34c71ba8834374c391e4616">vex::stopwatch&lt; Clock &gt;</a>
 , <a class="el" href="classvex_1_1profiler.html#a0297c22109f3ede4376b33b85a0f3a1c">vex::profiler&lt; Clock &gt;</a>
+</li>
+<li>total()
+: <a class="el" href="classvex_1_1stopwatch.html#ad51f70336fa64fccbadf00b7a4cea613">vex::stopwatch&lt; Clock &gt;</a>
 </li>
 </ul>
 
@@ -307,8 +373,11 @@
 
 
 <h3><a class="anchor" id="index_w"></a>- w -</h3><ul>
+<li>write()
+: <a class="el" href="classvex_1_1backend_1_1cuda_1_1device__vector.html#ab84e5b9aebafacdc987f14d62e699160">vex::backend::cuda::device_vector&lt; T &gt;</a>
+</li>
 <li>write_data()
-: <a class="el" href="classvex_1_1vector.html#afa66099d924613ef81fb750060d48ab3">vex::vector&lt; T &gt;</a>
+: <a class="el" href="classvex_1_1vector.html#ad20134106411dff1dba40d3e7744a908">vex::vector&lt; T &gt;</a>
 </li>
 </ul>
 </div><!-- contents -->

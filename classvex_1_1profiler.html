@@ -29,6 +29,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -62,9 +63,9 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0093574a1fef68c37324533f07de7fa1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1profiler.html#a0093574a1fef68c37324533f07de7fa1">profiler</a> (const std::vector&lt; cl::CommandQueue &gt; &amp;queue=std::vector&lt; cl::CommandQueue &gt;(), const std::string &amp;name=&quot;Profile&quot;)</td></tr>
-<tr class="memdesc:a0093574a1fef68c37324533f07de7fa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a0093574a1fef68c37324533f07de7fa1">More...</a><br/></td></tr>
-<tr class="separator:a0093574a1fef68c37324533f07de7fa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2ff9289c1e3cbf707d1d262bca5493b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1profiler.html#aa2ff9289c1e3cbf707d1d262bca5493b">profiler</a> (const std::vector&lt; <a class="el" href="classvex_1_1backend_1_1cuda_1_1command__queue.html">backend::command_queue</a> &gt; &amp;queue=std::vector&lt; <a class="el" href="classvex_1_1backend_1_1cuda_1_1command__queue.html">backend::command_queue</a> &gt;(), const std::string &amp;name=&quot;Profile&quot;)</td></tr>
+<tr class="memdesc:aa2ff9289c1e3cbf707d1d262bca5493b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#aa2ff9289c1e3cbf707d1d262bca5493b">More...</a><br/></td></tr>
+<tr class="separator:aa2ff9289c1e3cbf707d1d262bca5493b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e30c672478aa5d4f09e1aba3774c6b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1profiler.html#a1e30c672478aa5d4f09e1aba3774c6b2">tic_cpu</a> (const std::string &amp;name)</td></tr>
 <tr class="memdesc:a1e30c672478aa5d4f09e1aba3774c6b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts a CPU timer.  <a href="#a1e30c672478aa5d4f09e1aba3774c6b2">More...</a><br/></td></tr>
 <tr class="separator:a1e30c672478aa5d4f09e1aba3774c6b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -92,7 +93,7 @@ class vex::profiler&lt; Clock &gt;</h3>
   </dd>
 </dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a0093574a1fef68c37324533f07de7fa1"></a>
+<a class="anchor" id="aa2ff9289c1e3cbf707d1d262bca5493b"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -104,8 +105,8 @@ template&lt;class Clock = std::chrono::high_resolution_clock&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="classvex_1_1profiler.html">vex::profiler</a>&lt; Clock &gt;::<a class="el" href="classvex_1_1profiler.html">profiler</a> </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; cl::CommandQueue &gt; &amp;&#160;</td>
-          <td class="paramname"><em>queue</em> = <code>std::vector&lt;cl::CommandQueue&gt;()</code>, </td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classvex_1_1backend_1_1cuda_1_1command__queue.html">backend::command_queue</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>queue</em> = <code>std::vector&lt;<a class="el" href="classvex_1_1backend_1_1cuda_1_1command__queue.html">backend::command_queue</a>&gt;()</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -171,7 +172,7 @@ template&lt;class Clock = std::chrono::high_resolution_clock&gt; </div>
   </dd>
 </dl>
 
-<p>Referenced by <a class="el" href="namespacevex.html#ae8e8c4b4386379f9b8489e382909070e">vex::device_spmv_perf()</a>, and <a class="el" href="namespacevex.html#a96cd21126e72ca29af2e26548aaa6be7">vex::device_vector_perf()</a>.</p>
+<p>Referenced by <a class="el" href="namespacevex.html#ac74a209f956b87b8dc289aad5498a25c">vex::device_spmv_perf()</a>, and <a class="el" href="namespacevex.html#a3688791c9b5aa7a26c7a63d9684b481c">vex::device_vector_perf()</a>.</p>
 
 </div>
 </div>
@@ -237,7 +238,7 @@ template&lt;class Clock = std::chrono::high_resolution_clock&gt; </div>
 <p>Returns time since last tic. </p>
 <p>Also removes interval from the top of the profiler hierarchy. </p>
 
-<p>Referenced by <a class="el" href="namespacevex.html#ae8e8c4b4386379f9b8489e382909070e">vex::device_spmv_perf()</a>, and <a class="el" href="namespacevex.html#a96cd21126e72ca29af2e26548aaa6be7">vex::device_vector_perf()</a>.</p>
+<p>Referenced by <a class="el" href="namespacevex.html#ac74a209f956b87b8dc289aad5498a25c">vex::device_spmv_perf()</a>, and <a class="el" href="namespacevex.html#a3688791c9b5aa7a26c7a63d9684b481c">vex::device_vector_perf()</a>.</p>
 
 </div>
 </div>

@@ -29,6 +29,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -65,6 +66,7 @@
 <code>#include &lt;numeric&gt;</code><br/>
 <code>#include &lt;algorithm&gt;</code><br/>
 <code>#include &lt;<a class="el" href="vector_8hpp.html">vexcl/vector.hpp</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="element__index_8hpp.html">vexcl/element_index.hpp</a>&gt;</code><br/>
 <code>#include &lt;boost/fusion/container/vector.hpp&gt;</code><br/>
 <code>#include &lt;boost/fusion/container/vector/convert.hpp&gt;</code><br/>
 <code>#include &lt;boost/fusion/algorithm/transformation/push_back.hpp&gt;</code><br/>
@@ -76,7 +78,7 @@
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="vector__view_8hpp__incl.png" border="0" usemap="#vexcl_2vector__view_8hpp" alt=""/></div>
 <map name="vexcl_2vector__view_8hpp" id="vexcl_2vector__view_8hpp">
-<area shape="rect" id="node15" href="vector_8hpp.html" title="OpenCL device vector. " alt="" coords="1178,88,1303,115"/><area shape="rect" id="node30" href="util_8hpp.html" title="OpenCL general utilities. " alt="" coords="1081,253,1186,280"/><area shape="rect" id="node46" href="operations_8hpp.html" title="Templates used for expression tree traversal and kernel generation. " alt="" coords="522,171,675,197"/><area shape="rect" id="node66" href="profiler_8hpp.html" title="Simple OpenCL/Host profiler. " alt="" coords="2481,253,2610,280"/><area shape="rect" id="node104" href="devlist_8hpp.html" title="OpenCL device enumeration and context initialization. " alt="" coords="1453,171,1579,197"/><area shape="rect" id="node60" href="types_8hpp.html" title="Support for using native C++ and OpenCL types in expressions. " alt="" coords="884,253,1004,280"/></map>
+<area shape="rect" id="node15" href="vector_8hpp.html" title="OpenCL device vector. " alt="" coords="3293,88,3418,115"/><area shape="rect" id="node125" href="element__index_8hpp.html" title="Element index for use in vector expressions. " alt="" coords="4298,88,4477,115"/><area shape="rect" id="node30" href="backend_8hpp.html" title="Compile&#45;time selection of backend (OpenCL/CUDA). " alt="" coords="3510,253,3649,280"/><area shape="rect" id="node40" href="util_8hpp.html" title="OpenCL general utilities. " alt="" coords="3328,253,3433,280"/><area shape="rect" id="node55" href="operations_8hpp.html" title="Templates used for expression tree traversal and kernel generation. " alt="" coords="3846,171,4000,197"/><area shape="rect" id="node78" href="profiler_8hpp.html" title="Simple OpenCL/Host profiler. " alt="" coords="1299,171,1428,197"/><area shape="rect" id="node116" href="devlist_8hpp.html" title="OpenCL device enumeration and context initialization. " alt="" coords="3166,171,3292,197"/><area shape="rect" id="node32" href="opencl_8hpp.html" title="OpenCL backend for compute kernel generation/compilation/launching. " alt="" coords="3712,336,3898,363"/><area shape="rect" id="node36" href="opencl_2error_8hpp.html" title="Output OpenCL errors to a std::stream. " alt="" coords="3715,411,3873,453"/><area shape="rect" id="node69" href="types_8hpp.html" title="Support for using native C++ and OpenCL types in expressions. " alt="" coords="3912,253,4033,280"/></map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> This graph shows which files directly or indirectly include this file:</div>
@@ -85,7 +87,7 @@
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="vector__view_8hpp__dep__incl.png" border="0" usemap="#vexcl_2vector__view_8hppdep" alt=""/></div>
 <map name="vexcl_2vector__view_8hppdep" id="vexcl_2vector__view_8hppdep">
-<area shape="rect" id="node3" href="multi__array_8hpp.html" title="An analog of boost::multi_array. " alt="" coords="5,80,160,107"/><area shape="rect" id="node5" href="vexcl_8hpp.html" title="Vector expression template library for OpenCL. " alt="" coords="185,80,303,107"/></map>
+<area shape="rect" id="node3" href="gather_8hpp.html" title="Gather scattered points from OpenCL device vector. " alt="" coords="5,80,131,107"/><area shape="rect" id="node5" href="vexcl_8hpp.html" title="Vector expression template library for OpenCL. " alt="" coords="110,155,228,181"/><area shape="rect" id="node7" href="multi__array_8hpp.html" title="An analog of boost::multi_array. " alt="" coords="207,80,363,107"/><area shape="rect" id="node9" href="spmat_8hpp.html" title="OpenCL sparse matrix. " alt="" coords="387,80,513,107"/></map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -98,9 +100,6 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1slicer.html">vex::slicer&lt; NR &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slicing operator.  <a href="structvex_1_1slicer.html#details">More...</a><br/></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1expr__permutation.html">vex::expr_permutation&lt; Expr &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expression-based permutation operator.  <a href="structvex_1_1expr__permutation.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -115,18 +114,18 @@ Functions</h2></td></tr>
 <tr class="memitem:a1d8048e3bb5185ab018e9d0a0649ef0b"><td class="memTemplItemLeft" align="right" valign="top">expr_permutation&lt; Expr &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a1d8048e3bb5185ab018e9d0a0649ef0b">vex::permutation</a> (const Expr &amp;expr)</td></tr>
 <tr class="memdesc:a1d8048e3bb5185ab018e9d0a0649ef0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns permutation functor which is based on an integral expression.  <a href="#a1d8048e3bb5185ab018e9d0a0649ef0b">More...</a><br/></td></tr>
 <tr class="separator:a1d8048e3bb5185ab018e9d0a0649ef0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af07b3fcd5e5eddf6c2a166390523bcfb"><td class="memTemplParams" colspan="2"><a class="anchor" id="af07b3fcd5e5eddf6c2a166390523bcfb"></a>
-template&lt;class RDC , typename T , size_t NDIM, size_t NR&gt; </td></tr>
-<tr class="memitem:af07b3fcd5e5eddf6c2a166390523bcfb"><td class="memTemplItemLeft" align="right" valign="top">reduced_vector_view&lt; vector&lt; T &gt;<br class="typebreak"/>
-, NDIM, NR, RDC &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#af07b3fcd5e5eddf6c2a166390523bcfb">vex::reduce</a> (const vector_view&lt; T, gslice&lt; NDIM &gt; &gt; &amp;view, const std::array&lt; size_t, NR &gt; &amp;reduce_dims)</td></tr>
-<tr class="memdesc:af07b3fcd5e5eddf6c2a166390523bcfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduce vector_view along specified dimensions. <br/></td></tr>
-<tr class="separator:af07b3fcd5e5eddf6c2a166390523bcfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2129ae86ea9447f2bf8005bc05bd1349"><td class="memTemplParams" colspan="2"><a class="anchor" id="a2129ae86ea9447f2bf8005bc05bd1349"></a>
-template&lt;class RDC , typename T , size_t NDIM&gt; </td></tr>
-<tr class="memitem:a2129ae86ea9447f2bf8005bc05bd1349"><td class="memTemplItemLeft" align="right" valign="top">reduced_vector_view&lt; vector&lt; T &gt;<br class="typebreak"/>
-, NDIM, 1, RDC &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a2129ae86ea9447f2bf8005bc05bd1349">vex::reduce</a> (const vector_view&lt; T, gslice&lt; NDIM &gt; &gt; &amp;view, size_t reduce_dim)</td></tr>
-<tr class="memdesc:a2129ae86ea9447f2bf8005bc05bd1349"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduce vector_view along specified dimension. <br/></td></tr>
-<tr class="separator:a2129ae86ea9447f2bf8005bc05bd1349"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fee73e544429d5e986f932a26cb4408"><td class="memTemplParams" colspan="2"><a class="anchor" id="a1fee73e544429d5e986f932a26cb4408"></a>
+template&lt;class RDC , typename Expr , size_t NDIM, size_t NR&gt; </td></tr>
+<tr class="memitem:a1fee73e544429d5e986f932a26cb4408"><td class="memTemplItemLeft" align="right" valign="top">reduced_vector_view&lt; Expr, <br class="typebreak"/>
+NDIM, NR, RDC &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a1fee73e544429d5e986f932a26cb4408">vex::reduce</a> (const vector_view&lt; Expr, gslice&lt; NDIM &gt; &gt; &amp;view, const std::array&lt; size_t, NR &gt; &amp;reduce_dims)</td></tr>
+<tr class="memdesc:a1fee73e544429d5e986f932a26cb4408"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduce vector_view along specified dimensions. <br/></td></tr>
+<tr class="separator:a1fee73e544429d5e986f932a26cb4408"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ed38cdf2814b4c0a339c59868a52ec4"><td class="memTemplParams" colspan="2"><a class="anchor" id="a8ed38cdf2814b4c0a339c59868a52ec4"></a>
+template&lt;class RDC , typename Expr , size_t NDIM&gt; </td></tr>
+<tr class="memitem:a8ed38cdf2814b4c0a339c59868a52ec4"><td class="memTemplItemLeft" align="right" valign="top">reduced_vector_view&lt; Expr, <br class="typebreak"/>
+NDIM, 1, RDC &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a8ed38cdf2814b4c0a339c59868a52ec4">vex::reduce</a> (const vector_view&lt; Expr, gslice&lt; NDIM &gt; &gt; &amp;view, size_t reduce_dim)</td></tr>
+<tr class="memdesc:a8ed38cdf2814b4c0a339c59868a52ec4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduce vector_view along specified dimension. <br/></td></tr>
+<tr class="separator:a8ed38cdf2814b4c0a339c59868a52ec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab14a59d7fe62f48a61cadd5098f82f80"><td class="memTemplParams" colspan="2"><a class="anchor" id="ab14a59d7fe62f48a61cadd5098f82f80"></a>
 template&lt;class RDC , typename Expr , size_t NDIM, size_t NR&gt; </td></tr>
 <tr class="memitem:ab14a59d7fe62f48a61cadd5098f82f80"><td class="memTemplItemLeft" align="right" valign="top">reduced_vector_view&lt; typename <br class="typebreak"/>
@@ -143,17 +142,24 @@ boost::proto::result_of::as_child<br class="typebreak"/>
 ::type, NDIM, 1, RDC &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#ac77b2a657d4d26f3b8348c9ac1be02f4">vex::reduce</a> (const gslice&lt; NDIM &gt; &amp;slice, const Expr &amp;expr, size_t reduce_dim)</td></tr>
 <tr class="memdesc:ac77b2a657d4d26f3b8348c9ac1be02f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduce sliced expression along specified dimension. <br/></td></tr>
 <tr class="separator:ac77b2a657d4d26f3b8348c9ac1be02f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a159a23f567b28d7d284fa0cd720e900a"><td class="memTemplParams" colspan="2">template&lt;class Expr , size_t Nout, size_t Nin&gt; </td></tr>
+<tr class="memitem:a159a23f567b28d7d284fa0cd720e900a"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a159a23f567b28d7d284fa0cd720e900a">vex::reshape</a> (const Expr &amp;expr, const std::array&lt; size_t, Nout &gt; &amp;dst_dims, const std::array&lt; size_t, Nin &gt; &amp;src_dims) -&gt; decltype(<a class="el" href="namespacevex.html#a1d8048e3bb5185ab018e9d0a0649ef0b">vex::permutation</a>(detail::reshape_helper&lt; Nout, Nin &gt;(dst_dims, src_dims)())(expr))</td></tr>
+<tr class="memdesc:a159a23f567b28d7d284fa0cd720e900a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reshapes given expression.  <a href="#a159a23f567b28d7d284fa0cd720e900a">More...</a><br/></td></tr>
+<tr class="separator:a159a23f567b28d7d284fa0cd720e900a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:ac11898b99f6b77ea08316ac19f0e7e86"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac11898b99f6b77ea08316ac19f0e7e86"></a>
-const range&#160;</td><td class="memItemRight" valign="bottom"><b>vex::_</b></td></tr>
+const range&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#ac11898b99f6b77ea08316ac19f0e7e86">vex::_</a></td></tr>
+<tr class="memdesc:ac11898b99f6b77ea08316ac19f0e7e86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Placeholder for an unbounded range. <br/></td></tr>
 <tr class="separator:ac11898b99f6b77ea08316ac19f0e7e86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad713fa361047b676e76f2f2d3342dcdd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad713fa361047b676e76f2f2d3342dcdd"></a>
-const extent_gen&lt; 0 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>vex::extents</b></td></tr>
+const extent_gen&lt; 0 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#ad713fa361047b676e76f2f2d3342dcdd">vex::extents</a></td></tr>
+<tr class="memdesc:ad713fa361047b676e76f2f2d3342dcdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper object for specifying slicer dimensions. <br/></td></tr>
 <tr class="separator:ad713fa361047b676e76f2f2d3342dcdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73c759e462ecb32cf236b5e5379da2f1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a73c759e462ecb32cf236b5e5379da2f1"></a>
-const index_gen&lt; 0 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>vex::indices</b></td></tr>
+const index_gen&lt; 0 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a73c759e462ecb32cf236b5e5379da2f1">vex::indices</a></td></tr>
+<tr class="memdesc:a73c759e462ecb32cf236b5e5379da2f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper object for specifying slicer shape. <br/></td></tr>
 <tr class="separator:a73c759e462ecb32cf236b5e5379da2f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>

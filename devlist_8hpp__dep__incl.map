@@ -1,14 +1,16 @@
 <map id="vexcl/devlist.hpp" name="vexcl/devlist.hpp">
-<area shape="rect" id="node3" href="$vector_8hpp.html" title="OpenCL device vector. " alt="" coords="521,80,647,107"/>
-<area shape="rect" id="node11" href="$vexcl_8hpp.html" title="Vector expression template library for OpenCL. " alt="" coords="755,320,873,347"/>
-<area shape="rect" id="node5" href="$boost__compute_8hpp.html" title="Provides wrappers for some of Boost.Compute (https://github.com/kylelutz/compute) algorithms..." alt="" coords="5,155,155,197"/>
-<area shape="rect" id="node7" href="$plan_8hpp.html" title="FFT plan, stores kernels and buffers for one configuration. " alt="" coords="180,163,309,189"/>
-<area shape="rect" id="node9" href="$fft_8hpp.html" title="Fast Fourier Transformation. " alt="" coords="239,245,337,272"/>
-<area shape="rect" id="node14" href="$gather_8hpp.html" title="Gather scattered points from OpenCL device vector. " alt="" coords="413,245,539,272"/>
-<area shape="rect" id="node17" href="$multi__array_8hpp.html" title="An analog of boost::multi_array. " alt="" coords="563,245,719,272"/>
-<area shape="rect" id="node19" href="$vector__view_8hpp.html" title="Provides sub&#45;view for an existing vex::vector. " alt="" coords="563,163,721,189"/>
-<area shape="rect" id="node23" href="$multivector_8hpp.html" title="OpenCL device multi&#45;vector. " alt="" coords="795,245,952,272"/>
-<area shape="rect" id="node26" href="$spmat_8hpp.html" title="OpenCL sparse matrix. " alt="" coords="977,245,1103,272"/>
-<area shape="rect" id="node29" href="$stencil_8hpp.html" title="Stencil convolution. " alt="" coords="849,163,975,189"/>
-<area shape="rect" id="node32" href="$vector__pointer_8hpp.html" title="Cast vex::vector to a raw pointer. " alt="" coords="999,163,1176,189"/>
+<area shape="rect" id="node3" href="$vector_8hpp.html" title="OpenCL device vector. " alt="" coords="528,80,653,107"/>
+<area shape="rect" id="node11" href="$vexcl_8hpp.html" title="Vector expression template library for OpenCL. " alt="" coords="513,411,631,437"/>
+<area shape="rect" id="node5" href="$plan_8hpp.html" title="FFT plan, stores kernels and buffers for one configuration. " alt="" coords="629,155,787,197"/>
+<area shape="rect" id="node7" href="$backend_2opencl_2fft_8hpp.html" title="Fast Fourier Transformation. " alt="" coords="629,246,787,287"/>
+<area shape="rect" id="node14" href="$boost__compute_8hpp.html" title="Provides wrappers for some of Boost.Compute (https://github.com/kylelutz/compute) algorithms..." alt="" coords="914,155,1064,197"/>
+<area shape="rect" id="node16" href="$gather_8hpp.html" title="Gather scattered points from OpenCL device vector. " alt="" coords="43,253,169,280"/>
+<area shape="rect" id="node19" href="$vector__view_8hpp.html" title="Provides sub&#45;view for an existing vex::vector. " alt="" coords="230,163,388,189"/>
+<area shape="rect" id="node22" href="$multi__array_8hpp.html" title="An analog of boost::multi_array. " alt="" coords="397,253,552,280"/>
+<area shape="rect" id="node24" href="$spmat_8hpp.html" title="OpenCL sparse matrix. " alt="" coords="246,253,372,280"/>
+<area shape="rect" id="node28" href="$generator_8hpp.html" title="OpenCL kernel generator. " alt="" coords="425,336,572,363"/>
+<area shape="rect" id="node32" href="$multivector_8hpp.html" title="OpenCL device multi&#45;vector. " alt="" coords="720,336,877,363"/>
+<area shape="rect" id="node36" href="$stencil_8hpp.html" title="Stencil convolution. " alt="" coords="902,336,1028,363"/>
+<area shape="rect" id="node39" href="$vector__pointer_8hpp.html" title="Cast vex::vector to a raw pointer. " alt="" coords="1089,163,1265,189"/>
+<area shape="rect" id="node9" href="$fft_8hpp.html" title="Backend selector for FFT. " alt="" coords="597,336,696,363"/>
 </map>

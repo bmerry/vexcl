@@ -29,6 +29,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li class="current"><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -47,9 +48,7 @@
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
 <div class="title">vex::fft Namespace Reference</div>  </div>
 </div><!--header-->
@@ -58,83 +57,14 @@
 <p>Fast Fourier Transform.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1fft_1_1prime__generator.html">prime_generator</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns successive prime numbers on each call.  <a href="structvex_1_1fft_1_1prime__generator.html#details">More...</a><br/></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a84576b97585988253392f81259cdd944"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>direction</b> { <b>forward</b>, 
+<tr class="memitem:a84576b97585988253392f81259cdd944"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex_1_1fft.html#a84576b97585988253392f81259cdd944">direction</a> { <b>forward</b>, 
 <b>inverse</b>, 
 <b>none</b>
  }</td></tr>
+<tr class="memdesc:a84576b97585988253392f81259cdd944"><td class="mdescLeft">&#160;</td><td class="mdescRight">FFT direction. <br/></td></tr>
 <tr class="separator:a84576b97585988253392f81259cdd944"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a1cd4816a0c206a51587e4e622499d5f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1cd4816a0c206a51587e4e622499d5f8"></a>
-std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;o, const pow &amp;p)</td></tr>
-<tr class="separator:a1cd4816a0c206a51587e4e622499d5f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae25202de5e90697d7a40d512f8f8979f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae25202de5e90697d7a40d512f8f8979f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>param_list</b> (std::ostringstream &amp;o, std::string prefix, size_t from, size_t to, size_t step=1)</td></tr>
-<tr class="separator:ae25202de5e90697d7a40d512f8f8979f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac29a5090975905e969e34b57ba1f5649"><td class="memTemplParams" colspan="2"><a class="anchor" id="ac29a5090975905e969e34b57ba1f5649"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:ac29a5090975905e969e34b57ba1f5649"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>kernel_radix</b> (std::ostringstream &amp;o, pow radix, bool invert)</td></tr>
-<tr class="separator:ac29a5090975905e969e34b57ba1f5649"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab45f759ff507a31ac6fdd4e98bd7fe83"><td class="memTemplParams" colspan="2"><a class="anchor" id="ab45f759ff507a31ac6fdd4e98bd7fe83"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:ab45f759ff507a31ac6fdd4e98bd7fe83"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>kernel_common</b> (std::ostringstream &amp;o, const cl::Device &amp;device)</td></tr>
-<tr class="separator:ab45f759ff507a31ac6fdd4e98bd7fe83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7200950f40f04cda372ec4f4ead98759"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7200950f40f04cda372ec4f4ead98759"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>mul_code</b> (std::ostringstream &amp;o, bool invert)</td></tr>
-<tr class="separator:a7200950f40f04cda372ec4f4ead98759"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea9c5c806edfb07a9c8a004788be3d30"><td class="memTemplParams" colspan="2"><a class="anchor" id="aea9c5c806edfb07a9c8a004788be3d30"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:aea9c5c806edfb07a9c8a004788be3d30"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>twiddle_code</b> (std::ostringstream &amp;o)</td></tr>
-<tr class="separator:aea9c5c806edfb07a9c8a004788be3d30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13206f9c3b67f156831e6446844d7338"><td class="memTemplParams" colspan="2"><a class="anchor" id="a13206f9c3b67f156831e6446844d7338"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:a13206f9c3b67f156831e6446844d7338"><td class="memTemplItemLeft" align="right" valign="top">kernel_call&#160;</td><td class="memTemplItemRight" valign="bottom"><b>radix_kernel</b> (bool once, const cl::CommandQueue &amp;queue, size_t n, size_t batch, bool invert, pow radix, size_t p, const cl::Buffer &amp;in, const cl::Buffer &amp;out)</td></tr>
-<tr class="separator:a13206f9c3b67f156831e6446844d7338"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae053a8a09885a3c2da39d42d0785c66e"><td class="memTemplParams" colspan="2"><a class="anchor" id="ae053a8a09885a3c2da39d42d0785c66e"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:ae053a8a09885a3c2da39d42d0785c66e"><td class="memTemplItemLeft" align="right" valign="top">kernel_call&#160;</td><td class="memTemplItemRight" valign="bottom"><b>transpose_kernel</b> (const cl::CommandQueue &amp;queue, size_t width, size_t height, const cl::Buffer &amp;in, const cl::Buffer &amp;out)</td></tr>
-<tr class="separator:ae053a8a09885a3c2da39d42d0785c66e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc7797afd60458f9a8854b4e8b96ffff"><td class="memTemplParams" colspan="2"><a class="anchor" id="abc7797afd60458f9a8854b4e8b96ffff"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:abc7797afd60458f9a8854b4e8b96ffff"><td class="memTemplItemLeft" align="right" valign="top">kernel_call&#160;</td><td class="memTemplItemRight" valign="bottom"><b>bluestein_twiddle</b> (const cl::CommandQueue &amp;queue, size_t n, bool inverse, const cl::Buffer &amp;out)</td></tr>
-<tr class="separator:abc7797afd60458f9a8854b4e8b96ffff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a78bf9afc69666f289346395009ac14"><td class="memTemplParams" colspan="2"><a class="anchor" id="a7a78bf9afc69666f289346395009ac14"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:a7a78bf9afc69666f289346395009ac14"><td class="memTemplItemLeft" align="right" valign="top">kernel_call&#160;</td><td class="memTemplItemRight" valign="bottom"><b>bluestein_pad_kernel</b> (const cl::CommandQueue &amp;queue, size_t n, size_t m, const cl::Buffer &amp;in, const cl::Buffer &amp;out)</td></tr>
-<tr class="separator:a7a78bf9afc69666f289346395009ac14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7de63c5fce78e3fafc99f1d97520c768"><td class="memTemplParams" colspan="2"><a class="anchor" id="a7de63c5fce78e3fafc99f1d97520c768"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:a7de63c5fce78e3fafc99f1d97520c768"><td class="memTemplItemLeft" align="right" valign="top">kernel_call&#160;</td><td class="memTemplItemRight" valign="bottom"><b>bluestein_mul_in</b> (const cl::CommandQueue &amp;queue, bool inverse, size_t batch, size_t radix, size_t p, size_t threads, size_t stride, const cl::Buffer &amp;data, const cl::Buffer &amp;exp, const cl::Buffer &amp;out)</td></tr>
-<tr class="separator:a7de63c5fce78e3fafc99f1d97520c768"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ff43c327eb580d89e7f6b94057fcb08"><td class="memTemplParams" colspan="2"><a class="anchor" id="a5ff43c327eb580d89e7f6b94057fcb08"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:a5ff43c327eb580d89e7f6b94057fcb08"><td class="memTemplItemLeft" align="right" valign="top">kernel_call&#160;</td><td class="memTemplItemRight" valign="bottom"><b>bluestein_mul_out</b> (const cl::CommandQueue &amp;queue, size_t batch, size_t p, size_t radix, size_t threads, size_t stride, const cl::Buffer &amp;data, const cl::Buffer &amp;exp, const cl::Buffer &amp;out)</td></tr>
-<tr class="separator:a5ff43c327eb580d89e7f6b94057fcb08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa9fda363aa37cec404bfe844c41c913"><td class="memTemplParams" colspan="2"><a class="anchor" id="aaa9fda363aa37cec404bfe844c41c913"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:aaa9fda363aa37cec404bfe844c41c913"><td class="memTemplItemLeft" align="right" valign="top">kernel_call&#160;</td><td class="memTemplItemRight" valign="bottom"><b>bluestein_mul</b> (const cl::CommandQueue &amp;queue, size_t n, size_t batch, const cl::Buffer &amp;data, const cl::Buffer &amp;exp, const cl::Buffer &amp;out)</td></tr>
-<tr class="separator:aaa9fda363aa37cec404bfe844c41c913"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53c29bb3cfe585a4a054ddab173eb690"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a53c29bb3cfe585a4a054ddab173eb690"></a>
-std::vector&lt; pow &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex_1_1fft.html#a53c29bb3cfe585a4a054ddab173eb690">prime_factors</a> (size_t n)</td></tr>
-<tr class="memdesc:a53c29bb3cfe585a4a054ddab173eb690"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the prime factors of a number. <br/></td></tr>
-<tr class="separator:a53c29bb3cfe585a4a054ddab173eb690"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5dabe3b0aae11f54afd08baf81f7f48"><td class="memTemplParams" colspan="2"><a class="anchor" id="ab5dabe3b0aae11f54afd08baf81f7f48"></a>
-template&lt;class Iterator &gt; </td></tr>
-<tr class="memitem:ab5dabe3b0aae11f54afd08baf81f7f48"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><b>next_prime_power</b> (Iterator begin, Iterator end, size_t target, size_t n=1, size_t best=-1)</td></tr>
-<tr class="separator:ab5dabe3b0aae11f54afd08baf81f7f48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a577d88fae8a9b15c5b6369d4c4059c2c"><td class="memTemplParams" colspan="2"><a class="anchor" id="a577d88fae8a9b15c5b6369d4c4059c2c"></a>
-template&lt;class T , class P &gt; </td></tr>
-<tr class="memitem:a577d88fae8a9b15c5b6369d4c4059c2c"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;o, const plan&lt; T, P &gt; &amp;p)</td></tr>
-<tr class="separator:a577d88fae8a9b15c5b6369d4c4059c2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Fast Fourier Transform. </p>

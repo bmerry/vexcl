@@ -1,8 +1,12 @@
 <map id="vexcl/vector_view.hpp" name="vexcl/vector_view.hpp">
-<area shape="rect" id="node15" href="$vector_8hpp.html" title="OpenCL device vector. " alt="" coords="1178,88,1303,115"/>
-<area shape="rect" id="node30" href="$util_8hpp.html" title="OpenCL general utilities. " alt="" coords="1081,253,1186,280"/>
-<area shape="rect" id="node46" href="$operations_8hpp.html" title="Templates used for expression tree traversal and kernel generation. " alt="" coords="522,171,675,197"/>
-<area shape="rect" id="node66" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler. " alt="" coords="2481,253,2610,280"/>
-<area shape="rect" id="node104" href="$devlist_8hpp.html" title="OpenCL device enumeration and context initialization. " alt="" coords="1453,171,1579,197"/>
-<area shape="rect" id="node60" href="$types_8hpp.html" title="Support for using native C++ and OpenCL types in expressions. " alt="" coords="884,253,1004,280"/>
+<area shape="rect" id="node15" href="$vector_8hpp.html" title="OpenCL device vector. " alt="" coords="3293,88,3418,115"/>
+<area shape="rect" id="node125" href="$element__index_8hpp.html" title="Element index for use in vector expressions. " alt="" coords="4298,88,4477,115"/>
+<area shape="rect" id="node30" href="$backend_8hpp.html" title="Compile&#45;time selection of backend (OpenCL/CUDA). " alt="" coords="3510,253,3649,280"/>
+<area shape="rect" id="node40" href="$util_8hpp.html" title="OpenCL general utilities. " alt="" coords="3328,253,3433,280"/>
+<area shape="rect" id="node55" href="$operations_8hpp.html" title="Templates used for expression tree traversal and kernel generation. " alt="" coords="3846,171,4000,197"/>
+<area shape="rect" id="node78" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler. " alt="" coords="1299,171,1428,197"/>
+<area shape="rect" id="node116" href="$devlist_8hpp.html" title="OpenCL device enumeration and context initialization. " alt="" coords="3166,171,3292,197"/>
+<area shape="rect" id="node32" href="$opencl_8hpp.html" title="OpenCL backend for compute kernel generation/compilation/launching. " alt="" coords="3712,336,3898,363"/>
+<area shape="rect" id="node36" href="$opencl_2error_8hpp.html" title="Output OpenCL errors to a std::stream. " alt="" coords="3715,411,3873,453"/>
+<area shape="rect" id="node69" href="$types_8hpp.html" title="Support for using native C++ and OpenCL types in expressions. " alt="" coords="3912,253,4033,280"/>
 </map>

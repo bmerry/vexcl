@@ -29,6 +29,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -61,19 +62,31 @@
 
 <p><code>#include &lt;random.hpp&gt;</code></p>
 
-<p>Inherits UserFunction&lt; RandomNormal&lt; T, Generator &gt;, T(cl_ulong, cl_ulong)&gt;.</p>
+<p>Inherits UserFunction&lt; RandomNormal&lt; T, Generator &gt;, T(cl_ulong, cl_ulong)&gt;, and UserFunction&lt; RandomNormal&lt; T, Generator &gt;, T(cl_ulong, cl_ulong)&gt;.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a799ffd397c07169419cbd129e4627f5f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a799ffd397c07169419cbd129e4627f5f"></a>
-typedef <a class="el" href="structvex_1_1cl__scalar__of.html">cl_scalar_of</a>&lt; T &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>Ts</b></td></tr>
+typedef cl_scalar_of&lt; T &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>Ts</b></td></tr>
 <tr class="separator:a799ffd397c07169419cbd129e4627f5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9967303e682a6ad1e176800e40e44c0a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9967303e682a6ad1e176800e40e44c0a"></a>
-typedef <a class="el" href="structvex_1_1cl__vector__of.html">cl_vector_of</a>&lt; Ts, 2 &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>T2</b></td></tr>
+typedef cl_vector_of&lt; Ts, 2 &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>T2</b></td></tr>
+<tr class="separator:a9967303e682a6ad1e176800e40e44c0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a799ffd397c07169419cbd129e4627f5f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a799ffd397c07169419cbd129e4627f5f"></a>
+typedef cl_scalar_of&lt; T &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>Ts</b></td></tr>
+<tr class="separator:a799ffd397c07169419cbd129e4627f5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9967303e682a6ad1e176800e40e44c0a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9967303e682a6ad1e176800e40e44c0a"></a>
+typedef cl_vector_of&lt; Ts, 2 &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>T2</b></td></tr>
 <tr class="separator:a9967303e682a6ad1e176800e40e44c0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ae29b5bf462fb6a2789a1233085b08735"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae29b5bf462fb6a2789a1233085b08735"></a>
+static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>preamble</b> ()</td></tr>
+<tr class="separator:ae29b5bf462fb6a2789a1233085b08735"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77b25f629c981b19cf1b1743a8cdb9b8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a77b25f629c981b19cf1b1743a8cdb9b8"></a>
+static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>body</b> ()</td></tr>
+<tr class="separator:a77b25f629c981b19cf1b1743a8cdb9b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77b25f629c981b19cf1b1743a8cdb9b8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a77b25f629c981b19cf1b1743a8cdb9b8"></a>
 static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>body</b> ()</td></tr>
 <tr class="separator:a77b25f629c981b19cf1b1743a8cdb9b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -85,8 +98,9 @@ struct vex::RandomNormal&lt; T, Generator &gt;</h3>
 <p>Returns normal distributed random numbers. </p>
 <div class="fragment"><div class="line">RandomNormal&lt;cl_double2&gt; rand();</div>
 <div class="line">output = mean + std_deviation * rand(<a class="code" href="namespacevex.html#acf35349b5accc05f96b291457f522acb" title="When used in vector expression, returns current element index plus offset. ">element_index</a>(), seed);</div>
-</div><!-- fragment --> </div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>vexcl/<a class="el" href="random_8hpp.html">random.hpp</a></li>
+</div><!-- fragment --> </div><hr/>The documentation for this struct was generated from the following files:<ul>
+<li>vexcl/backend/cuda/<a class="el" href="backend_2cuda_2random_8hpp.html">random.hpp</a></li>
+<li>vexcl/backend/opencl/<a class="el" href="backend_2opencl_2random_8hpp.html">random.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -29,6 +29,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -62,6 +63,13 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a73c4360f13078ec4557f079f23fcd81b"><td class="memTemplParams" colspan="2"><a class="anchor" id="a73c4360f13078ec4557f079f23fcd81b"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:a73c4360f13078ec4557f079f23fcd81b"><td class="memTemplItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><b>key_size</b> ()</td></tr>
+<tr class="separator:a73c4360f13078ec4557f079f23fcd81b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdcb748bf30a6a8ab39961966fbfa0d2"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:acdcb748bf30a6a8ab39961966fbfa0d2"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structvex_1_1random_1_1philox.html#acdcb748bf30a6a8ab39961966fbfa0d2">macro</a> (std::ostream &amp;o, std::string name, size_t rounds=10)</td></tr>
+<tr class="separator:acdcb748bf30a6a8ab39961966fbfa0d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdcb748bf30a6a8ab39961966fbfa0d2"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:acdcb748bf30a6a8ab39961966fbfa0d2"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structvex_1_1random_1_1philox.html#acdcb748bf30a6a8ab39961966fbfa0d2">macro</a> (std::ostream &amp;o, std::string name, size_t rounds=10)</td></tr>
 <tr class="separator:acdcb748bf30a6a8ab39961966fbfa0d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -118,8 +126,52 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li>vexcl/random/<a class="el" href="philox_8hpp.html">philox.hpp</a></li>
+<a class="anchor" id="acdcb748bf30a6a8ab39961966fbfa0d2"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void vex::random::philox::macro </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>o</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>rounds</em> = <code>10</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>generates a macro <code>philox(ctr, key)</code> modifies both inputs, uses the components of ctr for randomness. </p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following files:<ul>
+<li>vexcl/backend/cuda/random/<a class="el" href="cuda_2random_2philox_8hpp.html">philox.hpp</a></li>
+<li>vexcl/backend/opencl/random/<a class="el" href="opencl_2random_2philox_8hpp.html">philox.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

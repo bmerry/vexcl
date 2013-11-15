@@ -29,6 +29,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -47,10 +48,7 @@
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#define-members">Macros</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">util.hpp File Reference</div>  </div>
@@ -62,13 +60,13 @@
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br/>
 <code>#include &lt;string&gt;</code><br/>
 <code>#include &lt;vector&gt;</code><br/>
+<code>#include &lt;array&gt;</code><br/>
 <code>#include &lt;tuple&gt;</code><br/>
 <code>#include &lt;map&gt;</code><br/>
 <code>#include &lt;stdexcept&gt;</code><br/>
 <code>#include &lt;algorithm&gt;</code><br/>
 <code>#include &lt;type_traits&gt;</code><br/>
 <code>#include &lt;boost/config.hpp&gt;</code><br/>
-<code>#include &lt;CL/cl.hpp&gt;</code><br/>
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for util.hpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -85,36 +83,14 @@
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="util_8hpp__dep__incl.png" border="0" usemap="#vexcl_2util_8hppdep" alt=""/></div>
 <map name="vexcl_2util_8hppdep" id="vexcl_2util_8hppdep">
-<area shape="rect" id="node3" href="operations_8hpp.html" title="Templates used for expression tree traversal and kernel generation. " alt="" coords="1172,80,1326,107"/><area shape="rect" id="node12" href="vector_8hpp.html" title="OpenCL device vector. " alt="" coords="576,155,702,181"/><area shape="rect" id="node31" href="multivector_8hpp.html" title="OpenCL device multi&#45;vector. " alt="" coords="794,237,951,264"/><area shape="rect" id="node44" href="generator_8hpp.html" title="OpenCL kernel generator. " alt="" coords="1942,155,2090,181"/><area shape="rect" id="node64" href="devlist_8hpp.html" title="OpenCL device enumeration and context initialization. " alt="" coords="576,80,702,107"/><area shape="rect" id="node5" href="constants_8hpp.html" title="Constants for use in vector expressions. " alt="" coords="1779,320,1927,347"/><area shape="rect" id="node9" href="element__index_8hpp.html" title="Element index for use in vector expressions. " alt="" coords="925,320,1104,347"/><area shape="rect" id="node22" href="gather_8hpp.html" title="Gather scattered points from OpenCL device vector. " alt="" coords="1216,237,1342,264"/><area shape="rect" id="node40" href="vector__pointer_8hpp.html" title="Cast vex::vector to a raw pointer. " alt="" coords="1418,237,1595,264"/><area shape="rect" id="node47" href="mba_8hpp.html" title="Scattered data interpolation with multilevel B&#45;Splines. " alt="" coords="1026,237,1140,264"/><area shape="rect" id="node51" href="random_8hpp.html" title="Random generators. " alt="" coords="1076,155,1211,181"/><area shape="rect" id="node54" href="reductor_8hpp.html" title="Vector expression reduction. " alt="" coords="1287,155,1426,181"/><area shape="rect" id="node57" href="tagged__terminal_8hpp.html" title="Tagged terminal wrapper. " alt="" coords="1501,155,1691,181"/><area shape="rect" id="node60" href="temporary_8hpp.html" title="Container for intermediate results. " alt="" coords="1716,155,1866,181"/><area shape="rect" id="node7" href="vexcl_8hpp.html" title="Vector expression template library for OpenCL. " alt="" coords="1020,395,1138,421"/><area shape="rect" id="node14" href="boost__compute_8hpp.html" title="Provides wrappers for some of Boost.Compute (https://github.com/kylelutz/compute) algorithms..." alt="" coords="26,230,176,271"/><area shape="rect" id="node16" href="plan_8hpp.html" title="FFT plan, stores kernels and buffers for one configuration. " alt="" coords="252,237,382,264"/><area shape="rect" id="node18" href="fft_8hpp.html" title="Fast Fourier Transformation. " alt="" coords="166,320,264,347"/><area shape="rect" id="node25" href="multi__array_8hpp.html" title="An analog of boost::multi_array. " alt="" coords="693,320,848,347"/><area shape="rect" id="node27" href="vector__view_8hpp.html" title="Provides sub&#45;view for an existing vex::vector. " alt="" coords="560,237,718,264"/><area shape="rect" id="node34" href="spmat_8hpp.html" title="OpenCL sparse matrix. " alt="" coords="340,320,466,347"/><area shape="rect" id="node37" href="stencil_8hpp.html" title="Stencil convolution. " alt="" coords="490,320,616,347"/></map>
+<area shape="rect" id="node3" href="operations_8hpp.html" title="Templates used for expression tree traversal and kernel generation. " alt="" coords="712,80,865,107"/><area shape="rect" id="node7" href="vector_8hpp.html" title="OpenCL device vector. " alt="" coords="1487,163,1612,189"/><area shape="rect" id="node32" href="generator_8hpp.html" title="OpenCL kernel generator. " alt="" coords="2054,253,2201,280"/><area shape="rect" id="node36" href="multivector_8hpp.html" title="OpenCL device multi&#45;vector. " alt="" coords="1872,253,2029,280"/><area shape="rect" id="node79" href="devlist_8hpp.html" title="OpenCL device enumeration and context initialization. " alt="" coords="1735,80,1861,107"/><area shape="rect" id="node5" href="backend_2cuda_2random_8hpp.html" title="Random generators for CUDA. " alt="" coords="175,155,321,197"/><area shape="rect" id="node20" href="gather_8hpp.html" title="Gather scattered points from OpenCL device vector. " alt="" coords="991,344,1117,371"/><area shape="rect" id="node43" href="vector__pointer_8hpp.html" title="Cast vex::vector to a raw pointer. " alt="" coords="631,253,808,280"/><area shape="rect" id="node47" href="backend_2opencl_2random_8hpp.html" title="Random generators for OpenCL. " alt="" coords="809,337,967,378"/><area shape="rect" id="node52" href="cast_8hpp.html" title="Cast an expression to a type. " alt="" coords="5,427,117,453"/><area shape="rect" id="node55" href="constants_8hpp.html" title="Constants for use in vector expressions. " alt="" coords="143,427,291,453"/><area shape="rect" id="node58" href="element__index_8hpp.html" title="Element index for use in vector expressions. " alt="" coords="889,163,1068,189"/><area shape="rect" id="node64" href="mba_8hpp.html" title="Scattered data interpolation with multilevel B&#45;Splines. " alt="" coords="257,344,372,371"/><area shape="rect" id="node68" href="reductor_8hpp.html" title="Vector expression reduction. " alt="" coords="367,427,505,453"/><area shape="rect" id="node71" href="tagged__terminal_8hpp.html" title="Tagged terminal wrapper. " alt="" coords="447,163,637,189"/><area shape="rect" id="node74" href="temporary_8hpp.html" title="Container for intermediate results. " alt="" coords="714,163,864,189"/><area shape="rect" id="node9" href="plan_8hpp.html" title="FFT plan, stores kernels and buffers for one configuration. " alt="" coords="1587,246,1745,287"/><area shape="rect" id="node11" href="backend_2opencl_2fft_8hpp.html" title="Fast Fourier Transformation. " alt="" coords="1587,337,1745,378"/><area shape="rect" id="node15" href="vexcl_8hpp.html" title="Vector expression template library for OpenCL. " alt="" coords="919,501,1037,528"/><area shape="rect" id="node18" href="boost__compute_8hpp.html" title="Provides wrappers for some of Boost.Compute (https://github.com/kylelutz/compute) algorithms..." alt="" coords="1361,246,1511,287"/><area shape="rect" id="node23" href="vector__view_8hpp.html" title="Provides sub&#45;view for an existing vex::vector. " alt="" coords="1075,253,1233,280"/><area shape="rect" id="node26" href="multi__array_8hpp.html" title="An analog of boost::multi_array. " alt="" coords="1194,344,1349,371"/><area shape="rect" id="node28" href="spmat_8hpp.html" title="OpenCL sparse matrix. " alt="" coords="1374,344,1500,371"/><area shape="rect" id="node40" href="stencil_8hpp.html" title="Stencil convolution. " alt="" coords="1327,427,1453,453"/><area shape="rect" id="node13" href="fft_8hpp.html" title="Backend selector for FFT. " alt="" coords="1507,427,1605,453"/><area shape="rect" id="node49" href="random_8hpp.html" title="Backend selector for random number generators. " alt="" coords="851,427,985,453"/></map>
 </div>
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1device__options.html">vex::device_options&lt; kind &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global program options holder.  <a href="structvex_1_1device__options.html#details">More...</a><br/></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacevex"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html">vex</a></td></tr>
 <tr class="memdesc:namespacevex"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector expression template library for OpenCL. <br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:af1b68fb4ba71d72d397f46a730f03f2f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af1b68fb4ba71d72d397f46a730f03f2f"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>__CL_ENABLE_EXCEPTIONS</b></td></tr>
-<tr class="separator:af1b68fb4ba71d72d397f46a730f03f2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6babb2f7faf3cc256e223009c7c8487"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab6babb2f7faf3cc256e223009c7c8487"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>CL_ERR2TXT</b>(num, msg)&#160;&#160;&#160;case (num): os &lt;&lt; (msg); break</td></tr>
-<tr class="separator:ab6babb2f7faf3cc256e223009c7c8487"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:aee23473e73f03425a96da4cbde34233e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>device_options_kind</b> { <b>compile_options</b>, 
-<b>program_header</b>
- }</td></tr>
-<tr class="separator:aee23473e73f03425a96da4cbde34233e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -130,75 +106,11 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="na
 size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#adde6e399118c4e9c8fdb111d23d65698">vex::alignup</a> (size_t n, size_t m=16U)</td></tr>
 <tr class="memdesc:adde6e399118c4e9c8fdb111d23d65698"><td class="mdescLeft">&#160;</td><td class="mdescRight">Align n to the next multiple of m. <br/></td></tr>
 <tr class="separator:adde6e399118c4e9c8fdb111d23d65698"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d3fe52e80bf245c052cedbf50a3d388"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d3fe52e80bf245c052cedbf50a3d388"></a>
-cl::Context&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a4d3fe52e80bf245c052cedbf50a3d388">vex::qctx</a> (const cl::CommandQueue &amp;q)</td></tr>
-<tr class="memdesc:a4d3fe52e80bf245c052cedbf50a3d388"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shortcut for q.getInfo&lt;CL_QUEUE_CONTEXT&gt;() <br/></td></tr>
-<tr class="separator:a4d3fe52e80bf245c052cedbf50a3d388"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae299eb0d6e1f28d13e73820ac0c56a52"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae299eb0d6e1f28d13e73820ac0c56a52"></a>
-cl::Device&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#ae299eb0d6e1f28d13e73820ac0c56a52">vex::qdev</a> (const cl::CommandQueue &amp;q)</td></tr>
-<tr class="memdesc:ae299eb0d6e1f28d13e73820ac0c56a52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shortcut for q.getInfo&lt;CL_QUEUE_DEVICE&gt;() <br/></td></tr>
-<tr class="separator:ae299eb0d6e1f28d13e73820ac0c56a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acdde8bea01bff2ffb88771e32cae12a4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acdde8bea01bff2ffb88771e32cae12a4"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#acdde8bea01bff2ffb88771e32cae12a4">vex::is_cpu</a> (const cl::Device &amp;d)</td></tr>
-<tr class="memdesc:acdde8bea01bff2ffb88771e32cae12a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the compute device is CPU. <br/></td></tr>
-<tr class="separator:acdde8bea01bff2ffb88771e32cae12a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a670468418fbb24fb1ca41adbaca5cdfc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a670468418fbb24fb1ca41adbaca5cdfc"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>vex::get_compile_options</b> (const cl::Device &amp;dev)</td></tr>
-<tr class="separator:a670468418fbb24fb1ca41adbaca5cdfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9756604e695ee64208b167160d7ca4ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9756604e695ee64208b167160d7ca4ea"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>vex::get_program_header</b> (const cl::Device &amp;dev)</td></tr>
-<tr class="separator:a9756604e695ee64208b167160d7ca4ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52da74e6e1a5a01418ae9b9cefadb66d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a52da74e6e1a5a01418ae9b9cefadb66d">vex::push_compile_options</a> (const cl::Device &amp;dev, const std::string &amp;str)</td></tr>
-<tr class="memdesc:a52da74e6e1a5a01418ae9b9cefadb66d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set global OpenCL compilation options for a given device.  <a href="#a52da74e6e1a5a01418ae9b9cefadb66d">More...</a><br/></td></tr>
-<tr class="separator:a52da74e6e1a5a01418ae9b9cefadb66d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3405cf82dc68727a0dc4fe81677881a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac3405cf82dc68727a0dc4fe81677881a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#ac3405cf82dc68727a0dc4fe81677881a">vex::pop_compile_options</a> (const cl::Device &amp;dev)</td></tr>
-<tr class="memdesc:ac3405cf82dc68727a0dc4fe81677881a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rolls back changes to compile options. <br/></td></tr>
-<tr class="separator:ac3405cf82dc68727a0dc4fe81677881a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a473a9fd8eb022d0c5d6f3b3c8f3ae33e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a473a9fd8eb022d0c5d6f3b3c8f3ae33e">vex::push_program_header</a> (const cl::Device &amp;dev, const std::string &amp;str)</td></tr>
-<tr class="memdesc:a473a9fd8eb022d0c5d6f3b3c8f3ae33e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set global OpenCL program header for a given device.  <a href="#a473a9fd8eb022d0c5d6f3b3c8f3ae33e">More...</a><br/></td></tr>
-<tr class="separator:a473a9fd8eb022d0c5d6f3b3c8f3ae33e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a4e95599d2b78b67f44130ca2deafef"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a4e95599d2b78b67f44130ca2deafef"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a6a4e95599d2b78b67f44130ca2deafef">vex::pop_program_header</a> (const cl::Device &amp;dev)</td></tr>
-<tr class="memdesc:a6a4e95599d2b78b67f44130ca2deafef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rolls back changes to compile options. <br/></td></tr>
-<tr class="separator:a6a4e95599d2b78b67f44130ca2deafef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5dc8bddc0a9b65cd4aae3d510b036a2a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5dc8bddc0a9b65cd4aae3d510b036a2a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a5dc8bddc0a9b65cd4aae3d510b036a2a">vex::push_compile_options</a> (const std::vector&lt; cl::CommandQueue &gt; &amp;queue, const std::string &amp;str)</td></tr>
-<tr class="memdesc:a5dc8bddc0a9b65cd4aae3d510b036a2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set global OpenCL compilation options for each device in queue list. <br/></td></tr>
-<tr class="separator:a5dc8bddc0a9b65cd4aae3d510b036a2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0bbeb74ee1d2069b386bc2da6ab4644"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af0bbeb74ee1d2069b386bc2da6ab4644"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#af0bbeb74ee1d2069b386bc2da6ab4644">vex::pop_compile_options</a> (const std::vector&lt; cl::CommandQueue &gt; &amp;queue)</td></tr>
-<tr class="memdesc:af0bbeb74ee1d2069b386bc2da6ab4644"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rolls back changes to compile options for each device in queue list. <br/></td></tr>
-<tr class="separator:af0bbeb74ee1d2069b386bc2da6ab4644"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e5ba7a6559c80e33282b83ce217175e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e5ba7a6559c80e33282b83ce217175e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a5e5ba7a6559c80e33282b83ce217175e">vex::push_program_header</a> (const std::vector&lt; cl::CommandQueue &gt; &amp;queue, const std::string &amp;str)</td></tr>
-<tr class="memdesc:a5e5ba7a6559c80e33282b83ce217175e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set global OpenCL program header for each device in queue list. <br/></td></tr>
-<tr class="separator:a5e5ba7a6559c80e33282b83ce217175e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5989c3bd66757af483a79d8f7aa1bc07"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5989c3bd66757af483a79d8f7aa1bc07"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a5989c3bd66757af483a79d8f7aa1bc07">vex::pop_program_header</a> (const std::vector&lt; cl::CommandQueue &gt; &amp;queue)</td></tr>
-<tr class="memdesc:a5989c3bd66757af483a79d8f7aa1bc07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rolls back changes to compile options for each device in queue list. <br/></td></tr>
-<tr class="separator:a5989c3bd66757af483a79d8f7aa1bc07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae8dd773dd40e5fa7cf9bb68f425cc20"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#aae8dd773dd40e5fa7cf9bb68f425cc20">vex::standard_kernel_header</a> (const cl::Device &amp;dev)</td></tr>
-<tr class="memdesc:aae8dd773dd40e5fa7cf9bb68f425cc20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns standard OpenCL program header.  <a href="#aae8dd773dd40e5fa7cf9bb68f425cc20">More...</a><br/></td></tr>
-<tr class="separator:aae8dd773dd40e5fa7cf9bb68f425cc20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7763bd1334147c58efee32b08012d0c"><td class="memItemLeft" align="right" valign="top">cl::Program&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#ab7763bd1334147c58efee32b08012d0c">vex::build_sources</a> (const cl::Context &amp;context, const std::string &amp;source, const std::string &amp;options=&quot;&quot;)</td></tr>
-<tr class="memdesc:ab7763bd1334147c58efee32b08012d0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create and build a program from source string.  <a href="#ab7763bd1334147c58efee32b08012d0c">More...</a><br/></td></tr>
-<tr class="separator:ab7763bd1334147c58efee32b08012d0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed8919091924e9ef2dac72bd2ead146d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aed8919091924e9ef2dac72bd2ead146d"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#aed8919091924e9ef2dac72bd2ead146d">vex::kernel_workgroup_size</a> (const cl::Kernel &amp;kernel, const cl::Device &amp;device)</td></tr>
-<tr class="memdesc:aed8919091924e9ef2dac72bd2ead146d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get maximum possible workgroup size for given kernel. <br/></td></tr>
-<tr class="separator:aed8919091924e9ef2dac72bd2ead146d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28774c57b6a78f9e774468ca3fbf9981"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a28774c57b6a78f9e774468ca3fbf9981"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a28774c57b6a78f9e774468ca3fbf9981">vex::num_workgroups</a> (const cl::Device &amp;device)</td></tr>
-<tr class="memdesc:a28774c57b6a78f9e774468ca3fbf9981"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard number of workgroups to launch on a device. <br/></td></tr>
-<tr class="separator:a28774c57b6a78f9e774468ca3fbf9981"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada36f89e79af9f483735ff5e844db802"><td class="memItemLeft" align="right" valign="top">cl::LocalSpaceArg&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#ada36f89e79af9f483735ff5e844db802">vex::Local</a> (size_t size)</td></tr>
-<tr class="memdesc:ada36f89e79af9f483735ff5e844db802"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function for generating LocalSpaceArg objects.  <a href="#ada36f89e79af9f483735ff5e844db802">More...</a><br/></td></tr>
-<tr class="separator:ada36f89e79af9f483735ff5e844db802"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a820f9bfc5d19b05ae97d079a51f1cfa3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a820f9bfc5d19b05ae97d079a51f1cfa3"></a>
-std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8hpp.html#a820f9bfc5d19b05ae97d079a51f1cfa3">operator&lt;&lt;</a> (std::ostream &amp;os, const cl::Error &amp;e)</td></tr>
-<tr class="memdesc:a820f9bfc5d19b05ae97d079a51f1cfa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output description of an OpenCL error to a stream. <br/></td></tr>
-<tr class="separator:a820f9bfc5d19b05ae97d079a51f1cfa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acec621a57aaa5e1e17619376714b34c6"><td class="memTemplParams" colspan="2"><a class="anchor" id="acec621a57aaa5e1e17619376714b34c6"></a>
+template&lt;class T , class... Tail&gt; </td></tr>
+<tr class="memitem:acec621a57aaa5e1e17619376714b34c6"><td class="memTemplItemLeft" align="right" valign="top">std::array&lt; T, 1+sizeof...(Tail)&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#acec621a57aaa5e1e17619376714b34c6">vex::make_array</a> (T t, Tail...tail)</td></tr>
+<tr class="memdesc:acec621a57aaa5e1e17619376714b34c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create std::array from arguments. <br/></td></tr>
+<tr class="separator:acec621a57aaa5e1e17619376714b34c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>OpenCL general utilities. </p>
