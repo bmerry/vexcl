@@ -1,8 +1,8 @@
 <map id="vexcl/spmat.hpp" name="vexcl/spmat.hpp">
 <area shape="rect" id="node19" href="$vector_8hpp.html" title="OpenCL device vector. " alt="" coords="2779,179,2905,205"/>
 <area shape="rect" id="node111" href="$vector__view_8hpp.html" title="Provides sub&#45;view for an existing vex::vector. " alt="" coords="3477,88,3635,115"/>
-<area shape="rect" id="node132" href="$hybrid__ell_8inl.html" title="OpenCL sparse matrix in Hybrid ELL&#45;CSR format. " alt="" coords="4385,81,4527,122"/>
-<area shape="rect" id="node134" href="$csr_8inl.html" title="OpenCL sparse matrix in CSR format. " alt="" coords="4553,88,4691,115"/>
+<area shape="rect" id="node132" href="$spmat_2hybrid__ell_8inl.html" title="OpenCL sparse matrix in Hybrid ELL&#45;CSR format. " alt="" coords="4385,81,4527,122"/>
+<area shape="rect" id="node134" href="$spmat_2csr_8inl.html" title="OpenCL sparse matrix in CSR format. " alt="" coords="4553,88,4691,115"/>
 <area shape="rect" id="node136" href="$ccsr_8hpp.html" title="Sparse matrix in Compressed CSR format. " alt="" coords="4716,88,4871,115"/>
 <area shape="rect" id="node138" href="$inline__spmv_8hpp.html" title="Inline SpMV operation. " alt="" coords="4897,81,5031,122"/>
 <area shape="rect" id="node33" href="$backend_8hpp.html" title="Compile&#45;time selection of backend (OpenCL/CUDA). " alt="" coords="2453,344,2593,371"/>

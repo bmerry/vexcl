@@ -16,13 +16,13 @@
 <area shape="rect" id="node168" href="$stencil_8hpp.html" title="Stencil convolution. " alt="" coords="190,163,316,189"/>
 <area shape="rect" id="node174" href="$gather_8hpp.html" title="Gather scattered points from OpenCL device vector. " alt="" coords="4187,80,4313,107"/>
 <area shape="rect" id="node181" href="$random_8hpp.html" title="Backend selector for random number generators. " alt="" coords="2801,80,2936,107"/>
-<area shape="rect" id="node184" href="$mba_8hpp.html" title="Scattered data interpolation with multilevel B&#45;Splines. " alt="" coords="3711,253,3825,280"/>
-<area shape="rect" id="node194" href="$generator_8hpp.html" title="OpenCL kernel generator. " alt="" coords="1394,163,1541,189"/>
-<area shape="rect" id="node206" href="$fft_8hpp.html" title="Backend selector for FFT. " alt="" coords="3011,80,3109,107"/>
+<area shape="rect" id="node184" href="$fft_8hpp.html" title="Backend selector for FFT. " alt="" coords="3011,80,3109,107"/>
+<area shape="rect" id="node187" href="$mba_8hpp.html" title="Scattered data interpolation with multilevel B&#45;Splines. " alt="" coords="3711,253,3825,280"/>
+<area shape="rect" id="node197" href="$generator_8hpp.html" title="OpenCL kernel generator. " alt="" coords="1394,163,1541,189"/>
 <area shape="rect" id="node5" href="$opencl_8hpp.html" title="OpenCL backend for compute kernel generation/compilation/launching. " alt="" coords="2445,501,2632,528"/>
 <area shape="rect" id="node18" href="$util_8hpp.html" title="OpenCL general utilities. " alt="" coords="1585,427,1689,453"/>
 <area shape="rect" id="node41" href="$types_8hpp.html" title="Support for using native C++ and OpenCL types in expressions. " alt="" coords="1049,427,1169,453"/>
 <area shape="rect" id="node47" href="$operations_8hpp.html" title="Templates used for expression tree traversal and kernel generation. " alt="" coords="2420,344,2573,371"/>
-<area shape="rect" id="node164" href="$hybrid__ell_8inl.html" title="OpenCL sparse matrix in Hybrid ELL&#45;CSR format. " alt="" coords="3603,155,3745,197"/>
-<area shape="rect" id="node166" href="$csr_8inl.html" title="OpenCL sparse matrix in CSR format. " alt="" coords="3771,163,3909,189"/>
+<area shape="rect" id="node164" href="$spmat_2hybrid__ell_8inl.html" title="OpenCL sparse matrix in Hybrid ELL&#45;CSR format. " alt="" coords="3603,155,3745,197"/>
+<area shape="rect" id="node166" href="$spmat_2csr_8inl.html" title="OpenCL sparse matrix in CSR format. " alt="" coords="3771,163,3909,189"/>
 </map>
