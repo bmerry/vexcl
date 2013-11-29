@@ -29,6 +29,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li class="current"><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
@@ -79,6 +80,7 @@
 <li><a href="#sparse-matrix-vector-products">Sparse matrix-vector products</a></li>
 <li><a href="#stencil-convolutions">Stencil convolutions</a></li>
 <li><a href="#raw-pointers">Raw pointers</a></li>
+<li><a href="#parallel-primitives">Sort, scan, reduce-by-key algorithms</a></li>
 <li><a href="#multivectors">Multivectors</a></li>
 <li><a href="#converting-generic-c-algorithms-to-opencl">Converting generic C++ algorithms to OpenCL/CUDA</a><ul>
 <li><a href="#kernel-generator">Kernel generator</a></li>
@@ -99,7 +101,7 @@
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="vexcl_8hpp.html">vexcl/vexcl.hpp</a>&gt;</span></div>
 <div class="line"></div>
 <div class="line"><span class="keywordtype">int</span> main() {</div>
-<div class="line">    vex::Context ctx( <a class="code" href="structvex_1_1Filter_1_1Type.html">vex::Filter::Type</a>(CL_DEVICE_TYPE_GPU) &amp;&amp; <a class="code" href="namespacevex_1_1Filter.html#ac0fd6d152ede941fd088efcbd01cefb1">vex::Filter::DoublePrecision</a> );</div>
+<div class="line">    <a class="code" href="classvex_1_1Context.html">vex::Context</a> ctx( <a class="code" href="structvex_1_1Filter_1_1Type.html">vex::Filter::Type</a>(CL_DEVICE_TYPE_GPU) &amp;&amp; vex::Filter::DoublePrecision );</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">if</span> (!ctx) <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;No devices available.&quot;</span>);</div>
 <div class="line"></div>
@@ -108,11 +110,11 @@
 <div class="line">}</div>
 </div><!-- fragment --><p>One of the most convenient filters is <a href="http://ddemidov.github.io/vexcl/structvex_1_1Filter_1_1EnvFilter.html">vex::Filter::Env</a> which selects compute devices based on environment variables. It allows to switch compute device without need to recompile the program.</p>
 <h2><a class="anchor" id="memory-allocation"></a>Memory allocation</h2>
-<p>The <code><a class="el" href="classvex_1_1vector.html" title="Device vector. ">vex::vector</a>&lt;T&gt;</code> class constructor accepts a const reference to <code>std::vector&lt;vex::command_queue&gt;</code>. A <code>vex::Context</code> instance may be conveniently converted to this type, but it is also possible to initialize the command queues elsewhere (e.g. with the OpenCL backend <code>vex::command_queue</code> is typedefed to <code>cl::CommandQueue</code>), thus completely eliminating the need to create a <code>vex::Context</code>. Each command queue in the list should uniquely identify a single compute device.</p>
+<p>The <code><a class="el" href="classvex_1_1vector.html" title="Device vector. ">vex::vector</a>&lt;T&gt;</code> class constructor accepts a const reference to <code>std::vector&lt;vex::command_queue&gt;</code>. A <code><a class="el" href="classvex_1_1Context.html" title="VexCL context holder. ">vex::Context</a></code> instance may be conveniently converted to this type, but it is also possible to initialize the command queues elsewhere (e.g. with the OpenCL backend <code>vex::command_queue</code> is typedefed to <code>cl::CommandQueue</code>), thus completely eliminating the need to create a <code><a class="el" href="classvex_1_1Context.html" title="VexCL context holder. ">vex::Context</a></code>. Each command queue in the list should uniquely identify a single compute device.</p>
 <p>The contents of the created vector will be partitioned across all devices that were present in the queue list. The size of each partition will be proportional to the device bandwidth, which is measured the first time the device is used. All vectors of the same size are guaranteed to be partitioned consistently, which minimizes inter-device communication.</p>
 <p>In the example below, three device vectors of the same size are allocated. Vector <code>A</code> is copied from host vector <code>a</code>, and the other vectors are created uninitialized: </p>
 <div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">size_t</span> n = 1024 * 1024;</div>
-<div class="line">vex::Context ctx( vex::Filter::Any );</div>
+<div class="line"><a class="code" href="classvex_1_1Context.html">vex::Context</a> ctx( <a class="code" href="namespacevex_1_1Filter.html#a0221a1c47f0b9602316d89e6e28d4ef0">vex::Filter::Any</a> );</div>
 <div class="line"></div>
 <div class="line">std::vector&lt;double&gt; a(n, 1.0);</div>
 <div class="line"></div>
@@ -392,6 +394,27 @@
 <div class="line"></div>
 <div class="line">y = global_interaction(x.size(), <a class="code" href="namespacevex.html#acf35349b5accc05f96b291457f522acb">vex::element_index</a>(), <a class="code" href="namespacevex.html#afca1d21b77d4ea7494aa032c9bb81db8">vex::raw_pointer</a>(x));</div>
 </div><!-- fragment --><p>Note that the use of <code><a class="el" href="namespacevex.html#afca1d21b77d4ea7494aa032c9bb81db8" title="Cast vex::vector to a raw pointer. ">raw_pointer()</a></code> is limited to single-device contexts for obvious reasons.</p>
+<h2><a class="anchor" id="parallel-primitives"></a>Sort, scan, reduce-by-key algorithms</h2>
+<p>VexCL provides several standalone parallel primitives that may not be used as part of a vector expression. These are <code>inclusive_scan</code>, <code>exclusive_scan</code>, <code>sort</code>, <code>sort_by_key</code>, <code>reduce_by_key</code>. All of these functions take VexCL vectors as both input and output parameters.</p>
+<p>Sorting and scan functions take an optional function object used for comparison and summing of elements. The functor should provide the same interface as, e.g. <code>std::less</code> for sorting or <code>std::plus</code> for summing; additionally, it should provide a VexCL function for device-side operations.</p>
+<p>Here is an example of such an object comparing integer elements in such a way that even elements precede odd ones: </p>
+<div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><span class="keyword">struct </span>even_first {</div>
+<div class="line">    <a class="code" href="operations_8hpp.html#aff85c71f5e6716591cf5948f92e093b3">VEX_FUNCTION</a>(device, <span class="keywordtype">bool</span>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>),</div>
+<div class="line">            <span class="stringliteral">&quot;char bit1 = 1 &amp; prm1;\n&quot;</span></div>
+<div class="line">            <span class="stringliteral">&quot;char bit2 = 1 &amp; prm2;\n&quot;</span></div>
+<div class="line">            <span class="stringliteral">&quot;if (bit1 == bit2) return prm1 &lt; prm2;\n&quot;</span></div>
+<div class="line">            <span class="stringliteral">&quot;return bit1 &lt; bit2;\n&quot;</span></div>
+<div class="line">            );</div>
+<div class="line">    <span class="keywordtype">bool</span> operator()(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b)<span class="keyword"> const </span>{</div>
+<div class="line">        <span class="keywordtype">char</span> bit1 = 1 &amp; a;</div>
+<div class="line">        <span class="keywordtype">char</span> bit2 = 1 &amp; b;</div>
+<div class="line">        <span class="keywordflow">if</span> (bit1 == bit2) <span class="keywordflow">return</span> a &lt; b;</div>
+<div class="line">        <span class="keywordflow">return</span> bit1 &lt; bit2;</div>
+<div class="line">    }</div>
+<div class="line">};</div>
+</div><!-- fragment --><p>Note that VexCL already provides <code><a class="el" href="structvex_1_1less.html" title="Function object class for less-than inequality comparison. ">vex::less</a>&lt;T&gt;</code>, <code><a class="el" href="structvex_1_1less__equal.html" title="Function object class for less-than-or-equal inequality comparison. ">vex::less_equal</a>&lt;T&gt;</code>, <code><a class="el" href="structvex_1_1greater.html" title="Function object class for greater-than inequality comparison. ">vex::greater</a>&lt;T&gt;</code>, <code><a class="el" href="structvex_1_1greater__equal.html" title="Function object class for greater-than-or-equal inequality comparison. ">vex::greater_equal</a>&lt;T&gt;</code>, and <code><a class="el" href="structvex_1_1plus.html" title="Binary function object class whose call returns the result of adding its two arguments. ">vex::plus</a>&lt;T&gt;</code>.</p>
+<p>The need to provide both host-side and device-side parts of the functor comes from the fact that multidevice vectors are first sorted partially on each of the compute devices they are allocated on and then merged on the host.</p>
 <h2><a class="anchor" id="multivectors"></a>Multivectors</h2>
 <p>The class template <code><a class="el" href="classvex_1_1multivector.html" title="Container for several vex::vectors. ">vex::multivector</a>&lt;T,N&gt;</code> allows one to store several equally sized device vectors and perform computations on all components synchronously. Each operation is delegated to the underlying vectors, but usually results in the launch of a single fused kernel. Expressions may include values of <code>std::array&lt;T,N&gt;</code> type, where N is equal to the number of multivector components. Each component gets the corresponding element of <code>std::array&lt;&gt;</code> when the expression is applied. Similarly, the array subscript operator or reduction of a multivector returns an <code>std::array&lt;T,N&gt;</code>. In order to access k-th component of a multivector, one can use the overloaded <code>operator()</code>:</p>
 <div class="fragment"><div class="line"><a class="code" href="operations_8hpp.html#aff85c71f5e6716591cf5948f92e093b3">VEX_FUNCTION</a>(between, <span class="keywordtype">bool</span>(<span class="keywordtype">double</span>, <span class="keywordtype">double</span>, <span class="keywordtype">double</span>), <span class="stringliteral">&quot;return prm1 &lt;= prm2 &amp;&amp; prm2 &lt;= prm3;&quot;</span>);</div>
@@ -512,26 +535,26 @@
 </div><!-- fragment --><h2><a class="anchor" id="custom-kernels"></a>Custom kernels</h2>
 <p>As <a href="http://en.wikipedia.org/wiki/Kozma_Prutkov">Kozma Prutkov</a> repeatedly said, "One cannot embrace the unembraceable". So in order to be usable, VexCL has to support custom kernels. <code>vex::vector::operator()(uint k)</code> returns a <code>cl::Buffer</code> that holds vector data on the k-th compute device. If the result depends on the neighboring points, one has to keep in mind that these points are possibly located on a different compute device. In this case the exchange of these halo points has to be addressed manually.</p>
 <p>The following example builds and launches a custom kernel for each device in the context: </p>
-<div class="fragment"><div class="line">std::vector&lt;cl::Kernel&gt; kernel(ctx.size());</div>
+<div class="fragment"><div class="line">std::vector&lt;vex::backend::kernel&gt; kernel;</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Compile and store the kernels for later use.</span></div>
 <div class="line"><span class="keywordflow">for</span>(uint d = 0; d &lt; ctx.size(); d++) {</div>
-<div class="line">    cl::Program program = <a class="code" href="namespacevex_1_1backend_1_1cuda.html#ae9f3a0dee72bc90d9cd3de629a4f3198">vex::backend::build_sources</a>(ctx.context(d),</div>
-<div class="line">        <span class="stringliteral">&quot;kernel void dummy(ulong size, global float *x)\n&quot;</span></div>
+<div class="line">    kernel.emplace_back(ctx.context(d),</div>
+<div class="line">        <span class="stringliteral">&quot;kernel void dummy(ulong n, global float *x)\n&quot;</span></div>
 <div class="line">        <span class="stringliteral">&quot;{\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;    size_t i = get_global_id(0);\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;    if (i &lt; size) x[i] = 4.2;\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;}\n&quot;</span></div>
+<div class="line">        <span class="stringliteral">&quot;    for(size_t i = get_global_id(0); i &lt; n; i += get_global_size(0))\n&quot;</span></div>
+<div class="line">        <span class="stringliteral">&quot;        x[i] = 4.2;\n&quot;</span></div>
+<div class="line">        <span class="stringliteral">&quot;}\n&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;dummy&quot;</span></div>
 <div class="line">        );</div>
-<div class="line">    kernel[d] = cl::Kernel(program, <span class="stringliteral">&quot;dummy&quot;</span>);</div>
 <div class="line">}</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Apply the kernels to the vector partitions on each device.</span></div>
 <div class="line"><span class="keywordflow">for</span>(uint d = 0; d &lt; ctx.size(); d++) {</div>
-<div class="line">    cl_ulong n = x.part_size();</div>
-<div class="line">    kernel[d].setArg(0, n);</div>
-<div class="line">    kernel[d].setArg(1, x(d));</div>
-<div class="line">    ctx.queue(d).enqueueNDRangeKernel(kernel[d], cl::NullRange, n, cl::NullRange);</div>
+<div class="line">    kernel[d].push_arg&lt;cl_ulong&gt;(x.part_size());</div>
+<div class="line">    kernel[d].push_arg(x(d));</div>
+<div class="line"></div>
+<div class="line">    kernel[d](ctx.queue(d));</div>
 <div class="line">}</div>
 </div><!-- fragment --><h2><a class="anchor" id="interoperability-with-other-libraries"></a>Interoperability with other libraries</h2>
 <p>Since VexCL is built upon standard Khronos OpenCL C++ bindings, it is easily interoperable with other OpenCL libraries. In particular, VexCL provides some glue code for <a href="http://viennacl.sourceforge.net/">ViennaCL</a> and for <a href="https://github.com/kylelutz/compute">Boost.compute</a> libraries.</p>

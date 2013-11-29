@@ -29,6 +29,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li class="current"><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
@@ -76,6 +77,15 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1Filter_1_1Extension.html">Extension</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects devices providing given OpenCL extensions.  <a href="structvex_1_1Filter_1_1Extension.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1Filter_1_1Count.html">Count</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects no more than given number of devices.  <a href="structvex_1_1Filter_1_1Count.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1Filter_1_1Position.html">Position</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects one device at the given position.  <a href="structvex_1_1Filter_1_1Position.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1Filter_1_1General.html">General</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runtime filter holder.  <a href="structvex_1_1Filter_1_1General.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -88,6 +98,21 @@ std::vector&lt; std::function<br class="typebreak"/>
 <tr class="memitem:af0656e113d6d54d81b43226802a1f903"><td class="memTemplItemLeft" align="right" valign="top">ExclusiveFilter&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex_1_1Filter.html#af0656e113d6d54d81b43226802a1f903">Exclusive</a> (Filter &amp;&amp;filter)</td></tr>
 <tr class="memdesc:af0656e113d6d54d81b43226802a1f903"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows exclusive access to compute devices across several processes.  <a href="#af0656e113d6d54d81b43226802a1f903">More...</a><br/></td></tr>
 <tr class="separator:af0656e113d6d54d81b43226802a1f903"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d7f4d27a344a223e412ae210a52ee9c"><td class="memTemplParams" colspan="2"><a class="anchor" id="a7d7f4d27a344a223e412ae210a52ee9c"></a>
+template&lt;class LHS , class RHS &gt; </td></tr>
+<tr class="memitem:a7d7f4d27a344a223e412ae210a52ee9c"><td class="memTemplItemLeft" align="right" valign="top">FilterBinaryOp&lt; FilterAnd &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex_1_1Filter.html#a7d7f4d27a344a223e412ae210a52ee9c">operator&amp;&amp;</a> (LHS &amp;&amp;lhs, RHS &amp;&amp;rhs)</td></tr>
+<tr class="memdesc:a7d7f4d27a344a223e412ae210a52ee9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Join two filters with AND operator. <br/></td></tr>
+<tr class="separator:a7d7f4d27a344a223e412ae210a52ee9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80c2a2fb00d0582e04c70ebd0256d9b3"><td class="memTemplParams" colspan="2"><a class="anchor" id="a80c2a2fb00d0582e04c70ebd0256d9b3"></a>
+template&lt;class LHS , class RHS &gt; </td></tr>
+<tr class="memitem:a80c2a2fb00d0582e04c70ebd0256d9b3"><td class="memTemplItemLeft" align="right" valign="top">FilterBinaryOp&lt; FilterOr &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex_1_1Filter.html#a80c2a2fb00d0582e04c70ebd0256d9b3">operator||</a> (LHS &amp;&amp;lhs, RHS &amp;&amp;rhs)</td></tr>
+<tr class="memdesc:a80c2a2fb00d0582e04c70ebd0256d9b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Join two filters with OR operator. <br/></td></tr>
+<tr class="separator:a80c2a2fb00d0582e04c70ebd0256d9b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e2fc524c98baceefa25da89943820b7"><td class="memTemplParams" colspan="2"><a class="anchor" id="a5e2fc524c98baceefa25da89943820b7"></a>
+template&lt;class Filter &gt; </td></tr>
+<tr class="memitem:a5e2fc524c98baceefa25da89943820b7"><td class="memTemplItemLeft" align="right" valign="top">NegateFilter&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex_1_1Filter.html#a5e2fc524c98baceefa25da89943820b7">operator!</a> (Filter &amp;&amp;filter)</td></tr>
+<tr class="memdesc:a5e2fc524c98baceefa25da89943820b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Negate a filter. <br/></td></tr>
+<tr class="separator:a5e2fc524c98baceefa25da89943820b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -99,6 +124,16 @@ const DoublePrecisionFilter&#160;</td><td class="memItemRight" valign="bottom"><
 const <a class="el" href="structvex_1_1Filter_1_1Extension.html">Extension</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex_1_1Filter.html#aa2a8b1ec2b33ec886ddeeda41c927320">GLSharing</a> (&quot;cl_khr_gl_sharing&quot;)</td></tr>
 <tr class="memdesc:aa2a8b1ec2b33ec886ddeeda41c927320"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects devices supporting OpenGL Sharing <a class="el" href="structvex_1_1Filter_1_1Extension.html" title="Selects devices providing given OpenCL extensions. ">Extension</a>. <br/></td></tr>
 <tr class="separator:aa2a8b1ec2b33ec886ddeeda41c927320"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6601cda8d86d3e6c6f89f81931353067"><td class="memItemLeft" align="right" valign="top">const AnyFilter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex_1_1Filter.html#a6601cda8d86d3e6c6f89f81931353067">All</a> = {}</td></tr>
+<tr class="memdesc:a6601cda8d86d3e6c6f89f81931353067"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects any device.  <a href="#a6601cda8d86d3e6c6f89f81931353067">More...</a><br/></td></tr>
+<tr class="separator:a6601cda8d86d3e6c6f89f81931353067"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0221a1c47f0b9602316d89e6e28d4ef0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0221a1c47f0b9602316d89e6e28d4ef0"></a>
+const AnyFilter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex_1_1Filter.html#a0221a1c47f0b9602316d89e6e28d4ef0">Any</a> = {}</td></tr>
+<tr class="memdesc:a0221a1c47f0b9602316d89e6e28d4ef0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects any device. <br/></td></tr>
+<tr class="separator:a0221a1c47f0b9602316d89e6e28d4ef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1123eb70914e1d9efce4b5990a1cb33"><td class="memItemLeft" align="right" valign="top">const EnvFilter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex_1_1Filter.html#ad1123eb70914e1d9efce4b5990a1cb33">Env</a></td></tr>
+<tr class="memdesc:ad1123eb70914e1d9efce4b5990a1cb33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Environment filter.  <a href="#ad1123eb70914e1d9efce4b5990a1cb33">More...</a><br/></td></tr>
+<tr class="separator:ad1123eb70914e1d9efce4b5990a1cb33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Device filters. </p>
@@ -129,6 +164,46 @@ template&lt;class Filter &gt; </div>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Depends on boost::interprocess library.</dd></dl>
 <p>lock files are created in directory specified in VEXCL_LOCK_DIR environment variable. If the variable does not exist, /tmp is used on Linux and TMPDIR% on Windows. The lock directory should exist and be writable by the running user. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a class="anchor" id="a6601cda8d86d3e6c6f89f81931353067"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const AnyFilter vex::Filter::All = {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Selects any device. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated:</a></b></dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad1123eb70914e1d9efce4b5990a1cb33"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const EnvFilter vex::Filter::Env</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Environment filter. </p>
+<p>Selects devices with respect to environment variables. Recognized variables are:</p>
+<ul>
+<li>OCL_PLATFORM &ndash; platform name; </li>
+<li>OCL_VENDOR &ndash; device vendor; </li>
+<li>OCL_DEVICE &ndash; device name; </li>
+<li>OCL_TYPE &ndash; device type (CPU, GPU, ACCELERATOR); </li>
+<li>OCL_MAX_DEVICES &ndash; maximum number of devices to use. </li>
+<li>OCL_POSITION &ndash; devices position in the device list.</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>Since this filter possibly counts passed devices, it should be the last in filter expression. Same reasoning applies as in case of <a class="el" href="structvex_1_1Filter_1_1Count.html" title="Selects no more than given number of devices. ">Filter::Count</a>. </dd></dl>
 
 </div>
 </div>
