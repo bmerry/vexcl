@@ -92,7 +92,7 @@
 <li><a href="#supported-compilers">Supported compilers</a></li>
 </ul>
 <h2><a class="anchor" id="selecting-backend"></a>Selecting backend</h2>
-<p>VexCL provides two backends: OpenCL and CUDA. In order choose either of those, user has to define <code>VEXCL_BACKEND_OPENCL</code> or <code>VEXCL_BACKEND_CUDA</code> macros. In case neither of those are defined, OpenCL backend is chosen by default. One also has to link to either libOpenCL.so (OpenCL.dll) or libcuda.so (cuda.dll).</p>
+<p>VexCL provides two backends: OpenCL and CUDA. In order to choose either of those, user has to define <code>VEXCL_BACKEND_OPENCL</code> or <code>VEXCL_BACKEND_CUDA</code> macros. In case neither of those are defined, OpenCL backend is chosen by default. One also has to link to either libOpenCL.so (OpenCL.dll) or libcuda.so (cuda.dll).</p>
 <p>For the CUDA backend to work, CUDA Toolkit has to be installed, NVIDIA CUDA compiler driver <code>nvcc</code> has to be in executable PATH and usable at runtime.</p>
 <h2><a class="anchor" id="context-initialization"></a>Context initialization</h2>
 <p>VexCL transparently works with multiple compute devices that are present in the system. A VexCL context is initialized with a device filter, which is just a functor that takes a reference to <code>vex::device</code> and returns a <code>bool</code>. Several <a href="http://ddemidov.github.io/vexcl/namespacevex_1_1Filter.html">standard filters</a> are provided, but one can easily add a custom functor. Filters may be combined with logical operators. All compute devices that satisfy the provided filter are added to the created context. In the example below all GPU devices that support double precision arithmetic are selected: </p>
@@ -554,7 +554,7 @@
 <div class="line"></div>
 <div class="line"><span class="comment">// Compile and store the kernels for later use.</span></div>
 <div class="line"><span class="keywordflow">for</span>(uint d = 0; d &lt; ctx.size(); d++) {</div>
-<div class="line">    kernel.emplace_back(ctx.context(d),</div>
+<div class="line">    kernel.emplace_back(ctx.queue(d),</div>
 <div class="line">        <span class="stringliteral">&quot;kernel void dummy(ulong n, global float *x)\n&quot;</span></div>
 <div class="line">        <span class="stringliteral">&quot;{\n&quot;</span></div>
 <div class="line">        <span class="stringliteral">&quot;    for(size_t i = get_global_id(0); i &lt; n; i += get_global_size(0))\n&quot;</span></div>

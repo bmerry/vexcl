@@ -1,16 +1,17 @@
 <map id="vexcl/spmat.hpp" name="vexcl/spmat.hpp">
-<area shape="rect" id="node19" href="$vector_8hpp.html" title="OpenCL device vector. " alt="" coords="2436,179,2561,205"/>
-<area shape="rect" id="node114" href="$vector__view_8hpp.html" title="Provides sub&#45;view for an existing vex::vector. " alt="" coords="3198,88,3356,115"/>
-<area shape="rect" id="node135" href="$spmat_2hybrid__ell_8inl.html" title="OpenCL sparse matrix in Hybrid ELL&#45;CSR format. " alt="" coords="4369,81,4511,122"/>
-<area shape="rect" id="node137" href="$spmat_2csr_8inl.html" title="OpenCL sparse matrix in CSR format. " alt="" coords="4536,88,4675,115"/>
-<area shape="rect" id="node139" href="$ccsr_8hpp.html" title="Sparse matrix in Compressed CSR format. " alt="" coords="4699,88,4855,115"/>
-<area shape="rect" id="node141" href="$inline__spmv_8hpp.html" title="Inline SpMV operation. " alt="" coords="4880,81,5015,122"/>
-<area shape="rect" id="node37" href="$backend_8hpp.html" title="Compile&#45;time selection of backend (OpenCL/CUDA). " alt="" coords="2213,344,2352,371"/>
-<area shape="rect" id="node41" href="$util_8hpp.html" title="OpenCL general utilities. " alt="" coords="2739,344,2844,371"/>
-<area shape="rect" id="node57" href="$operations_8hpp.html" title="Templates used for expression tree traversal and kernel generation. " alt="" coords="3231,261,3384,288"/>
-<area shape="rect" id="node79" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler. " alt="" coords="1121,261,1249,288"/>
-<area shape="rect" id="node107" href="$devlist_8hpp.html" title="OpenCL device enumeration and context initialization. " alt="" coords="2435,261,2561,288"/>
-<area shape="rect" id="node39" href="$opencl_8hpp.html" title="OpenCL backend for compute kernel generation/compilation/launching. " alt="" coords="2209,427,2396,453"/>
-<area shape="rect" id="node70" href="$types_8hpp.html" title="Support for using native C++ and OpenCL types in expressions. " alt="" coords="3057,344,3177,371"/>
-<area shape="rect" id="node124" href="$element__index_8hpp.html" title="Element index for use in vector expressions. " alt="" coords="3586,179,3765,205"/>
+<area shape="rect" id="node10" href="$vector_8hpp.html" title="OpenCL device vector. " alt="" coords="1141,179,1266,205"/>
+<area shape="rect" id="node39" href="$vector__view_8hpp.html" title="Provides sub&#45;view for an existing vex::vector. " alt="" coords="3183,88,3341,115"/>
+<area shape="rect" id="node47" href="$spmat_2hybrid__ell_8inl.html" title="OpenCL sparse matrix in Hybrid ELL&#45;CSR format. " alt="" coords="4239,81,4381,122"/>
+<area shape="rect" id="node48" href="$spmat_2csr_8inl.html" title="OpenCL sparse matrix in CSR format. " alt="" coords="4406,88,4545,115"/>
+<area shape="rect" id="node49" href="$ccsr_8hpp.html" title="Sparse matrix in Compressed CSR format. " alt="" coords="4570,88,4725,115"/>
+<area shape="rect" id="node50" href="$inline__spmv_8hpp.html" title="Inline SpMV operation. " alt="" coords="4750,81,4885,122"/>
+<area shape="rect" id="node17" href="$backend_8hpp.html" title="Compile&#45;time selection of backend (OpenCL/CUDA). " alt="" coords="1026,344,1165,371"/>
+<area shape="rect" id="node19" href="$util_8hpp.html" title="OpenCL general utilities. " alt="" coords="896,344,1001,371"/>
+<area shape="rect" id="node24" href="$operations_8hpp.html" title="Templates used for expression tree traversal and kernel generation. " alt="" coords="2957,261,3110,288"/>
+<area shape="rect" id="node29" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler. " alt="" coords="1631,261,1760,288"/>
+<area shape="rect" id="node38" href="$devlist_8hpp.html" title="OpenCL device enumeration and context initialization. " alt="" coords="922,261,1048,288"/>
+<area shape="rect" id="node18" href="$opencl_8hpp.html" title="OpenCL backend for compute kernel generation/compilation/launching. " alt="" coords="1037,427,1224,453"/>
+<area shape="rect" id="node28" href="$types_8hpp.html" title="Support for using native C++ and OpenCL types in expressions. " alt="" coords="3124,344,3245,371"/>
+<area shape="rect" id="node41" href="$element__index_8hpp.html" title="Element index for use in vector expressions. " alt="" coords="3467,179,3646,205"/>
+<area shape="rect" id="node42" href="$tagged__terminal_8hpp.html" title="Tagged terminal wrapper. " alt="" coords="3671,179,3861,205"/>
 </map>

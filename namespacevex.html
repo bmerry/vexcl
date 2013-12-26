@@ -98,6 +98,12 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1multivector.html">multivector</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Container for several vex::vectors.  <a href="classvex_1_1multivector.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1is__vector__expression.html">is_vector_expression</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Meta-filter for VexCL vector expressions.  <a href="structvex_1_1is__vector__expression.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1is__multivector__expression.html">is_multivector_expression</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Meta-filter for VexCL multivector expressions.  <a href="structvex_1_1is__multivector__expression.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1stopwatch.html">stopwatch</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A stopwatch that computes the median and mean of individual timings.  <a href="classvex_1_1stopwatch.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1152,6 +1158,11 @@ template&lt;class T , size_t N&gt; </td></tr>
 <tr class="memitem:a11afb8e8e5387abf04e3b7f815111e0e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a11afb8e8e5387abf04e3b7f815111e0e">copy</a> (const std::vector&lt; T &gt; &amp;hv, <a class="el" href="classvex_1_1multivector.html">multivector</a>&lt; T, N &gt; &amp;mv)</td></tr>
 <tr class="memdesc:a11afb8e8e5387abf04e3b7f815111e0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy host vector to multivector. <br/></td></tr>
 <tr class="separator:a11afb8e8e5387abf04e3b7f815111e0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8aaad637ee6e4c8527222b58ddd1089"><td class="memTemplParams" colspan="2"><a class="anchor" id="ab8aaad637ee6e4c8527222b58ddd1089"></a>
+template&lt;class T , size_t N&gt; </td></tr>
+<tr class="memitem:ab8aaad637ee6e4c8527222b58ddd1089"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#ab8aaad637ee6e4c8527222b58ddd1089">operator&lt;&lt;</a> (std::ostream &amp;o, const <a class="el" href="classvex_1_1multivector.html">vex::multivector</a>&lt; T, N &gt; &amp;t)</td></tr>
+<tr class="memdesc:ab8aaad637ee6e4c8527222b58ddd1089"><td class="mdescLeft">&#160;</td><td class="mdescRight">Download and print the vector elements. <br/></td></tr>
+<tr class="separator:ab8aaad637ee6e4c8527222b58ddd1089"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7ed95396644bcef1aff9a0cac89e69a"><td class="memTemplParams" colspan="2">template&lt;class... Expr&gt; </td></tr>
 <tr class="memitem:ab7ed95396644bcef1aff9a0cac89e69a"><td class="memTemplItemLeft" align="right" valign="top">expression_tuple&lt; std::tuple<br class="typebreak"/>
 &lt; const Expr &amp;...&gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#ab7ed95396644bcef1aff9a0cac89e69a">tie</a> (const Expr &amp;...expr)</td></tr>
@@ -1169,11 +1180,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a1670e7948b19b0c6fbcedc816ee70632">purge_kernel_caches</a> (const std::vector&lt; <a class="el" href="classvex_1_1backend_1_1cuda_1_1command__queue.html">backend::command_queue</a> &gt; &amp;queue)</td></tr>
 <tr class="memdesc:a1670e7948b19b0c6fbcedc816ee70632"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears cached OpenCL kernels, allowing to release OpenCL contexts. <br/></td></tr>
 <tr class="separator:a1670e7948b19b0c6fbcedc816ee70632"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab66e1bb26071c1afa9f30a7a773823ef"><td class="memTemplParams" colspan="2"><a class="anchor" id="ab66e1bb26071c1afa9f30a7a773823ef"></a>
-template&lt;typename K , typename V , class Comp , class Oper &gt; </td></tr>
-<tr class="memitem:ab66e1bb26071c1afa9f30a7a773823ef"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#ab66e1bb26071c1afa9f30a7a773823ef">reduce_by_key</a> (<a class="el" href="classvex_1_1vector.html">vector</a>&lt; K &gt; const &amp;ikeys, <a class="el" href="classvex_1_1vector.html">vector</a>&lt; V &gt; const &amp;ivals, <a class="el" href="classvex_1_1vector.html">vector</a>&lt; K &gt; &amp;okeys, <a class="el" href="classvex_1_1vector.html">vector</a>&lt; V &gt; &amp;ovals, Comp, Oper)</td></tr>
-<tr class="memdesc:ab66e1bb26071c1afa9f30a7a773823ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduce by key algorithm. <br/></td></tr>
-<tr class="separator:ab66e1bb26071c1afa9f30a7a773823ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2218b98674ff19fb08a82842a0a5646"><td class="memTemplParams" colspan="2"><a class="anchor" id="aa2218b98674ff19fb08a82842a0a5646"></a>
+template&lt;typename IKeys , typename OKeys , typename V , class Comp , class Oper &gt; </td></tr>
+<tr class="memitem:aa2218b98674ff19fb08a82842a0a5646"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#aa2218b98674ff19fb08a82842a0a5646">reduce_by_key</a> (IKeys &amp;&amp;ikeys, <a class="el" href="classvex_1_1vector.html">vector</a>&lt; V &gt; const &amp;ivals, OKeys &amp;&amp;okeys, <a class="el" href="classvex_1_1vector.html">vector</a>&lt; V &gt; &amp;ovals, Comp comp, Oper oper)</td></tr>
+<tr class="memdesc:aa2218b98674ff19fb08a82842a0a5646"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduce by key algorithm. <br/></td></tr>
+<tr class="separator:aa2218b98674ff19fb08a82842a0a5646"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae253d3b2dd8a5fd26a14dec81d8a51c2"><td class="memTemplParams" colspan="2"><a class="anchor" id="ae253d3b2dd8a5fd26a14dec81d8a51c2"></a>
 template&lt;typename K , typename V &gt; </td></tr>
 <tr class="memitem:ae253d3b2dd8a5fd26a14dec81d8a51c2"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#ae253d3b2dd8a5fd26a14dec81d8a51c2">reduce_by_key</a> (<a class="el" href="classvex_1_1vector.html">vector</a>&lt; K &gt; const &amp;ikeys, <a class="el" href="classvex_1_1vector.html">vector</a>&lt; V &gt; const &amp;ivals, <a class="el" href="classvex_1_1vector.html">vector</a>&lt; K &gt; &amp;okeys, <a class="el" href="classvex_1_1vector.html">vector</a>&lt; V &gt; &amp;ovals)</td></tr>
@@ -1356,6 +1367,22 @@ boost::proto::result_of::as_child<br class="typebreak"/>
 ::type, NDIM, 1, RDC &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#ac77b2a657d4d26f3b8348c9ac1be02f4">reduce</a> (const <a class="el" href="structvex_1_1gslice.html">gslice</a>&lt; NDIM &gt; &amp;slice, const Expr &amp;expr, size_t reduce_dim)</td></tr>
 <tr class="memdesc:ac77b2a657d4d26f3b8348c9ac1be02f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduce sliced expression along specified dimension. <br/></td></tr>
 <tr class="separator:ac77b2a657d4d26f3b8348c9ac1be02f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00792964db2b9c9b2bd784383cd46037"><td class="memTemplParams" colspan="2"><a class="anchor" id="a00792964db2b9c9b2bd784383cd46037"></a>
+template&lt;class RDC , typename Expr , size_t NDIM, size_t NR&gt; </td></tr>
+<tr class="memitem:a00792964db2b9c9b2bd784383cd46037"><td class="memTemplItemLeft" align="right" valign="top">reduced_vector_view&lt; typename <br class="typebreak"/>
+boost::proto::result_of::as_child<br class="typebreak"/>
+&lt; const Expr, vector_domain &gt;<br class="typebreak"/>
+::type, NDIM, NR, RDC &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a00792964db2b9c9b2bd784383cd46037">reduce</a> (const extent_gen&lt; NDIM &gt; &amp;ext, const Expr &amp;expr, const std::array&lt; size_t, NR &gt; &amp;reduce_dims)</td></tr>
+<tr class="memdesc:a00792964db2b9c9b2bd784383cd46037"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduce sliced expression along specified dimensions. <br/></td></tr>
+<tr class="separator:a00792964db2b9c9b2bd784383cd46037"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb11762cd37576f01efe61862c39d032"><td class="memTemplParams" colspan="2"><a class="anchor" id="abb11762cd37576f01efe61862c39d032"></a>
+template&lt;class RDC , typename Expr , size_t NDIM&gt; </td></tr>
+<tr class="memitem:abb11762cd37576f01efe61862c39d032"><td class="memTemplItemLeft" align="right" valign="top">reduced_vector_view&lt; typename <br class="typebreak"/>
+boost::proto::result_of::as_child<br class="typebreak"/>
+&lt; const Expr, vector_domain &gt;<br class="typebreak"/>
+::type, NDIM, 1, RDC &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#abb11762cd37576f01efe61862c39d032">reduce</a> (const extent_gen&lt; NDIM &gt; &amp;ext, const Expr &amp;expr, size_t reduce_dim)</td></tr>
+<tr class="memdesc:abb11762cd37576f01efe61862c39d032"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduce sliced expression along specified dimension. <br/></td></tr>
+<tr class="separator:abb11762cd37576f01efe61862c39d032"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a159a23f567b28d7d284fa0cd720e900a"><td class="memTemplParams" colspan="2">template&lt;class Expr , size_t Nout, size_t Nin&gt; </td></tr>
 <tr class="memitem:a159a23f567b28d7d284fa0cd720e900a"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a159a23f567b28d7d284fa0cd720e900a">reshape</a> (const Expr &amp;expr, const std::array&lt; size_t, Nout &gt; &amp;dst_dims, const std::array&lt; size_t, Nin &gt; &amp;src_dims) -&gt; decltype(<a class="el" href="namespacevex.html#a1d8048e3bb5185ab018e9d0a0649ef0b">vex::permutation</a>(detail::reshape_helper&lt; Nout, Nin &gt;(dst_dims, src_dims)())(expr))</td></tr>
 <tr class="memdesc:a159a23f567b28d7d284fa0cd720e900a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reshapes given expression.  <a href="#a159a23f567b28d7d284fa0cd720e900a">More...</a><br/></td></tr>
@@ -1685,7 +1712,7 @@ template&lt;class Condition , class Message &gt; </div>
 <p>Check run-time condition. </p>
 <p>Throws std::runtime_error if condition is false </p>
 
-<p>Referenced by <a class="el" href="classvex_1_1Context.html#ad60f13674fc76037ff47507d4fe58086">vex::Context::Context()</a>, <a class="el" href="namespacevex.html#a4d36c4ddd6b769349ebb2c11badf2199">exclusive_scan()</a>, <a class="el" href="namespacevex.html#a8fc18f46eb80f11430bd7d1fd224e4df">inclusive_scan()</a>, <a class="el" href="namespacevex.html#aa04547c51b46e0005b37ad00493f7354">make_inline()</a>, <a class="el" href="structvex_1_1gslice.html#a5b3aad88352f5da13754544d83cbea82">vex::gslice&lt; NR &gt;::operator()()</a>, <a class="el" href="namespacevex.html#afca1d21b77d4ea7494aa032c9bb81db8">raw_pointer()</a>, <a class="el" href="namespacevex.html#ab66e1bb26071c1afa9f30a7a773823ef">reduce_by_key()</a>, and <a class="el" href="classvex_1_1vector.html#a9c2de310d894fca15385030ae906d545">vex::vector&lt; T &gt;::vector()</a>.</p>
+<p>Referenced by <a class="el" href="classvex_1_1Context.html#ad60f13674fc76037ff47507d4fe58086">vex::Context::Context()</a>, <a class="el" href="namespacevex.html#a4d36c4ddd6b769349ebb2c11badf2199">exclusive_scan()</a>, <a class="el" href="namespacevex.html#a8fc18f46eb80f11430bd7d1fd224e4df">inclusive_scan()</a>, <a class="el" href="namespacevex.html#aa04547c51b46e0005b37ad00493f7354">make_inline()</a>, <a class="el" href="structvex_1_1gslice.html#a5b3aad88352f5da13754544d83cbea82">vex::gslice&lt; NR &gt;::operator()()</a>, <a class="el" href="namespacevex.html#afca1d21b77d4ea7494aa032c9bb81db8">raw_pointer()</a>, and <a class="el" href="classvex_1_1vector.html#a9c2de310d894fca15385030ae906d545">vex::vector&lt; T &gt;::vector()</a>.</p>
 
 </div>
 </div>

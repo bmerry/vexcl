@@ -1,36 +1,36 @@
 <map id="vexcl/types.hpp" name="vexcl/types.hpp">
-<area shape="rect" id="node3" href="$opencl_2source_8hpp.html" title="Helper class for OpenCL source code generation. " alt="" coords="1261,81,1419,122"/>
-<area shape="rect" id="node55" href="$operations_8hpp.html" title="Templates used for expression tree traversal and kernel generation. " alt="" coords="1779,320,1932,347"/>
-<area shape="rect" id="node68" href="$constants_8hpp.html" title="Constants for use in vector expressions. " alt="" coords="2491,403,2639,429"/>
-<area shape="rect" id="node106" href="$cuda_2source_8hpp.html" title="Helper class for CUDA source code generation. " alt="" coords="2065,81,2212,122"/>
-<area shape="rect" id="node5" href="$opencl_8hpp.html" title="OpenCL backend for compute kernel generation/compilation/launching. " alt="" coords="932,171,1119,197"/>
-<area shape="rect" id="node7" href="$backend_8hpp.html" title="Compile&#45;time selection of backend (OpenCL/CUDA). " alt="" coords="735,245,875,272"/>
-<area shape="rect" id="node9" href="$vector_8hpp.html" title="OpenCL device vector. " alt="" coords="793,403,919,429"/>
-<area shape="rect" id="node15" href="$fft_8hpp.html" title="Backend selector for FFT. " alt="" coords="387,667,485,693"/>
-<area shape="rect" id="node17" href="$vexcl_8hpp.html" title="Vector expression template library for OpenCL. " alt="" coords="1409,741,1527,768"/>
-<area shape="rect" id="node44" href="$sort_8hpp.html" title="Inclusive/Exclusive scan algortihms. " alt="" coords="94,493,204,520"/>
-<area shape="rect" id="node62" href="$random_8hpp.html" title="Backend selector for random number generators. " alt="" coords="995,493,1129,520"/>
-<area shape="rect" id="node91" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler. " alt="" coords="689,320,817,347"/>
-<area shape="rect" id="node96" href="$devlist_8hpp.html" title="OpenCL device enumeration and context initialization. " alt="" coords="538,320,664,347"/>
-<area shape="rect" id="node11" href="$plan_8hpp.html" title="FFT plan, stores kernels and buffers for one configuration. " alt="" coords="331,486,489,527"/>
-<area shape="rect" id="node13" href="$backend_2opencl_2fft_8hpp.html" title="Fast Fourier Transformation. " alt="" coords="357,577,515,618"/>
-<area shape="rect" id="node20" href="$boost__compute_8hpp.html" title="Provides wrappers for some of Boost.Compute (https://github.com/kylelutz/compute) algorithms..." alt="" coords="617,486,767,527"/>
-<area shape="rect" id="node22" href="$gather_8hpp.html" title="Gather scattered points from OpenCL device vector. " alt="" coords="1626,584,1752,611"/>
-<area shape="rect" id="node25" href="$vector__view_8hpp.html" title="Provides sub&#45;view for an existing vex::vector. " alt="" coords="1509,493,1667,520"/>
-<area shape="rect" id="node28" href="$multi__array_8hpp.html" title="An analog of boost::multi_array. " alt="" coords="1046,584,1201,611"/>
-<area shape="rect" id="node30" href="$spmat_8hpp.html" title="OpenCL sparse matrix. " alt="" coords="1278,584,1404,611"/>
-<area shape="rect" id="node34" href="$generator_8hpp.html" title="OpenCL kernel generator. " alt="" coords="1154,493,1301,520"/>
-<area shape="rect" id="node38" href="$multivector_8hpp.html" title="OpenCL device multi&#45;vector. " alt="" coords="1327,493,1484,520"/>
-<area shape="rect" id="node41" href="$reduce__by__key_8hpp.html" title="Reduce by key algortihm. " alt="" coords="843,584,1021,611"/>
-<area shape="rect" id="node48" href="$stencil_8hpp.html" title="Stencil convolution. " alt="" coords="589,667,715,693"/>
-<area shape="rect" id="node51" href="$vector__pointer_8hpp.html" title="Cast vex::vector to a raw pointer. " alt="" coords="1845,493,2021,520"/>
-<area shape="rect" id="node58" href="$backend_2cuda_2random_8hpp.html" title="Random generators for CUDA. " alt="" coords="2149,395,2296,437"/>
-<area shape="rect" id="node60" href="$backend_2opencl_2random_8hpp.html" title="Random generators for OpenCL. " alt="" coords="1147,395,1305,437"/>
-<area shape="rect" id="node65" href="$cast_8hpp.html" title="Cast an expression to a type. " alt="" coords="1707,667,1820,693"/>
-<area shape="rect" id="node71" href="$element__index_8hpp.html" title="Element index for use in vector expressions. " alt="" coords="1894,403,2073,429"/>
-<area shape="rect" id="node77" href="$mba_8hpp.html" title="Scattered data interpolation with multilevel B&#45;Splines. " alt="" coords="2024,667,2139,693"/>
-<area shape="rect" id="node81" href="$reductor_8hpp.html" title="Vector expression reduction. " alt="" coords="2163,667,2301,693"/>
-<area shape="rect" id="node84" href="$tagged__terminal_8hpp.html" title="Tagged terminal wrapper. " alt="" coords="2259,584,2449,611"/>
-<area shape="rect" id="node87" href="$temporary_8hpp.html" title="Container for intermediate results. " alt="" coords="2377,667,2527,693"/>
-<area shape="rect" id="node108" href="$cuda_8hpp.html" title="CUDA backend for compute kernel generation/compilation/launching. " alt="" coords="2059,171,2233,197"/>
+<area shape="rect" id="node2" href="$opencl_2source_8hpp.html" title="Helper class for OpenCL source code generation. " alt="" coords="1353,81,1511,122"/>
+<area shape="rect" id="node21" href="$operations_8hpp.html" title="Templates used for expression tree traversal and kernel generation. " alt="" coords="1689,320,1843,347"/>
+<area shape="rect" id="node26" href="$constants_8hpp.html" title="Constants for use in vector expressions. " alt="" coords="2425,403,2573,429"/>
+<area shape="rect" id="node34" href="$cuda_2source_8hpp.html" title="Helper class for CUDA source code generation. " alt="" coords="2432,81,2579,122"/>
+<area shape="rect" id="node3" href="$opencl_8hpp.html" title="OpenCL backend for compute kernel generation/compilation/launching. " alt="" coords="1129,171,1316,197"/>
+<area shape="rect" id="node4" href="$backend_8hpp.html" title="Compile&#45;time selection of backend (OpenCL/CUDA). " alt="" coords="837,245,976,272"/>
+<area shape="rect" id="node5" href="$vector_8hpp.html" title="OpenCL device vector. " alt="" coords="793,403,919,429"/>
+<area shape="rect" id="node8" href="$fft_8hpp.html" title="Backend selector for FFT. " alt="" coords="361,667,460,693"/>
+<area shape="rect" id="node9" href="$vexcl_8hpp.html" title="Vector expression template library for OpenCL. " alt="" coords="1234,741,1352,768"/>
+<area shape="rect" id="node18" href="$sort_8hpp.html" title="Inclusive/Exclusive scan algortihms. " alt="" coords="43,493,153,520"/>
+<area shape="rect" id="node24" href="$random_8hpp.html" title="Backend selector for random number generators. " alt="" coords="1988,493,2123,520"/>
+<area shape="rect" id="node32" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler. " alt="" coords="493,320,621,347"/>
+<area shape="rect" id="node33" href="$devlist_8hpp.html" title="OpenCL device enumeration and context initialization. " alt="" coords="894,320,1020,347"/>
+<area shape="rect" id="node6" href="$plan_8hpp.html" title="FFT plan, stores kernels and buffers for one configuration. " alt="" coords="281,486,439,527"/>
+<area shape="rect" id="node7" href="$backend_2opencl_2fft_8hpp.html" title="Fast Fourier Transformation. " alt="" coords="331,577,489,618"/>
+<area shape="rect" id="node10" href="$boost__compute_8hpp.html" title="Provides wrappers for some of Boost.Compute (https://github.com/kylelutz/compute) algorithms..." alt="" coords="667,486,817,527"/>
+<area shape="rect" id="node11" href="$gather_8hpp.html" title="Gather scattered points from OpenCL device vector. " alt="" coords="1297,584,1423,611"/>
+<area shape="rect" id="node12" href="$vector__view_8hpp.html" title="Provides sub&#45;view for an existing vex::vector. " alt="" coords="1167,493,1325,520"/>
+<area shape="rect" id="node13" href="$multi__array_8hpp.html" title="An analog of boost::multi_array. " alt="" coords="781,584,936,611"/>
+<area shape="rect" id="node14" href="$spmat_8hpp.html" title="OpenCL sparse matrix. " alt="" coords="961,584,1087,611"/>
+<area shape="rect" id="node15" href="$generator_8hpp.html" title="OpenCL kernel generator. " alt="" coords="995,493,1143,520"/>
+<area shape="rect" id="node16" href="$multivector_8hpp.html" title="OpenCL device multi&#45;vector. " alt="" coords="1503,493,1660,520"/>
+<area shape="rect" id="node17" href="$reduce__by__key_8hpp.html" title="Reduce by key algortihm. " alt="" coords="592,667,771,693"/>
+<area shape="rect" id="node19" href="$stencil_8hpp.html" title="Stencil convolution. " alt="" coords="630,584,756,611"/>
+<area shape="rect" id="node20" href="$vector__pointer_8hpp.html" title="Cast vex::vector to a raw pointer. " alt="" coords="1685,493,1861,520"/>
+<area shape="rect" id="node22" href="$backend_2cuda_2random_8hpp.html" title="Random generators for CUDA. " alt="" coords="2103,395,2249,437"/>
+<area shape="rect" id="node23" href="$backend_2opencl_2random_8hpp.html" title="Random generators for OpenCL. " alt="" coords="1869,395,2027,437"/>
+<area shape="rect" id="node25" href="$cast_8hpp.html" title="Cast an expression to a type. " alt="" coords="2319,667,2432,693"/>
+<area shape="rect" id="node27" href="$element__index_8hpp.html" title="Element index for use in vector expressions. " alt="" coords="1613,403,1792,429"/>
+<area shape="rect" id="node28" href="$tagged__terminal_8hpp.html" title="Tagged terminal wrapper. " alt="" coords="1186,403,1376,429"/>
+<area shape="rect" id="node29" href="$mba_8hpp.html" title="Scattered data interpolation with multilevel B&#45;Splines. " alt="" coords="1903,667,2017,693"/>
+<area shape="rect" id="node30" href="$reductor_8hpp.html" title="Vector expression reduction. " alt="" coords="2092,667,2231,693"/>
+<area shape="rect" id="node31" href="$temporary_8hpp.html" title="Container for intermediate results. " alt="" coords="2199,584,2349,611"/>
+<area shape="rect" id="node35" href="$cuda_8hpp.html" title="CUDA backend for compute kernel generation/compilation/launching. " alt="" coords="2426,171,2600,197"/>
 </map>

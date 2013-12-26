@@ -1,5 +1,5 @@
 <map id="vexcl/backend/opencl/random/threefry.hpp" name="vexcl/backend/opencl/random/threefry.hpp">
-<area shape="rect" id="node3" href="$backend_2opencl_2random_8hpp.html" title="Random generators for OpenCL. " alt="" coords="5,97,163,138"/>
-<area shape="rect" id="node5" href="$random_8hpp.html" title="Backend selector for random number generators. " alt="" coords="16,187,151,213"/>
-<area shape="rect" id="node7" href="$vexcl_8hpp.html" title="Vector expression template library for OpenCL. " alt="" coords="25,261,143,288"/>
+<area shape="rect" id="node2" href="$backend_2opencl_2random_8hpp.html" title="Random generators for OpenCL. " alt="" coords="5,97,163,138"/>
+<area shape="rect" id="node3" href="$random_8hpp.html" title="Backend selector for random number generators. " alt="" coords="16,187,151,213"/>
+<area shape="rect" id="node4" href="$vexcl_8hpp.html" title="Vector expression template library for OpenCL. " alt="" coords="25,261,143,288"/>
 </map>

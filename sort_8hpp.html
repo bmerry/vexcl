@@ -61,29 +61,10 @@
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;string&gt;</code><br/>
 <code>#include &lt;functional&gt;</code><br/>
-<code>#include &lt;boost/mpl/vector.hpp&gt;</code><br/>
-<code>#include &lt;boost/mpl/joint_view.hpp&gt;</code><br/>
-<code>#include &lt;boost/mpl/set.hpp&gt;</code><br/>
-<code>#include &lt;boost/mpl/push_front.hpp&gt;</code><br/>
-<code>#include &lt;boost/mpl/for_each.hpp&gt;</code><br/>
-<code>#include &lt;boost/mpl/accumulate.hpp&gt;</code><br/>
-<code>#include &lt;boost/mpl/inserter.hpp&gt;</code><br/>
-<code>#include &lt;boost/mpl/plus.hpp&gt;</code><br/>
-<code>#include &lt;boost/mpl/sizeof.hpp&gt;</code><br/>
-<code>#include &lt;boost/fusion/include/mpl.hpp&gt;</code><br/>
-<code>#include &lt;boost/fusion/include/vector.hpp&gt;</code><br/>
-<code>#include &lt;boost/fusion/include/as_vector.hpp&gt;</code><br/>
-<code>#include &lt;boost/fusion/include/make_vector.hpp&gt;</code><br/>
-<code>#include &lt;boost/fusion/include/for_each.hpp&gt;</code><br/>
-<code>#include &lt;boost/fusion/include/join.hpp&gt;</code><br/>
-<code>#include &lt;boost/fusion/include/invoke.hpp&gt;</code><br/>
-<code>#include &lt;boost/fusion/include/swap.hpp&gt;</code><br/>
-<code>#include &lt;boost/fusion/include/at_c.hpp&gt;</code><br/>
-<code>#include &lt;boost/fusion/include/zip_view.hpp&gt;</code><br/>
-<code>#include &lt;boost/fusion/adapted/std_tuple.hpp&gt;</code><br/>
 <code>#include &lt;<a class="el" href="backend_8hpp.html">vexcl/backend.hpp</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="util_8hpp.html">vexcl/util.hpp</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="vector_8hpp.html">vexcl/vector.hpp</a>&gt;</code><br/>
+<code>#include &lt;vexcl/detail/fusion.hpp&gt;</code><br/>
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for sort.hpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -91,7 +72,7 @@
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="sort_8hpp__incl.png" border="0" usemap="#vexcl_2sort_8hpp" alt=""/></div>
 <map name="vexcl_2sort_8hpp" id="vexcl_2sort_8hpp">
-<area shape="rect" id="node47" href="backend_8hpp.html" title="Compile&#45;time selection of backend (OpenCL/CUDA). " alt="" coords="889,245,1028,272"/><area shape="rect" id="node87" href="util_8hpp.html" title="OpenCL general utilities. " alt="" coords="1593,245,1698,272"/><area shape="rect" id="node104" href="vector_8hpp.html" title="OpenCL device vector. " alt="" coords="576,88,702,115"/><area shape="rect" id="node49" href="opencl_8hpp.html" title="OpenCL backend for compute kernel generation/compilation/launching. " alt="" coords="471,320,658,347"/><area shape="rect" id="node53" href="opencl_2error_8hpp.html" title="Output OpenCL errors to a std::stream. " alt="" coords="462,395,620,437"/><area shape="rect" id="node58" href="opencl_2context_8hpp.html" title="OpenCL device enumeration and context initialization. " alt="" coords="645,395,803,437"/><area shape="rect" id="node64" href="opencl_2filter_8hpp.html" title="Device filters for OpenCL backend. " alt="" coords="1316,395,1474,437"/><area shape="rect" id="node73" href="opencl_2device__vector_8hpp.html" title="OpenCL device vector. " alt="" coords="280,395,438,437"/><area shape="rect" id="node76" href="opencl_2source_8hpp.html" title="Helper class for OpenCL source code generation. " alt="" coords="828,395,986,437"/><area shape="rect" id="node84" href="opencl_2compiler_8hpp.html" title="OpenCL source code compilation wrapper. " alt="" coords="45,395,203,437"/><area shape="rect" id="node121" href="operations_8hpp.html" title="Templates used for expression tree traversal and kernel generation. " alt="" coords="916,171,1070,197"/><area shape="rect" id="node128" href="profiler_8hpp.html" title="Simple OpenCL/Host profiler. " alt="" coords="1228,171,1356,197"/><area shape="rect" id="node137" href="devlist_8hpp.html" title="OpenCL device enumeration and context initialization. " alt="" coords="1813,171,1939,197"/></map>
+<area shape="rect" id="node4" href="backend_8hpp.html" title="Compile&#45;time selection of backend (OpenCL/CUDA). " alt="" coords="3847,237,3987,264"/><area shape="rect" id="node25" href="util_8hpp.html" title="OpenCL general utilities. " alt="" coords="2846,403,2951,429"/><area shape="rect" id="node29" href="vector_8hpp.html" title="OpenCL device vector. " alt="" coords="3468,80,3593,107"/><area shape="rect" id="node5" href="opencl_8hpp.html" title="OpenCL backend for compute kernel generation/compilation/launching. " alt="" coords="4133,320,4320,347"/><area shape="rect" id="node7" href="opencl_2error_8hpp.html" title="Output OpenCL errors to a std::stream. " alt="" coords="4077,486,4235,527"/><area shape="rect" id="node9" href="opencl_2context_8hpp.html" title="OpenCL device enumeration and context initialization. " alt="" coords="3913,395,4071,437"/><area shape="rect" id="node11" href="opencl_2filter_8hpp.html" title="Device filters for OpenCL backend. " alt="" coords="4147,395,4305,437"/><area shape="rect" id="node14" href="opencl_2device__vector_8hpp.html" title="OpenCL device vector. " alt="" coords="4330,395,4488,437"/><area shape="rect" id="node15" href="opencl_2source_8hpp.html" title="Helper class for OpenCL source code generation. " alt="" coords="3461,395,3619,437"/><area shape="rect" id="node23" href="opencl_2compiler_8hpp.html" title="OpenCL source code compilation wrapper. " alt="" coords="4666,486,4824,527"/><area shape="rect" id="node24" href="opencl_2kernel_8hpp.html" title="An abstraction over OpenCL compute kernel. " alt="" coords="4666,395,4824,437"/><area shape="rect" id="node19" href="types_8hpp.html" title="Support for using native C++ and OpenCL types in expressions. " alt="" coords="3191,493,3312,520"/><area shape="rect" id="node32" href="operations_8hpp.html" title="Templates used for expression tree traversal and kernel generation. " alt="" coords="657,155,811,181"/><area shape="rect" id="node37" href="profiler_8hpp.html" title="Simple OpenCL/Host profiler. " alt="" coords="2579,155,2708,181"/><area shape="rect" id="node50" href="devlist_8hpp.html" title="OpenCL device enumeration and context initialization. " alt="" coords="4013,155,4139,181"/></map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> This graph shows which files directly or indirectly include this file:</div>
@@ -100,7 +81,7 @@
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="sort_8hpp__dep__incl.png" border="0" usemap="#vexcl_2sort_8hppdep" alt=""/></div>
 <map name="vexcl_2sort_8hppdep" id="vexcl_2sort_8hppdep">
-<area shape="rect" id="node3" href="vexcl_8hpp.html" title="Vector expression template library for OpenCL. " alt="" coords="5,80,123,107"/></map>
+<area shape="rect" id="node2" href="vexcl_8hpp.html" title="Vector expression template library for OpenCL. " alt="" coords="5,80,123,107"/></map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -126,10 +107,6 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:abc0f6d1d085ae97529e7a944dc252f48"><td class="memTemplParams" colspan="2"><a class="anchor" id="abc0f6d1d085ae97529e7a944dc252f48"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:abc0f6d1d085ae97529e7a944dc252f48"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::detail::print_types</b> (std::ostringstream &amp;s)</td></tr>
-<tr class="separator:abc0f6d1d085ae97529e7a944dc252f48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00109698b609c25143c1a480904e29b9"><td class="memTemplParams" colspan="2"><a class="anchor" id="a00109698b609c25143c1a480904e29b9"></a>
 template&lt;int NT, int VT, typename T &gt; </td></tr>
 <tr class="memitem:a00109698b609c25143c1a480904e29b9"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::detail::global_to_regstr_pred</b> ()</td></tr>
@@ -401,20 +378,6 @@ boost::fusion::result_of::join<br class="typebreak"/>
 ::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::detail::merge</b> (const KTuple &amp;keys, const VTuple &amp;vals, Comp comp)</td></tr>
 <tr class="memdesc:a7c57193bc591a62a1d95ef975598029b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Merges partially sorted vector partitions into host vector. <br/></td></tr>
 <tr class="separator:a7c57193bc591a62a1d95ef975598029b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7edf0943a1e390a0db0f35d8710832a"><td class="memTemplParams" colspan="2"><a class="anchor" id="af7edf0943a1e390a0db0f35d8710832a"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:af7edf0943a1e390a0db0f35d8710832a"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
-&lt; boost::fusion::traits::is_sequence<br class="typebreak"/>
-&lt; T &gt;::value, T &amp; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::detail::forward_as_sequence</b> (T &amp;t)</td></tr>
-<tr class="separator:af7edf0943a1e390a0db0f35d8710832a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ab2a3c1f7e04f9137da30ef9bbaa711"><td class="memTemplParams" colspan="2"><a class="anchor" id="a2ab2a3c1f7e04f9137da30ef9bbaa711"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:a2ab2a3c1f7e04f9137da30ef9bbaa711"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
-&lt; !boost::fusion::traits::is_sequence<br class="typebreak"/>
-&lt; T &gt;::value, <br class="typebreak"/>
-boost::fusion::vector&lt; T &amp; &gt;<br class="typebreak"/>
-&gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::detail::forward_as_sequence</b> (T &amp;t)</td></tr>
-<tr class="separator:a2ab2a3c1f7e04f9137da30ef9bbaa711"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c2325838d909c02fca5c0440e0d0a42"><td class="memTemplParams" colspan="2"><a class="anchor" id="a4c2325838d909c02fca5c0440e0d0a42"></a>
 template&lt;class K , class Comp &gt; </td></tr>
 <tr class="memitem:a4c2325838d909c02fca5c0440e0d0a42"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::detail::sort_sink</b> (K &amp;&amp;keys, Comp comp)</td></tr>

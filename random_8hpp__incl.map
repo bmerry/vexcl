@@ -1,18 +1,18 @@
 <map id="vexcl/random.hpp" name="vexcl/random.hpp">
-<area shape="rect" id="node3" href="$backend_8hpp.html" title="Compile&#45;time selection of backend (OpenCL/CUDA). " alt="" coords="1125,261,1264,288"/>
-<area shape="rect" id="node87" href="$backend_2opencl_2random_8hpp.html" title="Random generators for OpenCL. " alt="" coords="1419,81,1577,122"/>
-<area shape="rect" id="node5" href="$opencl_8hpp.html" title="OpenCL backend for compute kernel generation/compilation/launching. " alt="" coords="611,336,797,363"/>
-<area shape="rect" id="node9" href="$opencl_2error_8hpp.html" title="Output OpenCL errors to a std::stream. " alt="" coords="726,502,884,543"/>
-<area shape="rect" id="node14" href="$opencl_2context_8hpp.html" title="OpenCL device enumeration and context initialization. " alt="" coords="909,502,1067,543"/>
-<area shape="rect" id="node20" href="$opencl_2filter_8hpp.html" title="Device filters for OpenCL backend. " alt="" coords="155,502,313,543"/>
-<area shape="rect" id="node39" href="$opencl_2device__vector_8hpp.html" title="OpenCL device vector. " alt="" coords="507,411,665,453"/>
-<area shape="rect" id="node42" href="$opencl_2source_8hpp.html" title="Helper class for OpenCL source code generation. " alt="" coords="1145,411,1303,453"/>
-<area shape="rect" id="node78" href="$opencl_2compiler_8hpp.html" title="OpenCL source code compilation wrapper. " alt="" coords="390,502,548,543"/>
-<area shape="rect" id="node82" href="$opencl_2kernel_8hpp.html" title="An abstraction over OpenCL compute kernel. " alt="" coords="273,411,431,453"/>
-<area shape="rect" id="node52" href="$common_8hpp.html" title="Common backend utilities. " alt="" coords="431,600,632,627"/>
-<area shape="rect" id="node66" href="$types_8hpp.html" title="Support for using native C++ and OpenCL types in expressions. " alt="" coords="1338,509,1459,536"/>
-<area shape="rect" id="node89" href="$operations_8hpp.html" title="Templates used for expression tree traversal and kernel generation. " alt="" coords="1785,179,1939,205"/>
-<area shape="rect" id="node122" href="$opencl_2random_2philox_8hpp.html" title="Philox random generator. " alt="" coords="1419,171,1577,213"/>
-<area shape="rect" id="node124" href="$opencl_2random_2threefry_8hpp.html" title="Threefry random generator. " alt="" coords="1602,171,1760,213"/>
-<area shape="rect" id="node107" href="$util_8hpp.html" title="OpenCL general utilities. " alt="" coords="1621,509,1725,536"/>
+<area shape="rect" id="node2" href="$backend_8hpp.html" title="Compile&#45;time selection of backend (OpenCL/CUDA). " alt="" coords="967,261,1107,288"/>
+<area shape="rect" id="node32" href="$backend_2opencl_2random_8hpp.html" title="Random generators for OpenCL. " alt="" coords="1262,81,1420,122"/>
+<area shape="rect" id="node3" href="$opencl_8hpp.html" title="OpenCL backend for compute kernel generation/compilation/launching. " alt="" coords="571,336,757,363"/>
+<area shape="rect" id="node5" href="$opencl_2error_8hpp.html" title="Output OpenCL errors to a std::stream. " alt="" coords="702,502,860,543"/>
+<area shape="rect" id="node7" href="$opencl_2context_8hpp.html" title="OpenCL device enumeration and context initialization. " alt="" coords="1081,502,1239,543"/>
+<area shape="rect" id="node9" href="$opencl_2filter_8hpp.html" title="Device filters for OpenCL backend. " alt="" coords="315,502,473,543"/>
+<area shape="rect" id="node17" href="$opencl_2device__vector_8hpp.html" title="OpenCL device vector. " alt="" coords="467,411,625,453"/>
+<area shape="rect" id="node18" href="$opencl_2source_8hpp.html" title="Helper class for OpenCL source code generation. " alt="" coords="909,411,1067,453"/>
+<area shape="rect" id="node30" href="$opencl_2compiler_8hpp.html" title="OpenCL source code compilation wrapper. " alt="" coords="133,502,291,543"/>
+<area shape="rect" id="node31" href="$opencl_2kernel_8hpp.html" title="An abstraction over OpenCL compute kernel. " alt="" coords="141,411,299,453"/>
+<area shape="rect" id="node22" href="$common_8hpp.html" title="Common backend utilities. " alt="" coords="482,600,683,627"/>
+<area shape="rect" id="node26" href="$types_8hpp.html" title="Support for using native C++ and OpenCL types in expressions. " alt="" coords="1315,509,1436,536"/>
+<area shape="rect" id="node33" href="$operations_8hpp.html" title="Templates used for expression tree traversal and kernel generation. " alt="" coords="1628,179,1781,205"/>
+<area shape="rect" id="node44" href="$opencl_2random_2philox_8hpp.html" title="Philox random generator. " alt="" coords="1262,171,1420,213"/>
+<area shape="rect" id="node45" href="$opencl_2random_2threefry_8hpp.html" title="Threefry random generator. " alt="" coords="1445,171,1603,213"/>
+<area shape="rect" id="node41" href="$util_8hpp.html" title="OpenCL general utilities. " alt="" coords="1665,509,1769,536"/>
 </map>

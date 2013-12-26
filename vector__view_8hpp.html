@@ -68,6 +68,7 @@
 <code>#include &lt;algorithm&gt;</code><br/>
 <code>#include &lt;<a class="el" href="vector_8hpp.html">vexcl/vector.hpp</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="element__index_8hpp.html">vexcl/element_index.hpp</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="tagged__terminal_8hpp.html">vexcl/tagged_terminal.hpp</a>&gt;</code><br/>
 <code>#include &lt;boost/fusion/container/vector.hpp&gt;</code><br/>
 <code>#include &lt;boost/fusion/container/vector/convert.hpp&gt;</code><br/>
 <code>#include &lt;boost/fusion/algorithm/transformation/push_back.hpp&gt;</code><br/>
@@ -79,7 +80,7 @@
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="vector__view_8hpp__incl.png" border="0" usemap="#vexcl_2vector__view_8hpp" alt=""/></div>
 <map name="vexcl_2vector__view_8hpp" id="vexcl_2vector__view_8hpp">
-<area shape="rect" id="node15" href="vector_8hpp.html" title="OpenCL device vector. " alt="" coords="1476,88,1601,115"/><area shape="rect" id="node128" href="element__index_8hpp.html" title="Element index for use in vector expressions. " alt="" coords="958,88,1137,115"/><area shape="rect" id="node34" href="backend_8hpp.html" title="Compile&#45;time selection of backend (OpenCL/CUDA). " alt="" coords="1009,253,1148,280"/><area shape="rect" id="node44" href="util_8hpp.html" title="OpenCL general utilities. " alt="" coords="1225,253,1329,280"/><area shape="rect" id="node59" href="operations_8hpp.html" title="Templates used for expression tree traversal and kernel generation. " alt="" coords="675,171,828,197"/><area shape="rect" id="node83" href="profiler_8hpp.html" title="Simple OpenCL/Host profiler. " alt="" coords="2845,171,2973,197"/><area shape="rect" id="node119" href="devlist_8hpp.html" title="OpenCL device enumeration and context initialization. " alt="" coords="1391,171,1517,197"/><area shape="rect" id="node36" href="opencl_8hpp.html" title="OpenCL backend for compute kernel generation/compilation/launching. " alt="" coords="883,336,1069,363"/><area shape="rect" id="node40" href="opencl_2error_8hpp.html" title="Output OpenCL errors to a std::stream. " alt="" coords="659,411,817,453"/><area shape="rect" id="node73" href="types_8hpp.html" title="Support for using native C++ and OpenCL types in expressions. " alt="" coords="574,253,695,280"/></map>
+<area shape="rect" id="node8" href="vector_8hpp.html" title="OpenCL device vector. " alt="" coords="3143,88,3268,115"/><area shape="rect" id="node44" href="element__index_8hpp.html" title="Element index for use in vector expressions. " alt="" coords="4431,88,4611,115"/><area shape="rect" id="node45" href="tagged__terminal_8hpp.html" title="Tagged terminal wrapper. " alt="" coords="4635,88,4825,115"/><area shape="rect" id="node16" href="backend_8hpp.html" title="Compile&#45;time selection of backend (OpenCL/CUDA). " alt="" coords="2926,253,3065,280"/><area shape="rect" id="node18" href="util_8hpp.html" title="OpenCL general utilities. " alt="" coords="3487,253,3592,280"/><area shape="rect" id="node22" href="operations_8hpp.html" title="Templates used for expression tree traversal and kernel generation. " alt="" coords="4037,171,4191,197"/><area shape="rect" id="node28" href="profiler_8hpp.html" title="Simple OpenCL/Host profiler. " alt="" coords="1953,171,2081,197"/><area shape="rect" id="node42" href="devlist_8hpp.html" title="OpenCL device enumeration and context initialization. " alt="" coords="3193,171,3319,197"/><area shape="rect" id="node17" href="opencl_8hpp.html" title="OpenCL backend for compute kernel generation/compilation/launching. " alt="" coords="2903,336,3089,363"/><area shape="rect" id="node27" href="types_8hpp.html" title="Support for using native C++ and OpenCL types in expressions. " alt="" coords="3617,253,3737,280"/></map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> This graph shows which files directly or indirectly include this file:</div>
@@ -88,7 +89,7 @@
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="vector__view_8hpp__dep__incl.png" border="0" usemap="#vexcl_2vector__view_8hppdep" alt=""/></div>
 <map name="vexcl_2vector__view_8hppdep" id="vexcl_2vector__view_8hppdep">
-<area shape="rect" id="node3" href="gather_8hpp.html" title="Gather scattered points from OpenCL device vector. " alt="" coords="5,80,131,107"/><area shape="rect" id="node5" href="vexcl_8hpp.html" title="Vector expression template library for OpenCL. " alt="" coords="110,155,228,181"/><area shape="rect" id="node7" href="multi__array_8hpp.html" title="An analog of boost::multi_array. " alt="" coords="207,80,363,107"/><area shape="rect" id="node9" href="spmat_8hpp.html" title="OpenCL sparse matrix. " alt="" coords="387,80,513,107"/></map>
+<area shape="rect" id="node2" href="gather_8hpp.html" title="Gather scattered points from OpenCL device vector. " alt="" coords="5,80,131,107"/><area shape="rect" id="node3" href="vexcl_8hpp.html" title="Vector expression template library for OpenCL. " alt="" coords="110,155,228,181"/><area shape="rect" id="node4" href="multi__array_8hpp.html" title="An analog of boost::multi_array. " alt="" coords="207,80,363,107"/><area shape="rect" id="node5" href="spmat_8hpp.html" title="OpenCL sparse matrix. " alt="" coords="387,80,513,107"/></map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -143,6 +144,22 @@ boost::proto::result_of::as_child<br class="typebreak"/>
 ::type, NDIM, 1, RDC &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#ac77b2a657d4d26f3b8348c9ac1be02f4">vex::reduce</a> (const gslice&lt; NDIM &gt; &amp;slice, const Expr &amp;expr, size_t reduce_dim)</td></tr>
 <tr class="memdesc:ac77b2a657d4d26f3b8348c9ac1be02f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduce sliced expression along specified dimension. <br/></td></tr>
 <tr class="separator:ac77b2a657d4d26f3b8348c9ac1be02f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00792964db2b9c9b2bd784383cd46037"><td class="memTemplParams" colspan="2"><a class="anchor" id="a00792964db2b9c9b2bd784383cd46037"></a>
+template&lt;class RDC , typename Expr , size_t NDIM, size_t NR&gt; </td></tr>
+<tr class="memitem:a00792964db2b9c9b2bd784383cd46037"><td class="memTemplItemLeft" align="right" valign="top">reduced_vector_view&lt; typename <br class="typebreak"/>
+boost::proto::result_of::as_child<br class="typebreak"/>
+&lt; const Expr, vector_domain &gt;<br class="typebreak"/>
+::type, NDIM, NR, RDC &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a00792964db2b9c9b2bd784383cd46037">vex::reduce</a> (const extent_gen&lt; NDIM &gt; &amp;ext, const Expr &amp;expr, const std::array&lt; size_t, NR &gt; &amp;reduce_dims)</td></tr>
+<tr class="memdesc:a00792964db2b9c9b2bd784383cd46037"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduce sliced expression along specified dimensions. <br/></td></tr>
+<tr class="separator:a00792964db2b9c9b2bd784383cd46037"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb11762cd37576f01efe61862c39d032"><td class="memTemplParams" colspan="2"><a class="anchor" id="abb11762cd37576f01efe61862c39d032"></a>
+template&lt;class RDC , typename Expr , size_t NDIM&gt; </td></tr>
+<tr class="memitem:abb11762cd37576f01efe61862c39d032"><td class="memTemplItemLeft" align="right" valign="top">reduced_vector_view&lt; typename <br class="typebreak"/>
+boost::proto::result_of::as_child<br class="typebreak"/>
+&lt; const Expr, vector_domain &gt;<br class="typebreak"/>
+::type, NDIM, 1, RDC &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#abb11762cd37576f01efe61862c39d032">vex::reduce</a> (const extent_gen&lt; NDIM &gt; &amp;ext, const Expr &amp;expr, size_t reduce_dim)</td></tr>
+<tr class="memdesc:abb11762cd37576f01efe61862c39d032"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduce sliced expression along specified dimension. <br/></td></tr>
+<tr class="separator:abb11762cd37576f01efe61862c39d032"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a159a23f567b28d7d284fa0cd720e900a"><td class="memTemplParams" colspan="2">template&lt;class Expr , size_t Nout, size_t Nin&gt; </td></tr>
 <tr class="memitem:a159a23f567b28d7d284fa0cd720e900a"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a159a23f567b28d7d284fa0cd720e900a">vex::reshape</a> (const Expr &amp;expr, const std::array&lt; size_t, Nout &gt; &amp;dst_dims, const std::array&lt; size_t, Nin &gt; &amp;src_dims) -&gt; decltype(<a class="el" href="namespacevex.html#a1d8048e3bb5185ab018e9d0a0649ef0b">vex::permutation</a>(detail::reshape_helper&lt; Nout, Nin &gt;(dst_dims, src_dims)())(expr))</td></tr>
 <tr class="memdesc:a159a23f567b28d7d284fa0cd720e900a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reshapes given expression.  <a href="#a159a23f567b28d7d284fa0cd720e900a">More...</a><br/></td></tr>
