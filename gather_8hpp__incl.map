@@ -1,13 +1,13 @@
 <map id="vexcl/gather.hpp" name="vexcl/gather.hpp">
-<area shape="rect" id="node5" href="$operations_8hpp.html" title="Templates used for expression tree traversal and kernel generation. " alt="" coords="3814,245,3968,272"/>
-<area shape="rect" id="node27" href="$vector_8hpp.html" title="OpenCL device vector. " alt="" coords="3225,163,3350,189"/>
-<area shape="rect" id="node44" href="$vector__view_8hpp.html" title="Provides sub&#45;view for an existing vex::vector. " alt="" coords="4356,80,4514,107"/>
-<area shape="rect" id="node13" href="$backend_8hpp.html" title="Compile&#45;time selection of backend (OpenCL/CUDA). " alt="" coords="2899,328,3038,355"/>
-<area shape="rect" id="node16" href="$types_8hpp.html" title="Support for using native C++ and OpenCL types in expressions. " alt="" coords="4188,328,4309,355"/>
-<area shape="rect" id="node23" href="$util_8hpp.html" title="OpenCL general utilities. " alt="" coords="3427,328,3532,355"/>
-<area shape="rect" id="node14" href="$opencl_8hpp.html" title="OpenCL backend for compute kernel generation/compilation/launching. " alt="" coords="2876,411,3062,437"/>
-<area shape="rect" id="node30" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler. " alt="" coords="1478,245,1606,272"/>
-<area shape="rect" id="node43" href="$devlist_8hpp.html" title="OpenCL device enumeration and context initialization. " alt="" coords="3123,245,3249,272"/>
-<area shape="rect" id="node45" href="$element__index_8hpp.html" title="Element index for use in vector expressions. " alt="" coords="4282,163,4461,189"/>
-<area shape="rect" id="node46" href="$tagged__terminal_8hpp.html" title="Tagged terminal wrapper. " alt="" coords="4067,163,4257,189"/>
+<area shape="rect" id="node5" href="$operations_8hpp.html" title="Templates used for expression tree traversal and kernel generation. " alt="" coords="3636,253,3789,280"/>
+<area shape="rect" id="node27" href="$vector_8hpp.html" title="OpenCL device vector. " alt="" coords="2876,163,3001,189"/>
+<area shape="rect" id="node44" href="$vector__view_8hpp.html" title="Provides sub&#45;view for an existing vex::vector. " alt="" coords="3785,80,3943,107"/>
+<area shape="rect" id="node13" href="$backend_8hpp.html" title="Compile&#45;time selection of backend (OpenCL/CUDA). " alt="" coords="2586,344,2725,371"/>
+<area shape="rect" id="node16" href="$types_8hpp.html" title="Support for using native C++ and OpenCL types in expressions. " alt="" coords="3735,344,3856,371"/>
+<area shape="rect" id="node23" href="$util_8hpp.html" title="OpenCL general utilities. " alt="" coords="3367,344,3472,371"/>
+<area shape="rect" id="node14" href="$opencl_8hpp.html" title="OpenCL backend for compute kernel generation/compilation/launching. " alt="" coords="2663,427,2849,453"/>
+<area shape="rect" id="node31" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler. " alt="" coords="1607,253,1736,280"/>
+<area shape="rect" id="node43" href="$devlist_8hpp.html" title="OpenCL device enumeration and context initialization. " alt="" coords="2698,253,2824,280"/>
+<area shape="rect" id="node45" href="$element__index_8hpp.html" title="Element index for use in vector expressions. " alt="" coords="3483,163,3663,189"/>
+<area shape="rect" id="node46" href="$tagged__terminal_8hpp.html" title="Tagged terminal wrapper. " alt="" coords="3269,163,3459,189"/>
 </map>

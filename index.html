@@ -42,7 +42,7 @@
 <div class="title">VexCL Documentation</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a href="https://travis-ci.org/ddemidov/vexcl"></a></p>
+<div class="textblock"><p><a href="https://travis-ci.org/ddemidov/vexcl"></a> <a href="https://bitdeli.com/free"></a></p>
 <p>VexCL is a vector expression template library for OpenCL/CUDA. It has been created for ease of GPGPU development with C++. VexCL strives to reduce amount of boilerplate code needed to develop GPGPU applications. The library provides convenient and intuitive notation for vector arithmetic, reduction, sparse matrix-vector products, etc. Multi-device and even multi-platform computations are supported. The source code of the library is distributed under very permissive MIT license.</p>
 <p>The code is available at <a href="https://github.com/ddemidov/vexcl">https://github.com/ddemidov/vexcl</a>.</p>
 <p>Doxygen-generated documentation: <a href="http://ddemidov.github.io/vexcl">http://ddemidov.github.io/vexcl</a>.</p>
@@ -205,7 +205,14 @@
 </div><!-- fragment --><p>Custom functions may be used not only for convenience, but also for performance reasons. The above example could in principle be rewritten as: </p>
 <div class="fragment"><div class="line">Z = sqrt(X * X + Y * Y);</div>
 </div><!-- fragment --><p> The drawback of the latter variant is that <code>X</code> and <code>Y</code> will be read <em>twice</em>.</p>
-<h3><a class="anchor" id="tagged-terminals"></a>Tagged terminals</h3>
+<p>The convenience macro <code>VEX_STRINGIZE_SOURCE</code> may be used to easily enquote the source code for a user-defined function. It's advantage is that users will have benefits of syntax highlighting and general readability of their code: </p>
+<div class="fragment"><div class="line"><a class="code" href="operations_8hpp.html#aff85c71f5e6716591cf5948f92e093b3">VEX_FUNCTION</a>(diff_cube, <span class="keywordtype">double</span>(<span class="keywordtype">double</span>, <span class="keywordtype">double</span>),</div>
+<div class="line">    <a class="code" href="operations_8hpp.html#a8c4fa42e03a69b51b7e1af1c59a9a3b9">VEX_STRINGIZE_SOURCE</a>(</div>
+<div class="line">        <span class="keywordtype">double</span> d = prm1 - prm2;</div>
+<div class="line">        <span class="keywordflow">return</span> d * d * d;</div>
+<div class="line">        )</div>
+<div class="line">    );</div>
+</div><!-- fragment --><h3><a class="anchor" id="tagged-terminals"></a>Tagged terminals</h3>
 <p>The code snippet from the last paragraph is ineffective because the compiler cannot tell if any two terminals in an expression tree are actually referring to the same data. But programmers often have this information. VexCL allows one to pass this knowledge to compiler by tagging terminals with unique tags. By doing this, the programmer guarantees that any two terminals with matching tags are referencing same data.</p>
 <p>Below is a more effective variant of the above example: </p>
 <div class="fragment"><div class="line"><span class="keyword">using</span> <a class="code" href="namespacevex.html#a31259ad9c0db468f3f73e1decf8d0c14">vex::tag</a>;</div>
@@ -353,7 +360,7 @@
 </div><!-- fragment --><p>The current window is available inside the body of the operator through the <code>X</code> array, which is indexed relative to the stencil center.</p>
 <p>Stencil convolution operations, similar to the matrix-vector products, are only allowed in additive expressions.</p>
 <h2><a class="anchor" id="raw-pointers"></a>Raw pointers</h2>
-<p>Unforunately, describing two dimensional stencils (e.g. discretization of the Laplace operator) would not be effective, because the stencil width would be too large. One can solve this problem by using a combination of <code>raw_pointer(const vector&lt;T&gt;&amp;)</code> with a derefence operator (essentially doing pointer arithmetic inside compute kernel). For the sake of simplicity, the example below implements a simple 3-point laplace operator for a one-dimensional vector; but this could be easily extended in the two-dimensional case: </p>
+<p>Unfortunately, describing two dimensional stencils (e.g. discretization of the Laplace operator) would not be effective, because the stencil width would be too large. One can solve this problem by using a combination of <code>raw_pointer(const vector&lt;T&gt;&amp;)</code> with a derefence operator (essentially doing pointer arithmetic inside compute kernel). For the sake of simplicity, the example below implements a simple 3-point laplace operator for a one-dimensional vector; but this could be easily extended in the two-dimensional case: </p>
 <div class="fragment"><div class="line"><a class="code" href="constants_8hpp.html#a076ebff70ce67abaffd46155025e2aa4">VEX_CONSTANT</a>(zero, 0);</div>
 <div class="line"><a class="code" href="constants_8hpp.html#a076ebff70ce67abaffd46155025e2aa4">VEX_CONSTANT</a>(one,  1);</div>
 <div class="line"><a class="code" href="constants_8hpp.html#a076ebff70ce67abaffd46155025e2aa4">VEX_CONSTANT</a>(two,  2);</div>
@@ -385,11 +392,13 @@
 </div><!-- fragment --><p>The same approach could be used, for example, to implement an N-body problem with a user-defined function: </p>
 <div class="fragment"><div class="line"><span class="comment">// Takes vector size, current element position, and pointer to a vector to sum:</span></div>
 <div class="line"><a class="code" href="operations_8hpp.html#aff85c71f5e6716591cf5948f92e093b3">VEX_FUNCTION</a>(global_interaction, <span class="keywordtype">double</span>(<span class="keywordtype">size_t</span>, <span class="keywordtype">size_t</span>, <span class="keywordtype">double</span>*),</div>
-<div class="line">    <span class="stringliteral">&quot;double sum = 0;\n&quot;</span></div>
-<div class="line">    <span class="stringliteral">&quot;double myval = prm3[prm2];\n&quot;</span></div>
-<div class="line">    <span class="stringliteral">&quot;for(size_t i = 0; i &lt; prm1; ++i)\n&quot;</span></div>
-<div class="line">    <span class="stringliteral">&quot;    if (i != prm2) sum += fabs(prm3[i] - myval);\n&quot;</span></div>
-<div class="line">    <span class="stringliteral">&quot;return sum;\n&quot;</span></div>
+<div class="line">    <a class="code" href="operations_8hpp.html#a8c4fa42e03a69b51b7e1af1c59a9a3b9">VEX_STRINGIZE_SOURCE</a>(</div>
+<div class="line">        <span class="keywordtype">double</span> sum = 0;</div>
+<div class="line">        <span class="keywordtype">double</span> myval = prm3[prm2];</div>
+<div class="line">        <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i = 0; i &lt; prm1; ++i)</div>
+<div class="line">            <span class="keywordflow">if</span> (i != prm2) sum += fabs(prm3[i] - myval);</div>
+<div class="line">        <span class="keywordflow">return</span> sum;</div>
+<div class="line">        )</div>
 <div class="line">    );</div>
 <div class="line"></div>
 <div class="line">y = global_interaction(x.size(), <a class="code" href="namespacevex.html#acf35349b5accc05f96b291457f522acb">vex::element_index</a>(), <a class="code" href="namespacevex.html#afca1d21b77d4ea7494aa032c9bb81db8">vex::raw_pointer</a>(x));</div>
@@ -401,11 +410,13 @@
 <div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><span class="keyword">struct </span>even_first {</div>
 <div class="line">    <a class="code" href="operations_8hpp.html#aff85c71f5e6716591cf5948f92e093b3">VEX_FUNCTION</a>(device, <span class="keywordtype">bool</span>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>),</div>
-<div class="line">            <span class="stringliteral">&quot;char bit1 = 1 &amp; prm1;\n&quot;</span></div>
-<div class="line">            <span class="stringliteral">&quot;char bit2 = 1 &amp; prm2;\n&quot;</span></div>
-<div class="line">            <span class="stringliteral">&quot;if (bit1 == bit2) return prm1 &lt; prm2;\n&quot;</span></div>
-<div class="line">            <span class="stringliteral">&quot;return bit1 &lt; bit2;\n&quot;</span></div>
-<div class="line">            );</div>
+<div class="line">        <a class="code" href="operations_8hpp.html#a8c4fa42e03a69b51b7e1af1c59a9a3b9">VEX_STRINGIZE_SOURCE</a>(</div>
+<div class="line">            <span class="keywordtype">char</span> bit1 = 1 &amp; prm1;</div>
+<div class="line">            <span class="keywordtype">char</span> bit2 = 1 &amp; prm2;</div>
+<div class="line">            <span class="keywordflow">if</span> (bit1 == bit2) <span class="keywordflow">return</span> prm1 &lt; prm2;</div>
+<div class="line">            <span class="keywordflow">return</span> bit1 &lt; bit2;</div>
+<div class="line">            )</div>
+<div class="line">        );</div>
 <div class="line">    <span class="keywordtype">bool</span> operator()(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b)<span class="keyword"> const </span>{</div>
 <div class="line">        <span class="keywordtype">char</span> bit1 = 1 &amp; a;</div>
 <div class="line">        <span class="keywordtype">char</span> bit2 = 1 &amp; b;</div>
@@ -555,11 +566,12 @@
 <div class="line"><span class="comment">// Compile and store the kernels for later use.</span></div>
 <div class="line"><span class="keywordflow">for</span>(uint d = 0; d &lt; ctx.size(); d++) {</div>
 <div class="line">    kernel.emplace_back(ctx.queue(d),</div>
-<div class="line">        <span class="stringliteral">&quot;kernel void dummy(ulong n, global float *x)\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;{\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;    for(size_t i = get_global_id(0); i &lt; n; i += get_global_size(0))\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;        x[i] = 4.2;\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;}\n&quot;</span>,</div>
+<div class="line">        <a class="code" href="operations_8hpp.html#a8c4fa42e03a69b51b7e1af1c59a9a3b9">VEX_STRINGIZE_SOURCE</a>(</div>
+<div class="line">            kernel <span class="keywordtype">void</span> dummy(ulong n, global <span class="keywordtype">float</span> *x) {</div>
+<div class="line">                <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i = get_global_id(0); i &lt; n; i += get_global_size(0))</div>
+<div class="line">                    x[i] = 4.2;</div>
+<div class="line">            }</div>
+<div class="line">            ),</div>
 <div class="line">        <span class="stringliteral">&quot;dummy&quot;</span></div>
 <div class="line">        );</div>
 <div class="line">}</div>
@@ -586,7 +598,7 @@
 </ul>
 <p>VexCL uses standard OpenCL bindings for C++ from Khronos group. The cl.hpp file should be included with the OpenCL implementation on your system, but it is also provided with the library. </p>
 <hr/>
-<p> <em>This work is a joint effort of <a href="http://www.jscc.ru/eng/index.shtml">Supercomputer Center of Russian Academy of Sciences</a> (Kazan branch) and <a href="http://www.kpfu.ru">Kazan Federal University</a>. It is partially supported by RFBR grants No 12-07-0007 and 12-01-00033.</em> </p>
+<p> <em>This work is a joint effort of <a href="http://www.jscc.ru/eng/index.shtml">Supercomputer Center of Russian Academy of Sciences</a> (Kazan branch) and <a href="http://www.kpfu.ru">Kazan Federal University</a>. It is partially supported by RFBR grants No 12-07-0007 and 12-01-00333a.</em> </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -50,7 +50,7 @@
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
@@ -65,43 +65,23 @@
 
 <p><code>#include &lt;vector.hpp&gt;</code></p>
 
-<p>Inherits iterator&lt; std::random_access_iterator_tag, T &gt;.</p>
+<p>Inherits iterator_facade&lt; iterator_type&lt; vector_type, element_type &gt;, T, std::random_access_iterator_tag, element_type &gt;.</p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:ae65025e56d3e8fde966032b7fe934ae6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae65025e56d3e8fde966032b7fe934ae6"></a>
-element_type&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> () const </td></tr>
-<tr class="separator:ae65025e56d3e8fde966032b7fe934ae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78f75b2e9420621988c8a3a998b4261c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a78f75b2e9420621988c8a3a998b4261c"></a>
-<a class="el" href="classvex_1_1vector_1_1iterator__type.html">iterator_type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator++</b> ()</td></tr>
-<tr class="separator:a78f75b2e9420621988c8a3a998b4261c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60b2a31aebfea0c03c46b9c2d20e560a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60b2a31aebfea0c03c46b9c2d20e560a"></a>
-<a class="el" href="classvex_1_1vector_1_1iterator__type.html">iterator_type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator--</b> ()</td></tr>
-<tr class="separator:a60b2a31aebfea0c03c46b9c2d20e560a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79029df20af48085825ba79ea9f5de37"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a79029df20af48085825ba79ea9f5de37"></a>
-<a class="el" href="classvex_1_1vector_1_1iterator__type.html">iterator_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator++</b> (int)</td></tr>
-<tr class="separator:a79029df20af48085825ba79ea9f5de37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac779942c997ed570235054f560a483f0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac779942c997ed570235054f560a483f0"></a>
-<a class="el" href="classvex_1_1vector_1_1iterator__type.html">iterator_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator--</b> (int)</td></tr>
-<tr class="separator:ac779942c997ed570235054f560a483f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1bf088df73f89180aca19cba826121c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1bf088df73f89180aca19cba826121c"></a>
-<a class="el" href="classvex_1_1vector_1_1iterator__type.html">iterator_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (ptrdiff_t d) const </td></tr>
-<tr class="separator:aa1bf088df73f89180aca19cba826121c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abde362a253f235b536076dfc864d42c3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abde362a253f235b536076dfc864d42c3"></a>
-<a class="el" href="classvex_1_1vector_1_1iterator__type.html">iterator_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator-</b> (ptrdiff_t d) const </td></tr>
-<tr class="separator:abde362a253f235b536076dfc864d42c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34cf1d6d688cc53568014649ba531e69"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a34cf1d6d688cc53568014649ba531e69"></a>
-ptrdiff_t&#160;</td><td class="memItemRight" valign="bottom"><b>operator-</b> (<a class="el" href="classvex_1_1vector_1_1iterator__type.html">iterator_type</a> it) const </td></tr>
-<tr class="separator:a34cf1d6d688cc53568014649ba531e69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f4e57f4814f2eed35edac6c01d1318f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f4e57f4814f2eed35edac6c01d1318f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="classvex_1_1vector_1_1iterator__type.html">iterator_type</a> &amp;it) const </td></tr>
-<tr class="separator:a6f4e57f4814f2eed35edac6c01d1318f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a976fbdd8332123a2617072f3dfe75c7a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a976fbdd8332123a2617072f3dfe75c7a"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="classvex_1_1vector_1_1iterator__type.html">iterator_type</a> &amp;it) const </td></tr>
-<tr class="separator:a976fbdd8332123a2617072f3dfe75c7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa59e85dd9340a619970cdbd98edfd798"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa59e85dd9340a619970cdbd98edfd798"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;</b> (const <a class="el" href="classvex_1_1vector_1_1iterator__type.html">iterator_type</a> &amp;it) const </td></tr>
-<tr class="separator:aa59e85dd9340a619970cdbd98edfd798"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a1e261b15f535d5de18b0ab4c452e2fc7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e261b15f535d5de18b0ab4c452e2fc7"></a>
+typedef boost::iterator_facade<br class="typebreak"/>
+&lt; <a class="el" href="classvex_1_1vector_1_1iterator__type.html">iterator_type</a>&lt; vector_type, <br class="typebreak"/>
+element_type &gt;, T, <br class="typebreak"/>
+std::random_access_iterator_tag, <br class="typebreak"/>
+element_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>super_type</b></td></tr>
+<tr class="separator:a1e261b15f535d5de18b0ab4c452e2fc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2bf3b3b2b4918122daa385e238888eb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa2bf3b3b2b4918122daa385e238888eb"></a>
+typedef super_type::reference&#160;</td><td class="memItemRight" valign="bottom"><b>reference</b></td></tr>
+<tr class="separator:aa2bf3b3b2b4918122daa385e238888eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ecf0b116f8aa1dea5e3b4c80e23c49b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1ecf0b116f8aa1dea5e3b4c80e23c49b"></a>
+typedef super_type::difference_type&#160;</td><td class="memItemRight" valign="bottom"><b>difference_type</b></td></tr>
+<tr class="separator:a1ecf0b116f8aa1dea5e3b4c80e23c49b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -123,6 +103,9 @@ static const bool&#160;</td><td class="memItemRight" valign="bottom"><b>device_i
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
+<tr class="memitem:a986bf0deaa7559f361d03122eeea4c86"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a986bf0deaa7559f361d03122eeea4c86"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>::boost::iterator_core_access</b></td></tr>
+<tr class="separator:a986bf0deaa7559f361d03122eeea4c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7f940e5dca7631a26cb1511f9f8493a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af7f940e5dca7631a26cb1511f9f8493a"></a>
 class&#160;</td><td class="memItemRight" valign="bottom"><b>vector</b></td></tr>
 <tr class="separator:af7f940e5dca7631a26cb1511f9f8493a"><td class="memSeparator" colspan="2">&#160;</td></tr>

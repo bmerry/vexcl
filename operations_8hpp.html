@@ -115,6 +115,9 @@ Macros</h2></td></tr>
 <tr class="memitem:ae17a9e8f298a7beffb0318056efce26e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="operations_8hpp.html#ae17a9e8f298a7beffb0318056efce26e">VEX_FUNCTION_WITH_PREAMBLE</a>(name, signature, preamble, body)</td></tr>
 <tr class="memdesc:ae17a9e8f298a7beffb0318056efce26e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to declare a user function with preamble.  <a href="#ae17a9e8f298a7beffb0318056efce26e">More...</a><br/></td></tr>
 <tr class="separator:ae17a9e8f298a7beffb0318056efce26e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c4fa42e03a69b51b7e1af1c59a9a3b9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="operations_8hpp.html#a8c4fa42e03a69b51b7e1af1c59a9a3b9">VEX_STRINGIZE_SOURCE</a>(...)&#160;&#160;&#160;#__VA_ARGS__</td></tr>
+<tr class="memdesc:a8c4fa42e03a69b51b7e1af1c59a9a3b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stringizes compute kernel source code.  <a href="#a8c4fa42e03a69b51b7e1af1c59a9a3b9">More...</a><br/></td></tr>
+<tr class="separator:a8c4fa42e03a69b51b7e1af1c59a9a3b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -138,7 +141,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Templates used for expression tree traversal and kernel generation. </p>
-<dl class="section author"><dt>Author</dt><dd>Denis Demidov <a href="#" onclick="location.href='mai'+'lto:'+'dde'+'mi'+'dov'+'@k'+'su.'+'ru'; return false;">ddemi<span style="display: none;">.nosp@m.</span>dov@<span style="display: none;">.nosp@m.</span>ksu.r<span style="display: none;">.nosp@m.</span>u</a> </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Denis Demidov <a href="#" onclick="location.href='mai'+'lto:'+'den'+'ni'+'s.d'+'em'+'ido'+'v@'+'gma'+'il'+'.co'+'m'; return false;">denni<span style="display: none;">.nosp@m.</span>s.de<span style="display: none;">.nosp@m.</span>midov<span style="display: none;">.nosp@m.</span>@gma<span style="display: none;">.nosp@m.</span>il.co<span style="display: none;">.nosp@m.</span>m</a> </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a class="anchor" id="aff85c71f5e6716591cf5948f92e093b3"></a>
 <div class="memitem">
@@ -280,6 +283,31 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 <div class="line">*         );</div>
 <div class="line">* y = one(x);</div>
 <div class="line">* </div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="a8c4fa42e03a69b51b7e1af1c59a9a3b9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VEX_STRINGIZE_SOURCE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td>&#160;&#160;&#160;#__VA_ARGS__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Stringizes compute kernel source code. </p>
+<p>Example: </p>
+<div class="fragment"><div class="line"><a class="code" href="operations_8hpp.html#aff85c71f5e6716591cf5948f92e093b3">VEX_FUNCTION</a>(diff_cube, <span class="keywordtype">double</span>(<span class="keywordtype">double</span>, <span class="keywordtype">double</span>),</div>
+<div class="line">    <a class="code" href="operations_8hpp.html#a8c4fa42e03a69b51b7e1af1c59a9a3b9">VEX_STRINGIZE_SOURCE</a>(</div>
+<div class="line">        <span class="keywordtype">double</span> d = prm1 - prm2;</div>
+<div class="line">        <span class="keywordflow">return</span> d * d * d;</div>
+<div class="line">        )</div>
+<div class="line">    );</div>
 </div><!-- fragment --> 
 </div>
 </div>
