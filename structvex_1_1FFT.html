@@ -30,6 +30,7 @@
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -72,11 +73,11 @@ typedef cl_scalar_of&lt; Tin &gt;::type&#160;</td><td class="memItemRight" valig
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa4ddc4f60cea292b7b934f83420e1017"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa4ddc4f60cea292b7b934f83420e1017"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1FFT.html#aa4ddc4f60cea292b7b934f83420e1017">FFT</a> (const std::vector&lt; <a class="el" href="classvex_1_1backend_1_1cuda_1_1command__queue.html">backend::command_queue</a> &gt; &amp;queues, size_t length, <a class="el" href="namespacevex_1_1fft.html#a84576b97585988253392f81259cdd944">fft::direction</a> dir=fft::forward, const Planner &amp;planner=Planner())</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1FFT.html#aa4ddc4f60cea292b7b934f83420e1017">FFT</a> (const std::vector&lt; <a class="el" href="classvex_1_1backend_1_1cuda_1_1command__queue.html">backend::command_queue</a> &gt; &amp;queues, size_t <a class="el" href="group__builtins.html#ga429ef9fcabdab18e57d485cd2ff385b0">length</a>, <a class="el" href="namespacevex_1_1fft.html#a84576b97585988253392f81259cdd944">fft::direction</a> dir=fft::forward, const Planner &amp;planner=Planner())</td></tr>
 <tr class="memdesc:aa4ddc4f60cea292b7b934f83420e1017"><td class="mdescLeft">&#160;</td><td class="mdescRight">1D constructor <br/></td></tr>
 <tr class="separator:aa4ddc4f60cea292b7b934f83420e1017"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1f0eb62103f01646d52b3f666c5e41a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac1f0eb62103f01646d52b3f666c5e41a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>FFT</b> (size_t length, <a class="el" href="namespacevex_1_1fft.html#a84576b97585988253392f81259cdd944">fft::direction</a> dir=fft::forward, const Planner &amp;planner=Planner())</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>FFT</b> (size_t <a class="el" href="group__builtins.html#ga429ef9fcabdab18e57d485cd2ff385b0">length</a>, <a class="el" href="namespacevex_1_1fft.html#a84576b97585988253392f81259cdd944">fft::direction</a> dir=fft::forward, const Planner &amp;planner=Planner())</td></tr>
 <tr class="separator:ac1f0eb62103f01646d52b3f666c5e41a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a3dceb425f698b30ab0e309a4e9385b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a3dceb425f698b30ab0e309a4e9385b"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1FFT.html#a8a3dceb425f698b30ab0e309a4e9385b">FFT</a> (const std::vector&lt; <a class="el" href="classvex_1_1backend_1_1cuda_1_1command__queue.html">backend::command_queue</a> &gt; &amp;queues, const std::vector&lt; size_t &gt; &amp;lengths, <a class="el" href="namespacevex_1_1fft.html#a84576b97585988253392f81259cdd944">fft::direction</a> dir=fft::forward, const Planner &amp;planner=Planner())</td></tr>
@@ -127,7 +128,7 @@ struct vex::FFT&lt; Tin, Tout, Planner &gt;</h3>
 
 <p>Fast Fourier Transform. </p>
 <p>Usage: </p>
-<div class="fragment"><div class="line">FFT&lt;cl_double2&gt; fft(ctx, length);</div>
+<div class="fragment"><div class="line">FFT&lt;cl_double2&gt; fft(ctx, <a class="code" href="group__builtins.html#ga429ef9fcabdab18e57d485cd2ff385b0">length</a>);</div>
 <div class="line">output = fft(input); <span class="comment">// out-of-place transform</span></div>
 <div class="line">data = fft(data);    <span class="comment">// in-place transform</span></div>
 <div class="line">FFT&lt;cl_double2&gt; ifft({width, height}, fft::inverse); <span class="comment">// implicit context</span></div>
