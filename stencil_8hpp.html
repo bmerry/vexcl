@@ -181,7 +181,6 @@ template&lt;typename T &gt; </td></tr>
 <p>Macro to declare a user-defined stencil operator. </p>
 <div class="fragment"><div class="line"><a class="code" href="stencil_8hpp.html#a48de2489c51353e5e84a0e23f4b945c9">VEX_STENCIL_OPERATOR</a>(pow3_oper, <span class="keywordtype">double</span>, 3, 1, <span class="stringliteral">&quot;return X[0] + pow(X[-1] + X[1], 3.0);&quot;</span>, queue);</div>
 <div class="line">output = pow3_oper(input);</div>
-<div class="line">* </div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -236,7 +235,6 @@ template&lt;typename T &gt; </td></tr>
 <div class="fragment"><div class="line"><a class="code" href="stencil_8hpp.html#a382f8cf99fdf905e87856c4a01bf4fab">VEX_STENCIL_OPERATOR_TYPE</a>(pow3_oper_t, <span class="keywordtype">double</span>, 3, 1, <span class="stringliteral">&quot;return X[0] + pow(X[-1] + X[1], 3.0);&quot;</span>);</div>
 <div class="line">pow3_oper_t pow3_oper(ctx);</div>
 <div class="line">output = pow3_oper(input);</div>
-<div class="line">* </div>
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Should be used in case same operator is used in several places (to save on OpenCL kernel recompilations). Otherwise VEX_STENCIL_OPERATOR should be used locally. </dd></dl>
 
 </div>

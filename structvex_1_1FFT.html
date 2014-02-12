@@ -132,11 +132,9 @@ struct vex::FFT&lt; Tin, Tout, Planner &gt;</h3>
 <div class="line">data = fft(data);    <span class="comment">// in-place transform</span></div>
 <div class="line">FFT&lt;cl_double2&gt; ifft({width, height}, fft::inverse); <span class="comment">// implicit context</span></div>
 <div class="line">input = ifft(output); <span class="comment">// backward transform</span></div>
-<div class="line">* </div>
 </div><!-- fragment --><p> To batch multiple transformations, use <code>fft::none</code> as the first kind: </p>
 <div class="fragment"><div class="line">FFT&lt;cl_double2&gt; fft({batch, n}, {fft::none, fft::forward});</div>
 <div class="line">output = fft(input);</div>
-<div class="line">* </div>
 </div><!-- fragment --> </div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>vexcl/backend/opencl/<a class="el" href="backend_2opencl_2fft_8hpp.html">fft.hpp</a></li>
 </ul>

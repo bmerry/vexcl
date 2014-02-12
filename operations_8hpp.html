@@ -178,7 +178,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 <p>Macro to declare a user function. </p>
 <div class="fragment"><div class="line"><a class="code" href="operations_8hpp.html#aff85c71f5e6716591cf5948f92e093b3">VEX_FUNCTION</a>(pow3, <span class="keywordtype">double</span>(<span class="keywordtype">double</span>), <span class="stringliteral">&quot;return pow(prm1, 3.0);&quot;</span>);</div>
 <div class="line">output = pow3(input);</div>
-<div class="line">* </div>
 </div><!-- fragment --> 
 <p>Referenced by <a class="el" href="namespacevex.html#ae253d3b2dd8a5fd26a14dec81d8a51c2">vex::reduce_by_key()</a>.</p>
 
@@ -229,7 +228,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 <div class="fragment"><div class="line"><a class="code" href="operations_8hpp.html#a785817e2de8feb889ce654792bfd5bcb">VEX_FUNCTION_TYPE</a>(pow3_t, <span class="keywordtype">double</span>(<span class="keywordtype">double</span>), <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;return pow(prm1, 3.0);&quot;</span>);</div>
 <div class="line">pow3_t pow3;</div>
 <div class="line">output = pow3(input);</div>
-<div class="line">* </div>
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Should be used in case same function is used in several places (to save on OpenCL kernel recompilations). Otherwise VEX_FUNCTION should be used locally. </dd></dl>
 
 </div>
@@ -281,7 +279,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 <div class="line">        <span class="stringliteral">&quot;return sin2(prm1) + cos2(prm1);&quot;</span></div>
 <div class="line">        );</div>
 <div class="line">y = one(x);</div>
-<div class="line">* </div>
 </div><!-- fragment --> 
 </div>
 </div>

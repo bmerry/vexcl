@@ -1485,7 +1485,6 @@ template&lt;class InputIterator , class OutputIterator &gt; </div>
 <p>Weights device wrt to additive_operator performance. </p>
 <p>Launches the following kernel on each device: </p>
 <div class="fragment"><div class="line">y = A * x;</div>
-<div class="line">* </div>
 </div><!-- fragment --><p> where x and y are vectors, and A is matrix for 3D Poisson problem in square domain. Each device gets portion of the vector proportional to the performance of this operation. </p>
 
 <p>References <a class="el" href="classvex_1_1SpMat.html#a8d3b691e6259530d43489215104d9d4a">vex::SpMat&lt; val_t, col_t, idx_t &gt;::apply()</a>, <a class="el" href="classvex_1_1profiler.html#a62711181c6649461f6df957db5f22b0a">vex::profiler&lt; Clock &gt;::tic_cl()</a>, and <a class="el" href="classvex_1_1profiler.html#a0297c22109f3ede4376b33b85a0f3a1c">vex::profiler&lt; Clock &gt;::toc()</a>.</p>
@@ -1518,7 +1517,6 @@ template&lt;class InputIterator , class OutputIterator &gt; </div>
 <p>Returns device weight after simple bandwidth test.</p>
 <p>Launches the following kernel on each device: </p>
 <div class="fragment"><div class="line">a = b + c;</div>
-<div class="line">* </div>
 </div><!-- fragment --><p> where a, b and c are device vectors. Each device gets portion of the vector proportional to the performance of this operation. </p>
 
 <p>References <a class="el" href="classvex_1_1profiler.html#a62711181c6649461f6df957db5f22b0a">vex::profiler&lt; Clock &gt;::tic_cl()</a>, and <a class="el" href="classvex_1_1profiler.html#a0297c22109f3ede4376b33b85a0f3a1c">vex::profiler&lt; Clock &gt;::toc()</a>.</p>
@@ -1608,7 +1606,6 @@ template&lt;typename val_t , typename col_t , typename idx_t &gt; </div>
 <p>Example: </p>
 <div class="fragment"><div class="line"><span class="comment">// Get maximum residual value:</span></div>
 <div class="line">eps = sum( fabs(f - <a class="code" href="namespacevex.html#aa04547c51b46e0005b37ad00493f7354">vex::make_inline</a>(A * x)) );</div>
-<div class="line">* </div>
 </div><!-- fragment --> 
 <p>References <a class="el" href="namespacevex.html#a94c7748602834bd3b8b86762a0970a94">precondition()</a>.</p>
 
@@ -1676,7 +1673,6 @@ template&lt;class Expr &gt; </div>
 <p>Example: </p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> reverse = <a class="code" href="namespacevex.html#a1d8048e3bb5185ab018e9d0a0649ef0b">vex::permutation</a>(N - 1 - <a class="code" href="namespacevex.html#acf35349b5accc05f96b291457f522acb">vex::element_index</a>());</div>
 <div class="line">Y = reverse(X);</div>
-<div class="line">* </div>
 </div><!-- fragment --> 
 <p>Referenced by <a class="el" href="classvex_1_1SpMat.html#a8d3b691e6259530d43489215104d9d4a">vex::SpMat&lt; val_t, col_t, idx_t &gt;::apply()</a>, and <a class="el" href="namespacevex.html#a159a23f567b28d7d284fa0cd720e900a">reshape()</a>.</p>
 
@@ -1869,7 +1865,6 @@ template&lt;class Expr , size_t Nout, size_t Nin&gt; </div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Expand 1D vector to a 2D matrix (by copying along redundant dimension):</span></div>
 <div class="line"><span class="keyword">auto</span> A = <a class="code" href="namespacevex.html#a159a23f567b28d7d284fa0cd720e900a">reshape</a>(x, <a class="code" href="namespacevex.html#acec621a57aaa5e1e17619376714b34c6">make_array</a>(n, m), <a class="code" href="namespacevex.html#acec621a57aaa5e1e17619376714b34c6">make_array</a>(0));</div>
-<div class="line">* </div>
 </div><!-- fragment --> 
 <p>References <a class="el" href="namespacevex.html#a1d8048e3bb5185ab018e9d0a0649ef0b">permutation()</a>.</p>
 
@@ -1924,7 +1919,6 @@ template&lt;class Expr , size_t Nout, size_t Nin&gt; </div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Expand 1D vector to a 2D matrix (by copying along redundant dimension):</span></div>
 <div class="line"><span class="keyword">auto</span> A = <a class="code" href="namespacevex.html#a159a23f567b28d7d284fa0cd720e900a">reshape</a>(x, <a class="code" href="namespacevex.html#ad713fa361047b676e76f2f2d3342dcdd">extents</a>[n][m], <a class="code" href="namespacevex.html#ad713fa361047b676e76f2f2d3342dcdd">extents</a>[0]);</div>
-<div class="line">* </div>
 </div><!-- fragment --> 
 <p>References <a class="el" href="namespacevex.html#a1d8048e3bb5185ab018e9d0a0649ef0b">permutation()</a>.</p>
 
@@ -2086,7 +2080,6 @@ template&lt;size_t Tag, class Expr &gt; </div>
 <p>By tagging terminals user guarantees that the terminals with same tags actually refer to the same data. VexCL is able to use this information in order to reduce number of kernel parameters and unnecessary global memory I/O operations.</p>
 <p>Example: </p>
 <div class="fragment"><div class="line">s = sum(tag&lt;1&gt;(x) * tag&lt;1&gt;(x) + tag&lt;2&gt;(y) * tag&lt;2&gt;(y));</div>
-<div class="line">* </div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -2112,13 +2105,11 @@ template&lt;class... Expr&gt; </div>
 <div class="line"><a class="code" href="classvex_1_1vector.html">vex::vector&lt;double&gt;</a> y(ctx, 1024);</div>
 <div class="line"></div>
 <div class="line"><a class="code" href="namespacevex.html#ab7ed95396644bcef1aff9a0cac89e69a">vex::tie</a>(x,y) = <a class="code" href="namespacevex.html#ab7ed95396644bcef1aff9a0cac89e69a">std::tie</a>( x + y, y - x );</div>
-<div class="line">* </div>
 </div><!-- fragment --><p> This is functionally equivalent to </p>
 <div class="fragment"><div class="line">tmp_x = x + y;</div>
 <div class="line">tmp_y = y - x;</div>
 <div class="line">x = tmp_x;</div>
 <div class="line">y = tmp_y;</div>
-<div class="line">* </div>
 </div><!-- fragment --><p> but does not use temporaries and is more efficient. </p>
 
 <p>Referenced by <a class="el" href="namespacevex_1_1generator.html#a4c60e9f68a2e74de54a073730704532e">vex::generator::build_kernel()</a>, <a class="el" href="classvex_1_1Context.html#ad60f13674fc76037ff47507d4fe58086">vex::Context::Context()</a>, <a class="el" href="namespacevex_1_1generator.html#af0263b233e113206855f28eb745b7ec8">vex::generator::make_function()</a>, <a class="el" href="classvex_1_1mba.html#a5660107fe6178eec3173b39288583494">vex::mba&lt; NDIM, real &gt;::operator()()</a>, and <a class="el" href="classvex_1_1generator_1_1Kernel.html#aff818a250c0ad905cc9cd9c98cfa427e">vex::generator::Kernel&lt; NP &gt;::operator()()</a>.</p>
