@@ -30,7 +30,6 @@
     <ul class="tablist">
       <li class="current"><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
-      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -42,7 +41,7 @@
 <div class="title">VexCL Documentation</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a href="https://travis-ci.org/ddemidov/vexcl"></a> <a href="https://bitdeli.com/free"></a></p>
+<div class="textblock"><p><a href="https://travis-ci.org/ddemidov/vexcl"></a></p>
 <p>VexCL is a vector expression template library for OpenCL/CUDA. It has been created for ease of GPGPU development with C++. VexCL strives to reduce amount of boilerplate code needed to develop GPGPU applications. The library provides convenient and intuitive notation for vector arithmetic, reduction, sparse matrix-vector products, etc. Multi-device and even multi-platform computations are supported. The source code of the library is distributed under very permissive MIT license.</p>
 <p>The code is available at <a href="https://github.com/ddemidov/vexcl">https://github.com/ddemidov/vexcl</a>.</p>
 <p>Doxygen-generated documentation: <a href="http://ddemidov.github.io/vexcl">http://ddemidov.github.io/vexcl</a>.</p>
@@ -72,6 +71,8 @@
 <li><a href="#random-number-generation">Random number generation</a></li>
 <li><a href="#permutations">Permutations</a></li>
 <li><a href="#slicing">Slicing</a></li>
+<li><a href="#reducing">Reducing multidimensional expressions</a></li>
+<li><a href="#reshaping">Reshaping</a></li>
 <li><a href="#mba">Scattered data interpolation with multilevel B-Splines</a></li>
 <li><a href="#fast-fourier-transform">Fast Fourier Transform</a></li>
 </ul>
@@ -258,7 +259,7 @@
 <div class="line"><a class="code" href="structvex_1_1slicer.html">vex::slicer&lt;1&gt;</a> slice({n});</div>
 <div class="line"></div>
 <div class="line">Y = slice[<a class="code" href="structvex_1_1range.html">vex::range</a>(100, 2, 200)](X);</div>
-</div><!-- fragment --><p>And the example below shows how to work with two-dimensional matrix:</p>
+</div><!-- fragment --><p>And the example below shows how to work with a two-dimensional matrix:</p>
 <div class="fragment"><div class="line"><span class="keyword">using</span> <a class="code" href="structvex_1_1range.html">vex::range</a>;</div>
 <div class="line"></div>
 <div class="line"><a class="code" href="classvex_1_1vector.html">vex::vector&lt;double&gt;</a> X(ctx, n * n); <span class="comment">// n-by-n matrix stored in row-major order.</span></div>
@@ -276,8 +277,46 @@
 <div class="line"><a class="code" href="classvex_1_1vector.html">vex::vector&lt;double&gt;</a> Z = slice[range(10, 20)][range(30, 40)](X);</div>
 <div class="line">assert(Z.size() == 100);</div>
 </div><!-- fragment --><p><em>Slicing is only supported in single-device contexts.</em></p>
+<h3><a class="anchor" id="reducing"></a>Reducing multidimensional expressions</h3>
+<p><code><a class="el" href="namespacevex.html#ab9f2a40c6b7a0f4b540ba12f2b52532b" title="Reduce vex::multi_array along the specified dimensions. ">vex::reduce()</a></code> function allows one to reduce a multidimensional expression along one or more dimensions. The result is again a vector expression. The supported reduction operations are <code>SUM</code>, <code>MIN</code>, and <code>MAX</code>. The function takes three arguments: the shape of the expression to reduce (with the slowest changing dimension in the front), the expression to reduce, and the dimension(s) to reduce along. The latter are specified as indices into the shape array.</p>
+<p>In the following example we find maximum absolute value of each row in a two-dimensional matrix and assign the result to a vector: </p>
+<div class="fragment"><div class="line"><a class="code" href="classvex_1_1vector.html">vex::vector&lt;double&gt;</a> A(ctx, N * M);</div>
+<div class="line"><a class="code" href="classvex_1_1vector.html">vex::vector&lt;double&gt;</a> x(ctx, N);</div>
+<div class="line"></div>
+<div class="line">x = vex::reduce&lt;vex::MAX&gt;(<a class="code" href="namespacevex.html#ad713fa361047b676e76f2f2d3342dcdd">vex::extents</a>[N][M], fabs(A), vex::extents[1]);</div>
+</div><!-- fragment --><p><em>Expression reduction is only supported in single-device contexts.</em></p>
+<h3><a class="anchor" id="reshaping"></a>Reshaping</h3>
+<p><code>vex::reshape(expr, dst_dims, src_dims)</code> function is a powerful primitive that allows one to conveniently manipulate multidimensional data. It takes three arguments &ndash; an arbitrary vector expression <code>expr</code> to reshape, the dimensions <code>dst_dims</code> of the final result (with slowest changing dimension in the front), and the dimensions <code>src_dims</code> of the expression, which are specified as indices into <code>dst_dims</code>. The function returns a vector expression that could be assigned to a vector or participate in a larger expression. The dimensions may be conveniently specified with help of <code><a class="el" href="namespacevex.html#ad713fa361047b676e76f2f2d3342dcdd" title="Helper object for specifying slicer dimensions. ">vex::extents</a></code> object.</p>
+<p>Here is an example of transposing a two-dimensional matrix of size NxM: </p>
+<div class="fragment"><div class="line"><a class="code" href="classvex_1_1vector.html">vex::vector&lt;double&gt;</a> A(ctx, N * M);</div>
+<div class="line"><a class="code" href="classvex_1_1vector.html">vex::vector&lt;double&gt;</a> B = <a class="code" href="namespacevex.html#a159a23f567b28d7d284fa0cd720e900a">vex::reshape</a>(A,</div>
+<div class="line">                            vex::extents[M][N], <span class="comment">// new shape</span></div>
+<div class="line">                            vex::extents[1][0]  <span class="comment">// A is shaped as [N][M]</span></div>
+<div class="line">                            );</div>
+</div><!-- fragment --><p>If the source expression lacks some of the destination dimensions, then those will be introduced by replicating the available data. For example, to make a two-dimensional matrix from a one-dimensional vector by copying the vector to each row of the matrix, one could do the following: </p>
+<div class="fragment"><div class="line"><a class="code" href="classvex_1_1vector.html">vex::vector&lt;double&gt;</a> x(ctx, N);</div>
+<div class="line"><a class="code" href="classvex_1_1vector.html">vex::vector&lt;double&gt;</a> y(ctx, M);</div>
+<div class="line"><a class="code" href="classvex_1_1vector.html">vex::vector&lt;double&gt;</a> A(ctx, M * N);</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Copy x into rows of A:</span></div>
+<div class="line">A = <a class="code" href="namespacevex.html#a159a23f567b28d7d284fa0cd720e900a">vex::reshape</a>(x, vex::extents[M][N], vex::extents[1]);</div>
+<div class="line"><span class="comment">// Now, copy y into columns of A:</span></div>
+<div class="line">A = <a class="code" href="namespacevex.html#a159a23f567b28d7d284fa0cd720e900a">vex::reshape</a>(x, vex::extents[M][N], vex::extents[0]);</div>
+</div><!-- fragment --><p>Here is a more realistic example of a dense matrix-matrix multiplication. Elements of a matrix product <code>C = A * B</code> are defined as <code>C[i][j] = sum_k(A[i][k] * B[k][j])</code>. Let's assume that matrix <code>A</code> has shape <code>[N][L]</code>, and matrix <code>B</code> is shaped as <code>[L][M]</code>. Then matrix <code>C</code> has dimensions <code>[N][M]</code>. In order to implement the multiplication we extend matrices <code>A</code> and <code>B</code> to the shape of <code>[N][L][M]</code>, multiply the resulting expressions, and reduce the product along the middle dimension <code>L</code>: </p>
+<div class="fragment"><div class="line"><a class="code" href="classvex_1_1vector.html">vex::vector&lt;double&gt;</a> A(ctx, N * L);</div>
+<div class="line"><a class="code" href="classvex_1_1vector.html">vex::vector&lt;double&gt;</a> B(ctx, L * M);</div>
+<div class="line"><a class="code" href="classvex_1_1vector.html">vex::vector&lt;double&gt;</a> C(ctx, N * M);</div>
+<div class="line"></div>
+<div class="line">C = vex::reduce&lt;vex::SUM&gt;(</div>
+<div class="line">        vex::extents[N][L][M],</div>
+<div class="line">        <a class="code" href="namespacevex.html#a159a23f567b28d7d284fa0cd720e900a">vex::reshape</a>(A, vex::extents[N][L][M], vex::extents[0][1]) *</div>
+<div class="line">        <a class="code" href="namespacevex.html#a159a23f567b28d7d284fa0cd720e900a">vex::reshape</a>(B, vex::extents[N][L][M], vex::extents[1][2]),</div>
+<div class="line">        1</div>
+<div class="line">        );</div>
+</div><!-- fragment --><p>This of course would not be as efficient as a carefully crafted custom implementation or a call to a vendor BLAS function. Still, the fact that the result is a vector expression (and hence may be a part of a still larger expression) could be more important sometimes.</p>
+<p><em>Reshaping is only supported in single-device contexts.</em></p>
 <h3><a class="anchor" id="mba"></a>Scattered data interpolation with multilevel B-Splines</h3>
-<p>VexCL provides an implementation of the MBA algorithm based on paper by Lee, Wolberg, and Shin ([S. Lee, G. Wolberg, and S. Y. Shin. Scattered data interpolation with multilevel B-Splines. IEEE Transactions on Visualization and Computer Graphics, 3:228–244, 1997]<a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=620490&amp;tag=1">bsplines</a>). This is a fast algorithm for scattered N-dimensional data interpolation and approximation. Multilevel B-splines are used to compute a C2-continuously differentiable surface through a set of irregularly spaced points. The algorithm makes use of a coarse-to-fine hierarchy of control lattices to generate a sequence of bicubic B-spline functions whose sum approaches the desired interpolation function. Large performance gains are realized by using B-spline refinement to reduce the sum of these functions into one equivalent B-spline function. High-fidelity reconstruction is possible from a selected set of sparse and irregular samples.</p>
+<p>VexCL provides an implementation of the MBA algorithm based on paper by Lee, Wolberg, and Shin ([S. Lee, G. Wolberg, and S. Y. Shin. Scattered data interpolation with multilevel B-Splines. IEEE Transactions on Visualization and Computer Graphics, 3:228–244, 1997][bsplines]). This is a fast algorithm for scattered N-dimensional data interpolation and approximation. Multilevel B-splines are used to compute a C2-continuously differentiable surface through a set of irregularly spaced points. The algorithm makes use of a coarse-to-fine hierarchy of control lattices to generate a sequence of bicubic B-spline functions whose sum approaches the desired interpolation function. Large performance gains are realized by using B-spline refinement to reduce the sum of these functions into one equivalent B-spline function. High-fidelity reconstruction is possible from a selected set of sparse and irregular samples.</p>
 <p>The algorithm is first prepared on a CPU. After that, it may be used in vector expressions. Here is an example in 2D: </p>
 <div class="fragment"><div class="line"><span class="comment">// Coordinates of data points:</span></div>
 <div class="line">std::vector&lt; std::array&lt;double,2&gt; &gt; coords = {</div>
