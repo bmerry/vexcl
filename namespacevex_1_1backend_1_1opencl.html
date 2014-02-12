@@ -194,9 +194,9 @@ template&lt;class DevFilter &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>list of devices satisfying the provided filter.</dd></dl>
 <p>This example selects any GPU which supports double precision arithmetic: </p>
-<div class="fragment"><div class="line">* <span class="keyword">auto</span> devices = <a class="code" href="namespacevex_1_1backend_1_1opencl.html#a28cfb84154fe14869275faef8c84d219">device_list</a>(</div>
-<div class="line">*          Filter::Type(CL_DEVICE_TYPE_GPU) &amp;&amp; <a class="code" href="namespacevex_1_1Filter.html#a9afe90464102dd7182f58ec8d7041e69">Filter::DoublePrecision</a></div>
-<div class="line">*          );</div>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> devices = <a class="code" href="namespacevex_1_1backend_1_1opencl.html#a28cfb84154fe14869275faef8c84d219">device_list</a>(</div>
+<div class="line">         Filter::Type(CL_DEVICE_TYPE_GPU) &amp;&amp; <a class="code" href="namespacevex_1_1Filter.html#a9afe90464102dd7182f58ec8d7041e69">Filter::DoublePrecision</a></div>
+<div class="line">         );</div>
 <div class="line">* </div>
 </div><!-- fragment --> 
 </div>

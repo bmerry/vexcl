@@ -92,13 +92,13 @@ class vex::stencil&lt; T &gt;</h3>
 
 <p>Stencil. </p>
 <p>Should be used for stencil convolutions with vex::vectors as in </p>
-<div class="fragment"><div class="line">* <span class="keywordtype">void</span> convolve(</div>
-<div class="line">*          <span class="keyword">const</span> <a class="code" href="classvex_1_1stencil.html">vex::stencil&lt;double&gt;</a> &amp;s,</div>
-<div class="line">*          <span class="keyword">const</span> <a class="code" href="classvex_1_1vector.html">vex::vector&lt;double&gt;</a>  &amp;x,</div>
-<div class="line">*          <a class="code" href="classvex_1_1vector.html">vex::vector&lt;double&gt;</a> &amp;y)</div>
-<div class="line">* {</div>
-<div class="line">*     y = x * s;</div>
-<div class="line">* }</div>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> convolve(</div>
+<div class="line">         <span class="keyword">const</span> <a class="code" href="classvex_1_1stencil.html">vex::stencil&lt;double&gt;</a> &amp;s,</div>
+<div class="line">         <span class="keyword">const</span> <a class="code" href="classvex_1_1vector.html">vex::vector&lt;double&gt;</a>  &amp;x,</div>
+<div class="line">         <a class="code" href="classvex_1_1vector.html">vex::vector&lt;double&gt;</a> &amp;y)</div>
+<div class="line">{</div>
+<div class="line">    y = x * s;</div>
+<div class="line">}</div>
 <div class="line">* </div>
 </div><!-- fragment --><p> Stencil should be small enough to fit into local memory of all compute devices it resides on. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
